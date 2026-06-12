@@ -1,11 +1,14 @@
 import { NextResponse } from 'next/server';
-import sql from '@/app/lib/db';
+import prisma from '@/app/lib/prisma';
 
 export async function GET() {
   try {
-    const products = await sql`
-      SELECT * FROM products ORDER BY created_at DESC LIMIT 50
-    `;
+    const products = await prisma.product.findMany({
+      orderBy: {
+        created_at: 'desc',
+      },
+      take: 50,
+    });
     return NextResponse.json(products);
   } catch (error) {
     console.error('Database error:', error);

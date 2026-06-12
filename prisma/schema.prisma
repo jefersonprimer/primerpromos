@@ -1,0 +1,22 @@
+datasource db {
+  provider = "postgresql"
+}
+
+generator client {
+  provider = "prisma-client"
+  output   = "./generated"
+}
+
+model Product {
+  id                  Int      @id @default(autoincrement())
+  source_site         String
+  title               String
+  image_url           String   @default("")
+  cash_price          Decimal
+  installment_price   Decimal
+  installments_count  Int      @default(1)
+  product_url         String
+  created_at          DateTime @default(now())
+
+  @@map("products")
+}

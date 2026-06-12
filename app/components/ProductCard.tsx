@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { formatDistanceToNow } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 
@@ -41,6 +40,7 @@ export default function ProductCard({ product }: { product: Product }) {
       {/* Image */}
       <div className="relative h-48 w-full bg-white flex items-center justify-center p-2">
         {product.image_url ? (
+          /* eslint-disable-next-line @next/next/no-img-element */
           <img
             src={product.image_url}
             alt={product.title}
