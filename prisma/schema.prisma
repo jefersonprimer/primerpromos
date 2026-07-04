@@ -15,7 +15,7 @@ model Product {
   cash_price          Decimal
   installment_price   Decimal
   installments_count  Int      @default(1)
-  product_url         String
+  product_url         String   @unique
   created_at          DateTime @default(now())
 
   @@map("products")
