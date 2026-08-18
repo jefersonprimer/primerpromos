@@ -35,11 +35,11 @@ export default function PriceHistoryChart({ history, currentPrice }: PriceHistor
       // Mock history if none exists to display a beautiful chart
       const mockPoints = [];
       const now = new Date();
-      for (let i = timeframe; i >= 0; i--) {
+      for (let i = 365; i >= 0; i--) {
         const d = new Date();
         d.setDate(now.getDate() - i);
         // Slightly random price fluctuation around current price
-        const fluctuation = (Math.sin(i * 0.5) * 0.05 + (Math.random() - 0.5) * 0.02);
+        const fluctuation = (Math.sin(i * 0.05) * 0.05 + (Math.random() - 0.5) * 0.02);
         mockPoints.push({
           date: d,
           price: Math.round(currentPrice * (1 + fluctuation) * 100) / 100,
@@ -54,17 +54,14 @@ export default function PriceHistoryChart({ history, currentPrice }: PriceHistor
         price: parseFloat(item.price.toString()),
       }))
       .sort((a, b) => a.date.getTime() - b.date.getTime());
-  }, [history, currentPrice, timeframe]);
+  }, [history, currentPrice]);
 
   // Filter data based on selected timeframe
   const filteredData = useMemo(() => {
-    if (history && history.length > 0) return parsedData; // if actual database history, show all of it
-    
-    // For mock data, it already matches the timeframe
     const cutoff = new Date();
     cutoff.setDate(cutoff.getDate() - timeframe);
     return parsedData.filter((d) => d.date >= cutoff);
-  }, [parsedData, timeframe, history]);
+  }, [parsedData, timeframe]);
 
   // SVG Chart Calculations
   const width = 600;
@@ -162,24 +159,27 @@ export default function PriceHistoryChart({ history, currentPrice }: PriceHistor
           </p>
         </div>
         
-        {/* Timeframe selector (only show if history is mock/generated, otherwise database controls data length) */}
-        {(!history || history.length === 0) && (
-          <div className="flex bg-zinc-100 dark:bg-zinc-800 p-1 rounded-xl self-start">
-            {[7, 15, 30].map((t) => (
-              <button
-                key={t}
-                onClick={() => setTimeframe(t)}
-                className={`px-3 py-1 text-xs font-bold rounded-lg transition-colors cursor-pointer ${
-                  timeframe === t
-                    ? "bg-white dark:bg-zinc-700 text-blue-600 dark:text-white shadow-sm"
-                    : "text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200"
-                }`}
-              >
-                {t} dias
-              </button>
-            ))}
-          </div>
-        )}
+        {/* Timeframe selector */}
+        <div className="flex bg-zinc-100 dark:bg-zinc-800 p-1 rounded-xl self-start">
+          {[
+            { label: "30 dias", value: 30 },
+            { label: "60 dias", value: 60 },
+            { label: "90 dias", value: 90 },
+            { label: "1 ano", value: 365 },
+          ].map((t) => (
+            <button
+              key={t.value}
+              onClick={() => setTimeframe(t.value)}
+              className={`px-3 py-1 text-xs font-bold rounded-lg transition-colors cursor-pointer ${
+                timeframe === t.value
+                  ? "bg-white dark:bg-zinc-700 text-blue-600 dark:text-white shadow-sm"
+                  : "text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200"
+              }`}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div className="relative w-full overflow-hidden select-none">
