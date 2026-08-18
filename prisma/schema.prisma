@@ -22,6 +22,7 @@ model Product {
   store_url           String?
   created_at          DateTime       @default(now())
   price_histories     PriceHistory[]
+  offers              Offer[]
 
   @@map("products")
 }
@@ -37,5 +38,21 @@ model PriceHistory {
   @@unique([product_id, date])
   @@map("price_histories")
 }
+
+model Offer {
+  id                  Int      @id @default(autoincrement())
+  product_id          Int
+  product             Product  @relation(fields: [product_id], references: [id], onDelete: Cascade)
+  store_name          String
+  cash_price          Decimal
+  installment_price   Decimal
+  installments_count  Int      @default(1)
+  store_url           String
+  image_url           String?
+  created_at          DateTime @default(now())
+
+  @@map("offers")
+}
+
 
 

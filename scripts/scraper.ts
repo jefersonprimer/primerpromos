@@ -101,37 +101,78 @@ async function fetchBenchPromosHistory(slug: string): Promise<{ date: string; lo
   }
 }
 
-async function fetchBuscapeHistory(productUrl: string): Promise<{ date: string; price: number }[]> {
+interface BuscapeProductDetails {
+  history: { date: string; price: number }[];
+  offers: {
+    store_name: string;
+    cash_price: number;
+    installment_price: number;
+    installments_count: number;
+    store_url: string;
+    image_url: string | null;
+  }[];
+}
+
+async function fetchBuscapeProductDetails(productUrl: string): Promise<BuscapeProductDetails> {
+  const result: BuscapeProductDetails = { history: [], offers: [] };
   try {
     const response = await fetch(productUrl, {
       headers: {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
       },
     });
-    if (!response.ok) return [];
+    if (!response.ok) return result;
     const html = await response.text();
     const match = html.match(/<script id="__NEXT_DATA__" type="application\/json">(.*?)<\/script>/s);
-    if (!match || !match[1]) return [];
+    if (!match || !match[1]) return result;
     
     const nextData = JSON.parse(match[1]);
-    const historyRoot = nextData?.props?.initialReduxState?.priceHistory?.priceHistory;
-    if (!historyRoot) return [];
-    
-    const productIds = Object.keys(historyRoot);
-    if (productIds.length === 0) return [];
-    
-    const firstProductHistory = historyRoot[productIds[0]];
-    if (!firstProductHistory || !Array.isArray(firstProductHistory.days)) return [];
-    
-    return firstProductHistory.days.map((d: any) => ({
-      date: d.date,
-      price: d.price
-    }));
+    const reduxState = nextData?.props?.initialReduxState;
+    if (!reduxState) return result;
+
+    // Parse History
+    const historyRoot = reduxState?.priceHistory?.priceHistory;
+    if (historyRoot) {
+      const productIds = Object.keys(historyRoot);
+      if (productIds.length > 0) {
+        const firstProductHistory = historyRoot[productIds[0]];
+        if (firstProductHistory && Array.isArray(firstProductHistory.days)) {
+          result.history = firstProductHistory.days.map((d: any) => ({
+            date: d.date,
+            price: d.price
+          }));
+        }
+      }
+    }
+
+    // Parse Offers
+    const rawOffers = [
+      ...(reduxState?.offers?.displayOffers || []),
+      ...(reduxState?.offers?.offerList || [])
+    ];
+
+    const seenUrls = new Set<string>();
+    for (const off of rawOffers) {
+      if (!off.id || !off.sellerName) continue;
+      const storeUrl = `https://www.buscape.com.br/lead?oid=${off.id}`;
+      if (seenUrls.has(storeUrl)) continue;
+      seenUrls.add(storeUrl);
+
+      result.offers.push({
+        store_name: off.sellerName,
+        cash_price: off.price,
+        installment_price: off.totalParceledValue || off.price,
+        installments_count: off.numParcels || 1,
+        store_url: storeUrl,
+        image_url: off.imageUrl || null
+      });
+    }
   } catch (error) {
-    console.error(`Error fetching Buscapé history for ${productUrl}:`, error);
-    return [];
+    console.error(`Error fetching Buscapé details for ${productUrl}:`, error);
   }
+  return result;
 }
+
 
 
 async function scrapeBenchPromos() {
@@ -365,10 +406,12 @@ async function scrapeBuscape() {
         },
       });
 
-      // Fetch and save history
-      console.log(`Fetching history for Buscapé product: ${productUrl}`);
-      const history = await fetchBuscapeHistory(productUrl);
-      for (const h of history) {
+      // Fetch and save details (history and offers)
+      console.log(`Fetching details for Buscapé product: ${productUrl}`);
+      const details = await fetchBuscapeProductDetails(productUrl);
+      
+      // Save history
+      for (const h of details.history) {
         if (!h.date || h.price === undefined) continue;
         const dateObj = new Date(h.date);
         await prisma.priceHistory.upsert({
@@ -389,6 +432,28 @@ async function scrapeBuscape() {
             installment_price: h.price
           }
         });
+      }
+
+      // Save offers
+      if (details.offers.length > 0) {
+        // Delete old offers first to keep it fresh
+        await prisma.offer.deleteMany({
+          where: { product_id: dbProduct.id }
+        });
+
+        // Insert new offers
+        await prisma.offer.createMany({
+          data: details.offers.map(off => ({
+            product_id: dbProduct.id,
+            store_name: off.store_name,
+            cash_price: off.cash_price,
+            installment_price: off.installment_price,
+            installments_count: off.installments_count,
+            store_url: off.store_url,
+            image_url: off.image_url
+          }))
+        });
+        console.log(`Saved ${details.offers.length} secondary offers for product: ${title}`);
       }
 
       savedCount++;

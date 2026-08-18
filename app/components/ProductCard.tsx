@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+import { Copy, Check, Tag } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
 import { ptBR } from "date-fns/locale";
 import Link from "next/link";
@@ -20,6 +24,8 @@ export interface Product {
 }
 
 export default function ProductCard({ product }: { product: Product }) {
+  const [copied, setCopied] = useState(false);
+
   const timeAgo = formatDistanceToNow(new Date(product.created_at), {
     addSuffix: true,
     locale: ptBR,
@@ -37,13 +43,28 @@ export default function ProductCard({ product }: { product: Product }) {
 
   const hasCoupon = !!product.coupon;
 
+  const handleCopy = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (!product.coupon) return;
+    try {
+      await navigator.clipboard.writeText(product.coupon);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy coupon:", err);
+    }
+  };
+
+  const categoryPath = product.category ? slugify(product.category) : "produto";
+
   return (
     <Link
-      href={`/produto/${product.id}-${slugify(product.title)}`}
-      className="flex flex-col bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow relative cursor-pointer group"
+      href={`/${categoryPath}/${product.id}-${slugify(product.title)}`}
+      className="flex flex-col bg-white dark:bg-zinc-900 hover:bg-zinc-50/50 dark:hover:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all relative cursor-pointer group"
     >
       {/* Header */}
-      <div className="flex justify-between items-center px-3 py-2 text-xs text-zinc-500 dark:text-zinc-400 border-b border-zinc-100 dark:border-zinc-800/50">
+      <div className="flex justify-between items-center px-3 py-2 text-xs text-zinc-500 dark:text-zinc-400 ">
         <div className="flex gap-1.5 items-center">
           <span className="font-medium text-zinc-700 dark:text-zinc-300 capitalize">
             {product.source_site}
@@ -64,20 +85,27 @@ export default function ProductCard({ product }: { product: Product }) {
           />
         ) : (
           <div className="w-full h-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center">
-            No Image
+            Sem Imagem
           </div>
         )}
 
-        {hasCoupon && (
-          <div className="absolute top-2 right-2 bg-emerald-100 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-900/60 text-emerald-800 dark:text-emerald-300 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
-            Cupom: {product.coupon}
+        {hasCoupon && product.coupon && (
+          <div
+            onClick={handleCopy}
+            className={`absolute top-2 right-2 border text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider transition-all active:scale-95 cursor-pointer z-10 select-all shadow-sm ${
+              copied
+                ? "bg-emerald-600 border-emerald-600 text-white"
+                : "bg-yellow-400 border-yellow-400 text-black hover:bg-yellow-500"
+            }`}
+          >
+            {copied ? "Copiado!" : `Cupom: ${product.coupon}`}
           </div>
         )}
       </div>
 
       {/* Content */}
       <div className="flex flex-col p-4 gap-2 flex-grow">
-        <h3 className="text-sm font-normal text-zinc-900 dark:text-zinc-100 line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+        <h3 className="text-sm font-normal text-zinc-900 dark:text-zinc-100 line-clamp-2">
           {product.title}
         </h3>
 

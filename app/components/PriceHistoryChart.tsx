@@ -66,7 +66,7 @@ export default function PriceHistoryChart({ history, currentPrice }: PriceHistor
   // SVG Chart Calculations
   const width = 600;
   const height = 240;
-  const paddingLeft = 60;
+  const paddingLeft = 80;
   const paddingRight = 20;
   const paddingTop = 30;
   const paddingBottom = 40;
@@ -182,7 +182,7 @@ export default function PriceHistoryChart({ history, currentPrice }: PriceHistor
         </div>
       </div>
 
-      <div className="relative w-full overflow-hidden select-none">
+      <div className="relative w-full select-none">
         <svg
           ref={svgRef}
           viewBox={`0 0 ${width} ${height}`}

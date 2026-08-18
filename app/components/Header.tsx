@@ -3,12 +3,16 @@
 import { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import ProductCard, { type Product } from "./ProductCard";
-import { ChevronDown, Search, X } from "lucide-react";
+import { ChevronDown, Search, X, Sun, Moon } from "lucide-react";
 import Link from "next/link";
 
 export default function Header() {
   return (
-    <Suspense fallback={<div className="h-16 bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800" />}>
+    <Suspense
+      fallback={
+        <div className="h-16 bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800" />
+      }
+    >
       <HeaderContent />
     </Suspense>
   );
@@ -19,6 +23,25 @@ function HeaderContent() {
   const searchParams = useSearchParams();
 
   const activeCategory = searchParams.get("category");
+
+  const [theme, setTheme] = useState<"light" | "dark">("light");
+
+  useEffect(() => {
+    const isDark = document.documentElement.classList.contains("dark");
+    setTheme(isDark ? "dark" : "light");
+  }, []);
+
+  const toggleTheme = () => {
+    const nextTheme = theme === "light" ? "dark" : "light";
+    setTheme(nextTheme);
+    if (nextTheme === "dark") {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  };
 
   const onCategoryChange = (category: string | null) => {
     const params = new URLSearchParams(window.location.search);
@@ -138,7 +161,7 @@ function HeaderContent() {
 
               {/* Peripherals Dropdown */}
               <div
-                className="relative"
+                className="relative h-16 flex items-center"
                 onMouseEnter={() => setIsPeripheralsOpen(true)}
                 onMouseLeave={() => setIsPeripheralsOpen(false)}
               >
@@ -156,37 +179,64 @@ function HeaderContent() {
                 </button>
 
                 {isPeripheralsOpen && (
-                  <div className="absolute left-0 mt-0 w-48 rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 py-1 shadow-lg ring-1 ring-black/5 focus:outline-none">
-                    {peripherals.map((item) => (
-                      <button
-                        key={item.value}
-                        onClick={() => handlePeripheralClick(item.value)}
-                        className={`block w-full text-left px-4 py-2 text-xs transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800 ${
-                          activeCategory === item.value
-                            ? "text-blue-600 dark:text-blue-400 font-semibold bg-zinc-50 dark:bg-zinc-800/40"
-                            : "text-zinc-700 dark:text-zinc-200"
-                        }`}
-                      >
-                        {item.label}
-                      </button>
-                    ))}
+                  <div className="absolute -left-32 top-full mt-0.5 w-[540px] rounded-2xl border border-zinc-200/80 dark:border-zinc-800 bg-white/98 dark:bg-zinc-950/98 backdrop-blur-md p-3 shadow-xl z-50 grid grid-cols-3 gap-2 focus:outline-none">
+                    {peripherals.map((item) => {
+                      const isActive = activeCategory === item.value;
+                      return (
+                        <button
+                          key={item.value}
+                          onClick={() => handlePeripheralClick(item.value)}
+                          className={`group/item flex flex-col justify-between text-left p-3 rounded-xl transition-all cursor-pointer border ${
+                            isActive
+                              ? "bg-blue-50/70 dark:bg-blue-950/20 border-blue-100 dark:border-blue-900/30 text-blue-600 dark:text-blue-400"
+                              : "bg-transparent border-transparent hover:bg-zinc-50 dark:hover:bg-zinc-900/60 hover:border-zinc-100 dark:hover:border-zinc-800/50 text-zinc-700 dark:text-zinc-300"
+                          }`}
+                        >
+                          <div className="flex flex-col gap-0.5">
+                            <span className="text-xs font-bold tracking-wide">
+                              {item.label}
+                            </span>
+                          </div>
+
+                          {isActive && (
+                            <span className="w-1.5 h-1.5 rounded-full bg-blue-600 dark:bg-blue-400 mt-2 self-start" />
+                          )}
+                        </button>
+                      );
+                    })}
                   </div>
                 )}
               </div>
             </nav>
           </div>
 
-          {/* Search Button on Right */}
-          <div className="flex items-center">
+          {/* Search and Theme Toggle Buttons on Right */}
+          <div className="flex items-center gap-1">
             <button
               onClick={() => {
                 setMouseHasEntered(false);
                 setIsSearchOpen(true);
               }}
-              className="p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors text-zinc-600 dark:text-zinc-300"
+              className="p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors text-zinc-600 dark:text-zinc-300 cursor-pointer"
               aria-label="Buscar"
             >
               <Search className="h-5 w-5" />
+            </button>
+
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors text-zinc-600 dark:text-zinc-300 cursor-pointer"
+              aria-label={
+                theme === "light"
+                  ? "Mudar para modo escuro"
+                  : "Mudar para modo claro"
+              }
+            >
+              {theme === "light" ? (
+                <Moon className="h-5 w-5" />
+              ) : (
+                <Sun className="h-5 w-5" />
+              )}
             </button>
           </div>
         </div>
