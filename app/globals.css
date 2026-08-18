@@ -4,7 +4,8 @@
   --background: #ffffff;
   --foreground: #171717;
   --app-font-sans: Arial, Helvetica, sans-serif;
-  --app-font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Monaco, monospace;
+  --app-font-mono:
+    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Monaco, monospace;
 }
 
 @theme inline {
@@ -25,4 +26,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--app-font-sans);
+}
+
+button:hover {
+  cursor: pointer;
 }

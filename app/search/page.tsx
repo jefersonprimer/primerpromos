@@ -1,41 +1,27 @@
 'use client';
 
 import { useEffect, useState, Suspense } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
-import ProductCard, { type Product } from './components/ProductCard';
+import { useSearchParams } from 'next/navigation';
+import ProductCard, { type Product } from '../components/ProductCard';
 
-function HomeContent() {
+function SearchResults() {
+  const searchParams = useSearchParams();
+  const query = searchParams.get('q') || '';
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const searchParams = useSearchParams();
-  const router = useRouter();
-
-  const selectedCategory = searchParams.get('category') || null;
-
-  const handleCategoryChange = (category: string | null) => {
-    const params = new URLSearchParams(window.location.search);
-    if (category) {
-      params.set('category', category);
-    } else {
-      params.delete('category');
-    }
-    router.push(`/?${params.toString()}`);
-  };
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   useEffect(() => {
     fetch('/api/products')
       .then(async (res) => {
         const data = await res.json();
-
         if (!res.ok) {
           throw new Error(data?.error || 'Falha ao carregar promoções.');
         }
-
         if (!Array.isArray(data)) {
           throw new Error('Resposta inválida da API.');
         }
-
         setProducts(data);
         setError(null);
       })
@@ -49,15 +35,26 @@ function HomeContent() {
       });
   }, []);
 
-  const filteredProducts = selectedCategory
-    ? products.filter((p) => p.category === selectedCategory)
-    : products;
+  const filteredProducts = products.filter((product) => {
+    const matchesQuery = query
+      ? product.title.toLowerCase().includes(query.toLowerCase()) ||
+        (product.category && product.category.toLowerCase().includes(query.toLowerCase())) ||
+        product.source_site.toLowerCase().includes(query.toLowerCase())
+      : true;
+
+    const matchesCategory = selectedCategory
+      ? product.category === selectedCategory
+      : true;
+
+    return matchesQuery && matchesCategory;
+  });
 
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-black">
       <main className="max-w-7xl mx-auto p-8">
         <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-50 mb-6">
-          {selectedCategory ? `${selectedCategory}s em Destaque` : 'Promoções do Dia'}
+          {query ? `Resultados para "${query}"` : 'Busca'} 
+          {selectedCategory && ` em ${selectedCategory}s`}
         </h2>
 
         {loading ? (
@@ -83,9 +80,7 @@ function HomeContent() {
         {!loading && filteredProducts.length === 0 && (
           <div className="text-center py-20">
             <p className="text-zinc-500 dark:text-zinc-400">
-              {selectedCategory
-                ? `Nenhuma promoção encontrada na categoria ${selectedCategory}.`
-                : 'Nenhuma promoção encontrada. O worker está rodando?'}
+              Nenhuma promoção encontrada para a sua busca.
             </p>
           </div>
         )}
@@ -94,14 +89,14 @@ function HomeContent() {
   );
 }
 
-export default function Home() {
+export default function SearchPage() {
   return (
     <Suspense fallback={
       <div className="min-h-screen bg-zinc-50 dark:bg-black flex items-center justify-center">
         <p className="text-zinc-500 dark:text-zinc-400">Carregando...</p>
       </div>
     }>
-      <HomeContent />
+      <SearchResults />
     </Suspense>
   );
 }
