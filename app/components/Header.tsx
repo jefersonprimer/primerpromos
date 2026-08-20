@@ -1,10 +1,11 @@
 "use client";
 
 import { useState, useEffect, Suspense } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import ProductCard, { type Product } from "./ProductCard";
 import { ChevronDown, Search, X, Sun, Moon } from "lucide-react";
 import Link from "next/link";
+import { getCategorySlug, slugify } from "@/app/lib/utils";
 
 export default function Header() {
   return (
@@ -20,9 +21,6 @@ export default function Header() {
 
 function HeaderContent() {
   const router = useRouter();
-  const searchParams = useSearchParams();
-
-  const activeCategory = searchParams.get("category");
 
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
@@ -44,16 +42,16 @@ function HeaderContent() {
   };
 
   const onCategoryChange = (category: string | null) => {
-    const params = new URLSearchParams(window.location.search);
     if (category) {
-      params.set("category", category);
+      const slug = getCategorySlug(category);
+      router.push(`/${slug}`);
     } else {
-      params.delete("category");
+      router.push("/");
     }
-    router.push(`/?${params.toString()}`);
   };
 
   const [isPeripheralsOpen, setIsPeripheralsOpen] = useState(false);
+  const [isCategoriesOpen, setIsCategoriesOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [mouseHasEntered, setMouseHasEntered] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -110,9 +108,30 @@ function HeaderContent() {
     setIsPeripheralsOpen(false);
   };
 
-  const isPeripheralActive = peripherals.some(
-    (p) => p.value === activeCategory,
-  );
+  const mainCategories = [
+    { label: "Placas de vídeo", value: "Placa De Vídeo" },
+    { label: "Processadores", value: "Processador" },
+    { label: "Motherboards", value: "Placa-Mãe" },
+    { label: "Gabinetes", value: "Gabinete" },
+    { label: "Fontes", value: "Fonte" },
+    { label: "Memórias RAM", value: "Memória RAM" },
+    { label: "SSDs", value: "SSD" },
+    { label: "Cadeiras", value: "Cadeira" },
+    { label: "Smartphones", value: "Smartphone" },
+    { label: "TVs", value: "TV" },
+    { label: "Consoles", value: "Console" },
+    { label: "Mochilas", value: "Mochila" },
+    { label: "Acessórios", value: "Acessório" },
+    { label: "Suportes", value: "Suporte" },
+    { label: "Eletrodomésticos", value: "Eletrodoméstico" },
+    { label: "Mesa", value: "Mesa" },
+    { label: "Desktops", value: "Desktop" },
+  ];
+
+  const handleCategoryClick = (val: string) => {
+    onCategoryChange(val);
+    setIsCategoriesOpen(false);
+  };
 
   return (
     <header
@@ -139,22 +158,14 @@ function HeaderContent() {
             <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
               <button
                 onClick={() => onCategoryChange("Notebook")}
-                className={`transition-colors hover:text-blue-600 dark:hover:text-blue-400 ${
-                  activeCategory === "Notebook"
-                    ? "text-blue-600 dark:text-blue-400 font-semibold"
-                    : "text-zinc-600 dark:text-zinc-300"
-                }`}
+                className="transition-colors hover:text-zinc-900 dark:hover:text-zinc-100 text-zinc-600 dark:text-zinc-300"
               >
                 Notebooks
               </button>
 
               <button
                 onClick={() => onCategoryChange("Smartphone")}
-                className={`transition-colors hover:text-blue-600 dark:hover:text-blue-400 ${
-                  activeCategory === "Smartphone"
-                    ? "text-blue-600 dark:text-blue-400 font-semibold"
-                    : "text-zinc-600 dark:text-zinc-300"
-                }`}
+                className="transition-colors hover:text-zinc-900 dark:hover:text-zinc-100 text-zinc-600 dark:text-zinc-300"
               >
                 Smartphones
               </button>
@@ -166,11 +177,7 @@ function HeaderContent() {
                 onMouseLeave={() => setIsPeripheralsOpen(false)}
               >
                 <button
-                  className={`flex items-center gap-1 transition-colors hover:text-blue-600 dark:hover:text-blue-400 ${
-                    isPeripheralActive
-                      ? "text-blue-600 dark:text-blue-400 font-semibold"
-                      : "text-zinc-600 dark:text-zinc-300"
-                  }`}
+                  className="flex items-center gap-1 transition-colors hover:text-zinc-900 dark:hover:text-zinc-100 text-zinc-600 dark:text-zinc-300"
                 >
                   Periféricos
                   <ChevronDown
@@ -181,26 +188,53 @@ function HeaderContent() {
                 {isPeripheralsOpen && (
                   <div className="absolute -left-32 top-full mt-0.5 w-[540px] rounded-2xl border border-zinc-200/80 dark:border-zinc-800 bg-white/98 dark:bg-zinc-950/98 backdrop-blur-md p-3 shadow-xl z-50 grid grid-cols-3 gap-2 focus:outline-none">
                     {peripherals.map((item) => {
-                      const isActive = activeCategory === item.value;
                       return (
                         <button
                           key={item.value}
                           onClick={() => handlePeripheralClick(item.value)}
-                          className={`group/item flex flex-col justify-between text-left p-3 rounded-xl transition-all cursor-pointer border ${
-                            isActive
-                              ? "bg-blue-50/70 dark:bg-blue-950/20 border-blue-100 dark:border-blue-900/30 text-blue-600 dark:text-blue-400"
-                              : "bg-transparent border-transparent hover:bg-zinc-50 dark:hover:bg-zinc-900/60 hover:border-zinc-100 dark:hover:border-zinc-800/50 text-zinc-700 dark:text-zinc-300"
-                          }`}
+                          className="group/item flex flex-col justify-between text-left p-3 rounded-xl transition-all cursor-pointer border bg-transparent border-transparent hover:bg-zinc-50 dark:hover:bg-zinc-900/60 hover:border-zinc-100 dark:hover:border-zinc-800/50 text-zinc-700 dark:text-zinc-300"
                         >
                           <div className="flex flex-col gap-0.5">
                             <span className="text-xs font-bold tracking-wide">
                               {item.label}
                             </span>
                           </div>
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
 
-                          {isActive && (
-                            <span className="w-1.5 h-1.5 rounded-full bg-blue-600 dark:bg-blue-400 mt-2 self-start" />
-                          )}
+              {/* Categories Dropdown */}
+              <div
+                className="relative h-16 flex items-center"
+                onMouseEnter={() => setIsCategoriesOpen(true)}
+                onMouseLeave={() => setIsCategoriesOpen(false)}
+              >
+                <button
+                  className="flex items-center gap-1 transition-colors hover:text-zinc-900 dark:hover:text-zinc-100 text-zinc-600 dark:text-zinc-300"
+                >
+                  Categorias
+                  <ChevronDown
+                    className={`h-4 w-4 transition-transform duration-200 ${isCategoriesOpen ? "rotate-180" : ""}`}
+                  />
+                </button>
+
+                {isCategoriesOpen && (
+                  <div className="absolute -left-32 top-full mt-0.5 w-[540px] rounded-2xl border border-zinc-200/80 dark:border-zinc-800 bg-white/98 dark:bg-zinc-950/98 backdrop-blur-md p-3 shadow-xl z-50 grid grid-cols-3 gap-2 focus:outline-none">
+                    {mainCategories.map((item) => {
+                      return (
+                        <button
+                          key={item.value}
+                          onClick={() => handleCategoryClick(item.value)}
+                          className="group/item flex flex-col justify-between text-left p-3 rounded-xl transition-all cursor-pointer border bg-transparent border-transparent hover:bg-zinc-50 dark:hover:bg-zinc-900/60 hover:border-zinc-100 dark:hover:border-zinc-800/50 text-zinc-700 dark:text-zinc-300"
+                        >
+                          <div className="flex flex-col gap-0.5">
+                            <span className="text-xs font-bold tracking-wide">
+                              {item.label}
+                            </span>
+                          </div>
                         </button>
                       );
                     })}
@@ -217,7 +251,7 @@ function HeaderContent() {
                 setMouseHasEntered(false);
                 setIsSearchOpen(true);
               }}
-              className="p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors text-zinc-600 dark:text-zinc-300 cursor-pointer"
+              className="p-2 transition-colors text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 cursor-pointer"
               aria-label="Buscar"
             >
               <Search className="h-5 w-5" />
@@ -225,7 +259,7 @@ function HeaderContent() {
 
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors text-zinc-600 dark:text-zinc-300 cursor-pointer"
+              className="p-2 transition-colors text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 cursor-pointer"
               aria-label={
                 theme === "light"
                   ? "Mudar para modo escuro"
@@ -246,21 +280,13 @@ function HeaderContent() {
       <div className="md:hidden flex items-center justify-start gap-4 px-4 pb-3 overflow-x-auto scrollbar-none border-t border-zinc-100 dark:border-zinc-800/40 pt-2">
         <button
           onClick={() => onCategoryChange("Notebook")}
-          className={`text-xs whitespace-nowrap px-2.5 py-1 rounded-full ${
-            activeCategory === "Notebook"
-              ? "bg-blue-600 text-white font-semibold"
-              : "bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300"
-          }`}
+          className="text-xs whitespace-nowrap px-2.5 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300"
         >
           Notebooks
         </button>
         <button
           onClick={() => onCategoryChange("Smartphone")}
-          className={`text-xs whitespace-nowrap px-2.5 py-1 rounded-full ${
-            activeCategory === "Smartphone"
-              ? "bg-blue-600 text-white font-semibold"
-              : "bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300"
-          }`}
+          className="text-xs whitespace-nowrap px-2.5 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300"
         >
           Smartphones
         </button>
@@ -268,11 +294,7 @@ function HeaderContent() {
           <button
             key={item.value}
             onClick={() => onCategoryChange(item.value)}
-            className={`text-xs whitespace-nowrap px-2.5 py-1 rounded-full ${
-              activeCategory === item.value
-                ? "bg-blue-600 text-white font-semibold"
-                : "bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300"
-            }`}
+            className="text-xs whitespace-nowrap px-2.5 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300"
           >
             {item.label}
           </button>
@@ -335,12 +357,25 @@ function HeaderContent() {
                         Resultados encontrados
                       </h3>
                       {filteredPreviewProducts.length > 0 ? (
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-4">
+                        <div className="flex flex-col gap-2 pb-4">
                           {filteredPreviewProducts
-                            .slice(0, 4)
-                            .map((product) => (
-                              <ProductCard key={product.id} product={product} />
-                            ))}
+                            .slice(0, 10)
+                            .map((product) => {
+                              const categoryPath = product.category
+                                ? getCategorySlug(product.category)
+                                : "produto";
+                              const href = `/${categoryPath}/${product.id}-${slugify(product.title)}`;
+                              return (
+                                <Link
+                                  key={product.id}
+                                  href={href}
+                                  onClick={() => setIsSearchOpen(false)}
+                                  className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1 cursor-pointer block truncate"
+                                >
+                                  {product.title}
+                                </Link>
+                              );
+                            })}
                         </div>
                       ) : (
                         <div className="text-center py-8 text-zinc-500 dark:text-zinc-400 text-sm">

@@ -21,6 +21,7 @@ model Product {
   product_url         String         @unique
   store_url           String?
   created_at          DateTime       @default(now())
+  specs               Json?
   price_histories     PriceHistory[]
   offers              Offer[]
 

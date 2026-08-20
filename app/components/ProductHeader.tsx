@@ -15,10 +15,6 @@ export default function ProductHeader() {
   };
 
   return (
-    <Header
-      activeCategory={null}
-      onCategoryChange={handleCategoryChange}
-      totalOffers={0}
-    />
+    <Header />
   );
 }

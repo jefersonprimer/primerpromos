@@ -1,0 +1,738 @@
+{
+  "product": {
+    "id": "12547939",
+    "name": "Celular Samsung Galaxy S24 Ultra 5G 256GB 12 GB",
+    "countOfComments": 0,
+    "productSeries": "",
+    "image": "",
+    "minPrice": 0,
+    "maxPrice": 0,
+    "rating": 4.8,
+    "stores": 0,
+    "saved": false,
+    "adultContent": false,
+    "alertNotify": false,
+    "alertLowerBound": 0,
+    "alertUpperBound": 0,
+    "alertStepSize": 0,
+    "alertSuggestedValue": 0,
+    "seoUrl": "",
+    "categoryId": 0,
+    "priceHistorySet": false,
+    "status": "Active",
+    "mainImageId": 0,
+    "popularity": 0,
+    "loweredSeal": false,
+    "description": "A Samsung traz o sistema operacional Android no Smartphone Samsung Galaxy S24 Ultra 256GB 12GB RAM. A tela de tecnologia Dynamic AMOLED 2x conta com 6.8\" em resolução QHD+. Com resolução 8K em vídeos, a câmera deste Galaxy também possui os recursos de Câmera Quádrupla, Flash, Modo Noturno, Modo Retrato. Este Galaxy possui uma bateria com capacidade de 5000mAh. Este modelo de celular tem uma memória RAM de 12.0GB. ",
+    "creationDate": "2024-01-16T16:52:06.064-0300"
+  },
+  "videos": [],
+  "offers": [],
+  "availableOfferOrders": [],
+  "countOffers": 0,
+  "offerOrder": "",
+  "attributes": [
+    {
+      "group": "Informações Básicas",
+      "values": [
+        {
+          "categoryAttributeId": -1,
+          "name": "Marca",
+          "values": [
+            "Samsung"
+          ],
+          "attributeValues": [
+            {
+              "name": "Samsung",
+              "filterUrl": "/celular/samsung"
+            }
+          ]
+        },
+        {
+          "categoryAttributeId": -1,
+          "name": "Ano de Lançamento",
+          "values": [
+            "2024"
+          ],
+          "attributeValues": [
+            {
+              "name": "2024",
+              "filterUrl": null
+            }
+          ]
+        },
+        {
+          "categoryAttributeId": -1,
+          "name": "Linha",
+          "values": [
+            "Galaxy"
+          ],
+          "attributeValues": [
+            {
+              "name": "Galaxy",
+              "filterUrl": "/celular/linha-galaxy"
+            }
+          ]
+        },
+        {
+          "categoryAttributeId": -1,
+          "name": "Série",
+          "values": [
+            "S24 Ultra 5G"
+          ],
+          "attributeValues": [
+            {
+              "name": "S24 Ultra 5G",
+              "filterUrl": "/celular/serie-s24-ultra-5g"
+            }
+          ]
+        },
+        {
+          "categoryAttributeId": -1,
+          "name": "Tipo de Aparelho",
+          "values": [
+            "Smartphone"
+          ],
+          "attributeValues": [
+            {
+              "name": "Smartphone",
+              "filterUrl": null
+            }
+          ]
+        },
+        {
+          "categoryAttributeId": -1,
+          "name": "Quantidade de Chip",
+          "values": [
+            "2 Chips"
+          ],
+          "attributeValues": [
+            {
+              "name": "2 Chips",
+              "filterUrl": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Câmera",
+      "values": [
+        {
+          "categoryAttributeId": -1,
+          "name": "Resolução da Câmera Frontal",
+          "values": [
+            "12.0 MP"
+          ],
+          "attributeValues": [
+            {
+              "name": "12.0 MP",
+              "filterUrl": null
+            }
+          ]
+        },
+        {
+          "categoryAttributeId": -1,
+          "name": "Abertura da Câmera Frontal",
+          "values": [
+            "f/2.2"
+          ],
+          "attributeValues": [
+            {
+              "name": "f/2.2",
+              "filterUrl": null
+            }
+          ]
+        },
+        {
+          "categoryAttributeId": -1,
+          "name": "Filma em(Câmera Frontal)",
+          "values": [
+            "4K"
+          ],
+          "attributeValues": [
+            {
+              "name": "4K",
+              "filterUrl": null
+            }
+          ]
+        },
+        {
+          "categoryAttributeId": -1,
+          "name": "Filma em(Câmera Traseira)",
+          "values": [
+            "8K"
+          ],
+          "attributeValues": [
+            {
+              "name": "8K",
+              "filterUrl": "/celular/8k"
+            }
+          ]
+        },
+        {
+          "categoryAttributeId": -1,
+          "name": "Diferenciais da Câmera",
+          "values": [
+            "Câmera Quádrupla",
+            "Flash",
+            "Modo Noturno",
+            "Modo Retrato"
+          ],
+          "attributeValues": [
+            {
+              "name": "Câmera Quádrupla",
+              "filterUrl": "/celular/camera-quadrupla"
+            },
+            {
+              "name": "Flash",
+              "filterUrl": "/celular/flash"
+            },
+            {
+              "name": "Modo Noturno",
+              "filterUrl": "/celular/modo-noturno"
+            },
+            {
+              "name": "Modo Retrato",
+              "filterUrl": "/celular/modo-retrato"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Processador, Memória RAM e Armazenamento",
+      "values": [
+        {
+          "categoryAttributeId": -1,
+          "name": "Sistema Operacional",
+          "values": [
+            "Android 14"
+          ],
+          "attributeValues": [
+            {
+              "name": "Android 14",
+              "filterUrl": "/celular/android-14"
+            }
+          ]
+        },
+        {
+          "categoryAttributeId": -1,
+          "name": "Memória Ram",
+          "values": [
+            "12.0"
+          ],
+          "attributeValues": [
+            {
+              "name": "12.0",
+              "unit": "GB",
+              "filterUrl": "/celular/memoria-12-gb"
+            }
+          ]
+        },
+        {
+          "categoryAttributeId": -1,
+          "name": "Memória Interna",
+          "values": [
+            "256GB"
+          ],
+          "attributeValues": [
+            {
+              "name": "256GB",
+              "filterUrl": "/celular/armazenamento-interno-256gb"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Bateria",
+      "values": [
+        {
+          "categoryAttributeId": -1,
+          "name": "Capacidade da Bateria",
+          "values": [
+            "5000"
+          ],
+          "attributeValues": [
+            {
+              "name": "5000",
+              "unit": "mAh",
+              "filterUrl": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Tela",
+      "values": [
+        {
+          "categoryAttributeId": -1,
+          "name": "Tipo de Tela",
+          "values": [
+            "Dynamic AMOLED 2x"
+          ],
+          "attributeValues": [
+            {
+              "name": "Dynamic AMOLED 2x",
+              "filterUrl": null
+            }
+          ]
+        },
+        {
+          "categoryAttributeId": -1,
+          "name": "Tamanho da Tela",
+          "values": [
+            "6.8"
+          ],
+          "attributeValues": [
+            {
+              "name": "6.8",
+              "unit": "\"",
+              "filterUrl": "/celular/6-8-polegadas"
+            }
+          ]
+        },
+        {
+          "categoryAttributeId": -1,
+          "name": "Resolução da Tela",
+          "values": [
+            "QHD+"
+          ],
+          "attributeValues": [
+            {
+              "name": "QHD+",
+              "filterUrl": null
+            }
+          ]
+        },
+        {
+          "categoryAttributeId": -1,
+          "name": "Taxa de Atualização",
+          "values": [
+            "120.0"
+          ],
+          "attributeValues": [
+            {
+              "name": "120.0",
+              "unit": "Hz",
+              "filterUrl": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Conectividade e Recursos",
+      "values": [
+        {
+          "categoryAttributeId": -1,
+          "name": "Acesso à Internet",
+          "values": [
+            "5G",
+            "Wi-Fi Dual-band",
+            "Wi-Fi 6"
+          ],
+          "attributeValues": [
+            {
+              "name": "5G",
+              "filterUrl": "/celular/5g"
+            },
+            {
+              "name": "Wi-Fi Dual-band",
+              "filterUrl": "/celular/wi-fi-dual-band"
+            },
+            {
+              "name": "Wi-Fi 6",
+              "filterUrl": "/celular/wi-fi-6"
+            }
+          ]
+        },
+        {
+          "categoryAttributeId": -1,
+          "name": "Conectividade",
+          "values": [
+            "Bluetooth",
+            "NFC",
+            "OTG",
+            "USB Type-C"
+          ],
+          "attributeValues": [
+            {
+              "name": "Bluetooth",
+              "filterUrl": "/celular/conexao-bluetooth"
+            },
+            {
+              "name": "NFC",
+              "filterUrl": "/celular/nfc"
+            },
+            {
+              "name": "OTG",
+              "filterUrl": "/celular/otg"
+            },
+            {
+              "name": "USB Type-C",
+              "filterUrl": "/celular/usb-type-c"
+            }
+          ]
+        },
+        {
+          "categoryAttributeId": -1,
+          "name": "Recursos e Funções",
+          "values": [
+            "Acelerômetro",
+            "Leitor Biométrico na Tela",
+            "Giroscópio",
+            "Resistente à água IP68"
+          ],
+          "attributeValues": [
+            {
+              "name": "Acelerômetro",
+              "filterUrl": "/celular/acelerometro"
+            },
+            {
+              "name": "Leitor Biométrico na Tela",
+              "filterUrl": "/celular/leitor-biometrico-na-tela"
+            },
+            {
+              "name": "Giroscópio",
+              "filterUrl": "/celular/giroscopio"
+            },
+            {
+              "name": "Resistente à água IP68",
+              "filterUrl": "/celular/resistente-a-agua-ip68"
+            }
+          ]
+        },
+        {
+          "categoryAttributeId": -1,
+          "name": "Diferenciais desse Produto",
+          "values": [
+            "Gorilla Glass"
+          ],
+          "attributeValues": [
+            {
+              "name": "Gorilla Glass",
+              "filterUrl": "/celular/resistente-a-arranhoes"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "categoryId": 7,
+  "categoryName": "Celular e Smartphone",
+  "countOfComments": 916,
+  "mediaImages": [
+    {
+      "type": "PRODUCT_ZOOM",
+      "thumbUrl": "https://i.zst.com.br/thumbs/12/30/17/-1202498267.jpg",
+      "url": "https://i.zst.com.br/thumbs/12/30/17/-1202498267.jpg",
+      "name": "Smartphone",
+      "description": null
+    },
+    {
+      "type": "PRODUCT_ZOOM",
+      "thumbUrl": "https://i.zst.com.br/thumbs/12/3b/17/-1202498964.jpg",
+      "url": "https://i.zst.com.br/thumbs/12/3b/17/-1202498964.jpg",
+      "name": "Smartphone",
+      "description": null
+    },
+    {
+      "type": "PRODUCT_ZOOM",
+      "thumbUrl": "https://i.zst.com.br/thumbs/12/27/17/-1202498928.jpg",
+      "url": "https://i.zst.com.br/thumbs/12/27/17/-1202498928.jpg",
+      "name": "Smartphone",
+      "description": null
+    },
+    {
+      "type": "PRODUCT_ZOOM",
+      "thumbUrl": "https://i.zst.com.br/thumbs/12/d/17/-1202498897.jpg",
+      "url": "https://i.zst.com.br/thumbs/12/d/17/-1202498897.jpg",
+      "name": "Smartphone",
+      "description": null
+    },
+    {
+      "type": "PRODUCT_ZOOM",
+      "thumbUrl": "https://i.zst.com.br/thumbs/12/37/17/-1202499064.jpg",
+      "url": "https://i.zst.com.br/thumbs/12/37/17/-1202499064.jpg",
+      "name": "Smartphone",
+      "description": null
+    },
+    {
+      "type": "PRODUCT_ZOOM",
+      "thumbUrl": "https://i.zst.com.br/thumbs/12/5/17/-1202498988.jpg",
+      "url": "https://i.zst.com.br/thumbs/12/5/17/-1202498988.jpg",
+      "name": "Smartphone",
+      "description": null
+    },
+    {
+      "type": "PRODUCT_ZOOM",
+      "thumbUrl": "https://i.zst.com.br/thumbs/12/f/17/-1202498477.jpg",
+      "url": "https://i.zst.com.br/thumbs/12/f/17/-1202498477.jpg",
+      "name": "Smartphone",
+      "description": null
+    },
+    {
+      "type": "PRODUCT_ZOOM",
+      "thumbUrl": "https://i.zst.com.br/thumbs/12/19/17/-1202498499.jpg",
+      "url": "https://i.zst.com.br/thumbs/12/19/17/-1202498499.jpg",
+      "name": "Smartphone",
+      "description": null
+    },
+    {
+      "type": "PRODUCT_ZOOM",
+      "thumbUrl": "https://i.zst.com.br/thumbs/12/3d/17/-1202498542.jpg",
+      "url": "https://i.zst.com.br/thumbs/12/3d/17/-1202498542.jpg",
+      "name": "Smartphone",
+      "description": null
+    },
+    {
+      "type": "PRODUCT_ZOOM",
+      "thumbUrl": "https://i.zst.com.br/thumbs/12/11/17/-1202498589.jpg",
+      "url": "https://i.zst.com.br/thumbs/12/11/17/-1202498589.jpg",
+      "name": "Smartphone",
+      "description": null
+    },
+    {
+      "type": "PRODUCT_ZOOM",
+      "thumbUrl": "https://i.zst.com.br/thumbs/12/2b/17/-1202498616.jpg",
+      "url": "https://i.zst.com.br/thumbs/12/2b/17/-1202498616.jpg",
+      "name": "Smartphone",
+      "description": null
+    }
+  ],
+  "commentOrder": "NONE",
+  "availableCommentOrders": [],
+  "comments": [
+    {
+      "id": 0,
+      "userName": "Nilton",
+      "dislikeCount": 0,
+      "likeCount": 0,
+      "dateCreated": "2025-06-02T21:00:00-03:00",
+      "text": "Aparelho ótimo. Dentro das expectativas. Chegou antes do prazo e muito bem embalado.",
+      "rating": 5,
+      "title": "Ótimo aparelho.",
+      "isPositive": true,
+      "external": false,
+      "offerActive": false,
+      "offerId": 1238408431,
+      "merchantId": 9385,
+      "merchantName": "Amazon",
+      "merchantLogo": "https://s.zst.com.br/prod/cupons/thumbs/46/1f/32/720266555.jpg"
+    },
+    {
+      "id": 0,
+      "userName": "Luu",
+      "dislikeCount": 0,
+      "likeCount": 0,
+      "dateCreated": "2025-05-31T21:00:00-03:00",
+      "text": "o Samsung Galaxy S24 Ultra 5G me impressionou pela sua tela deslumbrante de 6,8 polegadas, que oferece cores vibrantes e uma experiência visual incomparável. O desempenho é fluido, graças ao processador Snapdragon 8 Gen 3, e a bateria de 5000mAh garante que eu consiga passar o dia inteiro sem me preocupar com recargas. A câmera, sem dúvida, é um dos maiores destaques, entregando fotos de altíssima qualidade, especialmente em condições de baixa luminosidade, algo que muitos usuários valorizam. Apesar de seu preço elevado, os recursos que ele oferece justificam o investimento. A popularidade entre os consumidores também é um reflexo do que este dispositivo entrega.<br>",
+      "rating": 5,
+      "title": "Desempenho, Câmera e Tela Incríveis",
+      "isPositive": true,
+      "external": false,
+      "offerActive": false,
+      "offerId": 1238408431,
+      "merchantId": 9385,
+      "merchantName": "Amazon",
+      "merchantLogo": "https://s.zst.com.br/prod/cupons/thumbs/46/1f/32/720266555.jpg"
+    },
+    {
+      "id": 0,
+      "userName": "Claudia",
+      "dislikeCount": 0,
+      "likeCount": 0,
+      "dateCreated": "2025-05-22T21:00:00-03:00",
+      "text": "Celular perfeito. Não deixa nada a desejar.A câmera é um expetáculo.Amei<br>",
+      "rating": 5,
+      "title": "Celular excelente",
+      "isPositive": true,
+      "external": false,
+      "offerActive": false,
+      "offerId": 1238408431,
+      "merchantId": 9385,
+      "merchantName": "Amazon",
+      "merchantLogo": "https://s.zst.com.br/prod/cupons/thumbs/46/1f/32/720266555.jpg"
+    },
+    {
+      "id": 0,
+      "userName": "Henrique",
+      "dislikeCount": 0,
+      "likeCount": 0,
+      "dateCreated": "2025-05-09T21:00:00-03:00",
+      "text": "Celular espetacular,  chegou muito bem embalado.",
+      "rating": 5,
+      "title": "Celular top",
+      "isPositive": true,
+      "external": false,
+      "offerActive": false,
+      "offerId": 1238408431,
+      "merchantId": 9385,
+      "merchantName": "Amazon",
+      "merchantLogo": "https://s.zst.com.br/prod/cupons/thumbs/46/1f/32/720266555.jpg"
+    },
+    {
+      "id": 0,
+      "userName": "NADI",
+      "dislikeCount": 0,
+      "likeCount": 0,
+      "dateCreated": "2025-05-06T21:00:00-03:00",
+      "text": "O celular é maravilhoso. Só acho que deveriam usar plástico bolha dentro da caixa pois a caixa do celular vem solta dentro de uma caixa bem maior, o que pode danifica o celular dentro. Também não gostei pq depois que comprei o preço caiu muito, logo na mesma semana.<br>",
+      "rating": 5,
+      "title": "Celular perfeito",
+      "isPositive": true,
+      "external": false,
+      "offerActive": false,
+      "offerId": 1238408431,
+      "merchantId": 9385,
+      "merchantName": "Amazon",
+      "merchantLogo": "https://s.zst.com.br/prod/cupons/thumbs/46/1f/32/720266555.jpg"
+    },
+    {
+      "id": 0,
+      "userName": "Leonardo",
+      "dislikeCount": 0,
+      "likeCount": 0,
+      "dateCreated": "2025-03-07T21:00:00-03:00",
+      "text": "Celular bom e com ótimo desempenho. Única desvantagem é que ele tende a ser um pouco mais pesado e mais grosso que alguns modelos.",
+      "rating": 5,
+      "title": "Ótimo aparelho com poucas desvantagens",
+      "isPositive": true,
+      "external": false,
+      "offerActive": false,
+      "offerId": 1238408431,
+      "merchantId": 9385,
+      "merchantName": "Amazon",
+      "merchantLogo": "https://s.zst.com.br/prod/cupons/thumbs/46/1f/32/720266555.jpg"
+    },
+    {
+      "id": 0,
+      "userName": "Cliente",
+      "dislikeCount": 0,
+      "likeCount": 0,
+      "dateCreated": "2025-03-03T21:00:00-03:00",
+      "text": "O produto dispensa comentários. Tudo nele de de altíssima qualidade: RAM, ROM, câmera, processador...<br>",
+      "rating": 5,
+      "title": "Excelente custo benefício",
+      "isPositive": true,
+      "external": false,
+      "offerActive": false,
+      "offerId": 1238408431,
+      "merchantId": 9385,
+      "merchantName": "Amazon",
+      "merchantLogo": "https://s.zst.com.br/prod/cupons/thumbs/46/1f/32/720266555.jpg"
+    },
+    {
+      "id": 0,
+      "userName": "Arthur",
+      "dislikeCount": 0,
+      "likeCount": 0,
+      "dateCreated": "2025-02-25T21:00:00-03:00",
+      "text": "Ótima experiência de compra. Um excelente produto, funcionando perfeitamente, e com entrega rápida.  SOBRE O APARELHO:  Mesmo com o lançamento do Galaxy S25 Ultra, o S24 Ultra mantém seu lugar no topo.  Na minha opinião, tem design superior ao S25 Ultra: mais sutil e sofisticado; com bordas retas e acabamento fosco, transmite uma aura de luxo funcional.  Com o Snapdragon 8 Gen 3, 12 GB de RAM, e 120 Hz tudo flui sem engasgos.  O sistema de câmeras do S24 Ultra é uma aula de versatilidade, e não perde para nenhum IPhone:  - Sensor de 200 MP para fotos ultra-detalhadas, mesmo em recortes extremos.  - Telefoto de 10 MP com zoom óptico de 5x, mantendo nitidez em distância.  - Ultrawide de 12 MP para capturar paisagens sem distorção.  - Câmera selfie de 12 MP com HDR inteligente.  A bateria de 5.000 mAh pode durar dois dias com uso moderado e aguenta praticamente um dia inteiro em uso intensivo.  Como o S25 Ultra traz só incrementos marginais, o S24 Ultra fica como o melhor, já que entrega 90% do que o sucessor por um preço muito mais em conta.  🌟 Nota Final: 10/10. O padrão-ouro dos smartphones, ontem, hoje e por muito tempo ainda.",
+      "rating": 5,
+      "title": "Continua Reinando como o Melhor Smartphone do Mundo",
+      "isPositive": true,
+      "external": false,
+      "offerActive": false,
+      "offerId": 1238408431,
+      "merchantId": 9385,
+      "merchantName": "Amazon",
+      "merchantLogo": "https://s.zst.com.br/prod/cupons/thumbs/46/1f/32/720266555.jpg"
+    },
+    {
+      "id": 0,
+      "userName": "Ana",
+      "dislikeCount": 0,
+      "likeCount": 0,
+      "dateCreated": "2024-11-01T21:00:00-03:00",
+      "text": "A entrega foi mais rápida que o prazo da Amazon. O celular é incrível, super rápido e tem bastante funcionalidades interessantes. Até o momento não decepciona.",
+      "rating": 5,
+      "title": "O celular é fantástico",
+      "isPositive": true,
+      "external": false,
+      "offerActive": false,
+      "offerId": 1238408431,
+      "merchantId": 9385,
+      "merchantName": "Amazon",
+      "merchantLogo": "https://s.zst.com.br/prod/cupons/thumbs/46/1f/32/720266555.jpg"
+    },
+    {
+      "id": 0,
+      "userName": "Tcastello",
+      "dislikeCount": 0,
+      "likeCount": 0,
+      "dateCreated": "2024-10-23T21:00:00-03:00",
+      "text": "Smart TOP demais, tudo nele é ótimo, velocidade de processamento, câmera, tela, armazenamento, qualidade do material....tudo é top",
+      "rating": 5,
+      "title": "Smart TOP",
+      "isPositive": true,
+      "external": false,
+      "offerActive": false,
+      "offerId": 1238408431,
+      "merchantId": 9385,
+      "merchantName": "Amazon",
+      "merchantLogo": "https://s.zst.com.br/prod/cupons/thumbs/46/1f/32/720266555.jpg"
+    }
+  ],
+  "commentsPageSize": 0,
+  "hasMediaGallery": false,
+  "minPriceInstallments": 0,
+  "minPriceInstallmentValue": 0,
+  "priceHistorySet": false,
+  "images": [],
+  "largeImages": [],
+  "brandOfProduct": {
+    "id": "",
+    "name": "",
+    "filterUrl": "",
+    "alias": ""
+  },
+  "brand": "",
+  "model": "",
+  "attributesIdsWithHint": [],
+  "shareInfo": {
+    "title": "",
+    "url": ""
+  },
+  "appIndexing": {
+    "title": "",
+    "description": "",
+    "keywords": [],
+    "deepLink": "",
+    "webURL": ""
+  },
+  "zsearchViewAlsoProducts": [],
+  "breadcrumbs": [
+    {
+      "active": true,
+      "category_rank_type": "CAE",
+      "id": 7,
+      "media_id": "1917453423",
+      "name": "Celular e Smartphone",
+      "popularity": 34127827,
+      "slug": "celular",
+      "strategic": false,
+      "type": "PRODUCT_LEAF"
+    },
+    {
+      "active": true,
+      "category_rank_type": "LONGTAIL",
+      "id": 348,
+      "media_id": "1917453423",
+      "name": "Celulares e Telefones",
+      "popularity": 30684359,
+      "slug": "celulares-e-telefones",
+      "strategic": false,
+      "type": "BRANCH"
+    }
+  ],
+  "externalReviewsUrl": "https://www.amazon.com.br/product-reviews/B0CQD912YR",
+  "tags": [],
+  "stamps": [
+    "escolha-do-editor"
+  ],
+  "ranking": 2
+}

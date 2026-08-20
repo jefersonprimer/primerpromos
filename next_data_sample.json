@@ -1,0 +1,5221 @@
+{
+  "props": {
+    "pageProps": {
+      "route": {
+        "id": "product_api_12547939",
+        "entityType": "product",
+        "entityID": "12547939",
+        "canonical": "/celular/smartphone-samsung-galaxy-s24-ultra-5g-256gb-camera-quadrupla",
+        "searchParameters": {},
+        "seo": {
+          "canonical": "/celular/smartphone-samsung-galaxy-s24-ultra-5g-256gb-camera-quadrupla"
+        }
+      },
+      "page": {
+        "productID": "12547939",
+        "banner": {
+          "id": "6d70bdfd-5755-419c-bd04-4f611f8be7bf",
+          "banner_name": "Banner Consignado Bpan - Buscapé Prod",
+          "image_desktop": {
+            "id": 30170,
+            "name": "Prod - Banner prod - Incentivo Credito Consignado - Desk 328x95.webp",
+            "width": 960,
+            "height": 278,
+            "formats": {
+              "medium": {
+                "ext": ".webp",
+                "url": "https://s.zst.com.br/prod/brickz/medium_Prod_Banner_prod_Incentivo_Credito_Consignado_Desk_328x95_6457865c64.webp",
+                "hash": "medium_Prod_Banner_prod_Incentivo_Credito_Consignado_Desk_328x95_6457865c64",
+                "mime": "image/webp",
+                "name": "medium_Prod - Banner prod - Incentivo Credito Consignado - Desk 328x95.webp",
+                "size": 172.42,
+                "width": 750,
+                "height": 217
+              },
+              "small": {
+                "ext": ".webp",
+                "url": "https://s.zst.com.br/prod/brickz/small_Prod_Banner_prod_Incentivo_Credito_Consignado_Desk_328x95_6457865c64.webp",
+                "hash": "small_Prod_Banner_prod_Incentivo_Credito_Consignado_Desk_328x95_6457865c64",
+                "mime": "image/webp",
+                "name": "small_Prod - Banner prod - Incentivo Credito Consignado - Desk 328x95.webp",
+                "size": 82.7,
+                "width": 500,
+                "height": 145
+              },
+              "thumbnail": {
+                "ext": ".webp",
+                "url": "https://s.zst.com.br/prod/brickz/thumbnail_Prod_Banner_prod_Incentivo_Credito_Consignado_Desk_328x95_6457865c64.webp",
+                "hash": "thumbnail_Prod_Banner_prod_Incentivo_Credito_Consignado_Desk_328x95_6457865c64",
+                "mime": "image/webp",
+                "name": "thumbnail_Prod - Banner prod - Incentivo Credito Consignado - Desk 328x95.webp",
+                "size": 23.47,
+                "width": 245,
+                "height": 71
+              }
+            },
+            "hash": "Prod_Banner_prod_Incentivo_Credito_Consignado_Desk_328x95_6457865c64",
+            "ext": ".webp",
+            "mime": "image/webp",
+            "size": 174.22,
+            "url": "https://s.zst.com.br/prod/brickz/Prod_Banner_prod_Incentivo_Credito_Consignado_Desk_328x95_6457865c64.webp",
+            "provider": "strapi-provider-upload-s3-cdn",
+            "createdAt": "2026-04-15T19:08:30.035Z",
+            "updatedAt": "2026-04-15T19:08:30.035Z"
+          },
+          "image_mobile": {
+            "id": 30171,
+            "name": "Prod - Banner prod - Incentivo Credito Consignado - Mob 328x125.webp",
+            "width": 960,
+            "height": 366,
+            "formats": {
+              "medium": {
+                "ext": ".webp",
+                "url": "https://s.zst.com.br/prod/brickz/medium_Prod_Banner_prod_Incentivo_Credito_Consignado_Mob_328x125_49b0fc63e5.webp",
+                "hash": "medium_Prod_Banner_prod_Incentivo_Credito_Consignado_Mob_328x125_49b0fc63e5",
+                "mime": "image/webp",
+                "name": "medium_Prod - Banner prod - Incentivo Credito Consignado - Mob 328x125.webp",
+                "size": 186.77,
+                "width": 750,
+                "height": 286
+              },
+              "small": {
+                "ext": ".webp",
+                "url": "https://s.zst.com.br/prod/brickz/small_Prod_Banner_prod_Incentivo_Credito_Consignado_Mob_328x125_49b0fc63e5.webp",
+                "hash": "small_Prod_Banner_prod_Incentivo_Credito_Consignado_Mob_328x125_49b0fc63e5",
+                "mime": "image/webp",
+                "name": "small_Prod - Banner prod - Incentivo Credito Consignado - Mob 328x125.webp",
+                "size": 90,
+                "width": 500,
+                "height": 191
+              },
+              "thumbnail": {
+                "ext": ".webp",
+                "url": "https://s.zst.com.br/prod/brickz/thumbnail_Prod_Banner_prod_Incentivo_Credito_Consignado_Mob_328x125_49b0fc63e5.webp",
+                "hash": "thumbnail_Prod_Banner_prod_Incentivo_Credito_Consignado_Mob_328x125_49b0fc63e5",
+                "mime": "image/webp",
+                "name": "thumbnail_Prod - Banner prod - Incentivo Credito Consignado - Mob 328x125.webp",
+                "size": 25.78,
+                "width": 245,
+                "height": 93
+              }
+            },
+            "hash": "Prod_Banner_prod_Incentivo_Credito_Consignado_Mob_328x125_49b0fc63e5",
+            "ext": ".webp",
+            "mime": "image/webp",
+            "size": 192.23,
+            "url": "https://s.zst.com.br/prod/brickz/Prod_Banner_prod_Incentivo_Credito_Consignado_Mob_328x125_49b0fc63e5.webp",
+            "provider": "strapi-provider-upload-s3-cdn",
+            "createdAt": "2026-04-15T19:08:45.02Z",
+            "updatedAt": "2026-04-15T19:08:45.02Z"
+          },
+          "url_desktop": "/lead?oid=1563005771",
+          "url_mobile": "/lead?oid=1563005771",
+          "click_event_name": "Consignado Privado Pan",
+          "area": "product_overview",
+          "from": "2026-08-09T03:00:00Z",
+          "to": "2040-08-06T02:59:00Z",
+          "brand": "buscape"
+        },
+        "leadParams": {
+          "leadChannel": "211",
+          "searchterm": ""
+        },
+        "path": "/celular/smartphone-samsung-galaxy-s24-ultra-5g-256gb-camera-quadrupla?_lc=211",
+        "articles": [
+          {
+            "objectID": "6a5a725f678004001cf914c5",
+            "categoryIDs": [
+              "7"
+            ],
+            "featuredProductsIDs": [
+              "13992512",
+              "13992522"
+            ],
+            "position": 1,
+            "id": "6a5a725f678004001cf914c5",
+            "title": "Galaxy Z Fold8 Ultra: lançamento, ficha técnica e novidades do dobrável premium da Samsung",
+            "slug": "samsung-galaxy-z-fold-8-ultra",
+            "featured": false,
+            "subtitle": "",
+            "excerpt": "Dobrável premium da Samsung chegou mais fino, câmera ultrawide e bateria maior",
+            "url": "https://www.buscape.com.br/celular/conteudo/samsung-galaxy-z-fold-8-ultra",
+            "urls": {
+              "zoom": "",
+              "buscape": "/celular/conteudo/samsung-galaxy-z-fold-8-ultra"
+            },
+            "imageUrl": "https://s.zst.com.br/cms-assets/2026/07/galaxy-z-fold-8-ultra-capa-1.webp",
+            "timestamp": "2026-08-06T21:30:08Z",
+            "tags": [
+              "celular",
+              "Review",
+              "#recomendado"
+            ],
+            "allTags": [
+              {
+                "name": "celular",
+                "slug": "celular"
+              },
+              {
+                "name": "Review",
+                "slug": "review"
+              },
+              {
+                "name": "#brand:buscape",
+                "slug": "hash-brand-buscape"
+              },
+              {
+                "name": "#feature:summary",
+                "slug": "hash-feature-summary"
+              },
+              {
+                "name": "#recomendado",
+                "slug": "hash-recomendado"
+              }
+            ],
+            "primaryTag": {
+              "name": "celular",
+              "slug": "celular"
+            },
+            "author": {
+              "name": "Tatiane Almirante",
+              "slug": "tatiane",
+              "profileImage": "https://s.zst.com.br/cms-assets/2026/04/1776970511303-3.png"
+            },
+            "readingTimeInMinutes": 4,
+            "popularity": 0,
+            "siblingTags": [
+              {
+                "name": "Smartwatch",
+                "slug": "smartwatch"
+              },
+              {
+                "name": "SmartBand",
+                "slug": "smartband"
+              },
+              {
+                "name": "Outros Acessórios para Celular e Smartphone",
+                "slug": "outros-acessorios-para-celular-e-smartphone"
+              },
+              {
+                "name": "Telefone",
+                "slug": "telefone"
+              }
+            ],
+            "redirect": {
+              "zoom": "",
+              "buscape": ""
+            }
+          }
+        ],
+        "smartRecommenderDeviceType": "desktop",
+        "smartRecommenderHits": [
+          {
+            "objectId": "product12759629",
+            "position": 1,
+            "type": "product",
+            "sourceId": "12759629",
+            "name": "Forno Elétrico de Embutir Fischer 48 l Fit Line 34493-9548",
+            "shortName": "Forno Elétrico de Embutir Fischer 48 l Fit Line 34493-9548",
+            "image": "https://i.zst.com.br/thumbs/45/3/13/-1346742670.jpg",
+            "stamps": [
+              "EditorPick"
+            ],
+            "categoryId": "404",
+            "categoryName": "Forno",
+            "categorySeoUrl": "forno",
+            "categoryRankType": "MIDTAIL",
+            "strategic": false,
+            "marketplace": true,
+            "price": 863.22,
+            "rating": 4.5,
+            "storeCount": 9,
+            "url": "/forno/forno-eletrico-de-embutir-fischer-48-litros-branco-fit-line-34493",
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.9234,
+            "hasInterest": true,
+            "bestOffer": {
+              "id": "1290289190",
+              "merchantId": "9385",
+              "merchantName": "Amazon"
+            },
+            "productTags": {
+              "STAMP": [
+                {
+                  "description": "Produto indicado por um dos editores ou especialistas do Buscapé.",
+                  "label": "#escolhadoeditor",
+                  "priority": 21,
+                  "slug": "escolha-do-editor"
+                }
+              ]
+            },
+            "countOfComments": 69
+          },
+          {
+            "objectId": "product4120973",
+            "position": 2,
+            "type": "product",
+            "sourceId": "4120973",
+            "name": "Micro-ondas de Embutir Fischer 25 Litros Fit Line 25873-5617 Inox",
+            "shortName": "Micro-ondas de Embutir Fischer 25 Litros Fit Line 25873-5617 Inox",
+            "image": "https://i.zst.com.br/thumbs/45/17/12/790992564.jpg",
+            "categoryId": "10",
+            "categoryName": "Micro-ondas",
+            "categorySeoUrl": "microondas",
+            "categoryRankType": "MIDTAIL",
+            "strategic": false,
+            "marketplace": true,
+            "price": 1429.9,
+            "rating": 3.9,
+            "storeCount": 10,
+            "url": "/microondas/micro-ondas-de-embutir-fischer-25-litros-fit-line-25873-5617-inox",
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.7003,
+            "hasInterest": true,
+            "bestOffer": {
+              "id": "1258150624",
+              "merchantId": "9385",
+              "merchantName": "Amazon"
+            },
+            "countOfComments": 39
+          },
+          {
+            "objectId": "product12563691",
+            "position": 3,
+            "type": "product",
+            "sourceId": "12563691",
+            "name": "Smartwatch Samsung Galaxy Fit Fit3",
+            "shortName": "Smartwatch Samsung Galaxy Fit Fit3",
+            "image": "https://i.zst.com.br/thumbs/45/1d/12/-1231015973.jpg",
+            "stamps": [
+              "EditorPick"
+            ],
+            "categoryId": "2096",
+            "categoryName": "Smartwatch",
+            "categorySeoUrl": "smartwatch",
+            "categoryRankType": "MIDTAIL",
+            "strategic": false,
+            "marketplace": true,
+            "price": 218.9,
+            "rating": 4.6,
+            "storeCount": 10,
+            "url": "/smartwatch/samsung-galaxy-fit3",
+            "installments": {
+              "amount_months": 9,
+              "price": 25.6,
+              "total_value": 230.4
+            },
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.6515,
+            "hasInterest": true,
+            "bestOffer": {
+              "id": "1507550442",
+              "merchantId": "16108",
+              "merchantName": "KaBuM!"
+            },
+            "productTags": {
+              "STAMP": [
+                {
+                  "description": "Produto indicado por um dos editores ou especialistas do Buscapé.",
+                  "label": "#escolhadoeditor",
+                  "priority": 21,
+                  "slug": "escolha-do-editor"
+                }
+              ]
+            },
+            "countOfComments": 885
+          },
+          {
+            "objectId": "product13480394",
+            "position": 4,
+            "type": "product",
+            "sourceId": "13480394",
+            "name": "Smartwatch Xiaomi Redmi Watch 5 Active Alexa e Chamada, Prata",
+            "shortName": "Smartwatch Xiaomi Redmi Watch 5 Active Alexa e Chamada, Prata",
+            "image": "https://i.zst.com.br/thumbs/45/30/1b/-1448698269.jpg",
+            "stamps": [
+              "EditorPick"
+            ],
+            "categoryId": "2096",
+            "categoryName": "Smartwatch",
+            "categorySeoUrl": "smartwatch",
+            "categoryRankType": "MIDTAIL",
+            "strategic": false,
+            "marketplace": true,
+            "price": 238.07,
+            "rating": 4.6,
+            "storeCount": 14,
+            "url": "/smartwatch/smartwatch-xiaomi-redmi-watch-5-active-alexa-e-chamada-prata",
+            "installments": {
+              "amount_months": 2,
+              "price": 128,
+              "total_value": 256
+            },
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.8815,
+            "hasInterest": true,
+            "bestOffer": {
+              "id": "1562731397",
+              "merchantId": "22905",
+              "merchantName": "Magazine Luiza"
+            },
+            "productTags": {
+              "STAMP": [
+                {
+                  "description": "Produto indicado por um dos editores ou especialistas do Buscapé.",
+                  "label": "#escolhadoeditor",
+                  "priority": 21,
+                  "slug": "escolha-do-editor"
+                }
+              ]
+            },
+            "countOfComments": 204
+          },
+          {
+            "objectId": "product12563916",
+            "position": 5,
+            "type": "product",
+            "sourceId": "12563916",
+            "name": "Forno Elétrico de Embutir Fischer 48 l Fit Line 34493",
+            "shortName": "Forno Elétrico de Embutir Fischer 48 l Fit Line 34493",
+            "image": "https://i.zst.com.br/thumbs/45/13/18/-1237014388.jpg",
+            "categoryId": "404",
+            "categoryName": "Forno",
+            "categorySeoUrl": "forno",
+            "categoryRankType": "MIDTAIL",
+            "strategic": false,
+            "marketplace": true,
+            "price": 849.15,
+            "rating": 4.2,
+            "storeCount": 10,
+            "url": "/forno/forno-eletrico-de-embutir-fischer-fit-line-inox-48l-220v-34493-95486",
+            "installments": {
+              "amount_months": 10,
+              "price": 87.91,
+              "total_value": 879.1
+            },
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.9496,
+            "hasInterest": true,
+            "bestOffer": {
+              "id": "1488856066",
+              "merchantId": "245",
+              "merchantName": "Webcontinental"
+            },
+            "countOfComments": 85
+          },
+          {
+            "objectId": "product11618965",
+            "position": 6,
+            "type": "product",
+            "sourceId": "11618965",
+            "name": "Centrífuga De Roupas Mueller Fit 12,6kg De Roupa Molhada",
+            "shortName": "Centrífuga De Roupas Mueller Fit 12,6kg De Roupa Molhada",
+            "image": "https://i.zst.com.br/thumbs/45/24/39/1969911677.jpg",
+            "stamps": [
+              "EditorPick"
+            ],
+            "categoryId": "1818",
+            "categoryName": "Centrífuga de Roupas",
+            "categorySeoUrl": "centrifuga-roupas",
+            "categoryRankType": "LONGTAIL",
+            "strategic": false,
+            "marketplace": false,
+            "price": 556.33,
+            "rating": 4.7,
+            "storeCount": 7,
+            "url": "/centrifuga-roupas/centrifuga-de-roupas-mueller-fit-12-6kg-de-roupa-molhada",
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0,
+            "hasInterest": true,
+            "bestOffer": {
+              "id": "910241528",
+              "merchantId": "9385",
+              "merchantName": "Amazon"
+            },
+            "productTags": {
+              "STAMP": [
+                {
+                  "description": "Produto indicado por um dos editores ou especialistas do Buscapé.",
+                  "label": "#escolhadoeditor",
+                  "priority": 21,
+                  "slug": "escolha-do-editor"
+                }
+              ]
+            },
+            "countOfComments": 216
+          },
+          {
+            "objectId": "product13993878",
+            "position": 7,
+            "type": "product",
+            "sourceId": "13993878",
+            "name": "Smartwatch Huawei WATCH FIT 4",
+            "shortName": "Smartwatch Huawei WATCH FIT 4",
+            "image": "https://i.zst.com.br/thumbs/45/f/38/-1638116589.jpg",
+            "categoryId": "2096",
+            "categoryName": "Smartwatch",
+            "categorySeoUrl": "smartwatch",
+            "categoryRankType": "MIDTAIL",
+            "strategic": false,
+            "marketplace": false,
+            "price": 779,
+            "storeCount": 6,
+            "url": "/smartwatch/smartwatch-huawei-watch-fit-4",
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.6432,
+            "hasInterest": true,
+            "bestOffer": {
+              "id": "1502181875",
+              "merchantId": "9385",
+              "merchantName": "Amazon"
+            }
+          },
+          {
+            "objectId": "product12483000",
+            "position": 8,
+            "type": "product",
+            "sourceId": "12483000",
+            "name": "Smartwatch Apple Watch Ultra LTE 49,0 mm",
+            "shortName": "Smartwatch Apple Watch Ultra LTE 49,0 mm",
+            "image": "https://i.zst.com.br/thumbs/45/26/f/-952010792.jpg",
+            "stamps": [
+              "EditorPick"
+            ],
+            "categoryId": "2096",
+            "categoryName": "Smartwatch",
+            "categorySeoUrl": "smartwatch",
+            "categoryRankType": "MIDTAIL",
+            "strategic": false,
+            "marketplace": false,
+            "price": 7235.54,
+            "storeCount": 4,
+            "url": "/smartwatch/smartwatch-apple-watch-ultra-4g-49-0-mm",
+            "installments": {
+              "amount_months": 10,
+              "price": 822.22,
+              "total_value": 8222.2
+            },
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.9305,
+            "hasInterest": true,
+            "bestOffer": {
+              "id": "1564122206",
+              "merchantId": "22905",
+              "merchantName": "Magazine Luiza"
+            },
+            "productTags": {
+              "STAMP": [
+                {
+                  "description": "Produto indicado por um dos editores ou especialistas do Buscapé.",
+                  "label": "#escolhadoeditor",
+                  "priority": 21,
+                  "slug": "escolha-do-editor"
+                }
+              ]
+            }
+          },
+          {
+            "objectId": "product13993502",
+            "position": 9,
+            "type": "product",
+            "sourceId": "13993502",
+            "name": "Smartwatch Garmin Forerunner 165",
+            "shortName": "Smartwatch Garmin Forerunner 165",
+            "image": "https://i.zst.com.br/thumbs/45/3d/39/-1609556125.jpg",
+            "categoryId": "2096",
+            "categoryName": "Smartwatch",
+            "categorySeoUrl": "smartwatch",
+            "categoryRankType": "MIDTAIL",
+            "strategic": false,
+            "marketplace": true,
+            "price": 1798.63,
+            "storeCount": 3,
+            "url": "/smartwatch/smartwatch-garmin-forerunner-165-4-gb",
+            "installments": {
+              "amount_months": 10,
+              "price": 193.4,
+              "total_value": 1934
+            },
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.895,
+            "hasInterest": true,
+            "bestOffer": {
+              "id": "1578010402",
+              "merchantId": "22905",
+              "merchantName": "Magazine Luiza"
+            }
+          },
+          {
+            "objectId": "product3105224",
+            "position": 10,
+            "type": "product",
+            "sourceId": "3105224",
+            "name": "Cooktop Fischer Fit Line Tripla chama 26300-57079 5 Bocas Acendimento Superautomático",
+            "shortName": "Cooktop Fischer Fit Line Tripla chama 26300-57079 5 Bocas Acendimento Superautomático",
+            "image": "https://i.zst.com.br/thumbs/45/1c/30/500000013.jpg",
+            "stamps": [
+              "EditorPick"
+            ],
+            "categoryId": "403",
+            "categoryName": "Fogão",
+            "categorySeoUrl": "fogao",
+            "categoryRankType": "CAE",
+            "strategic": false,
+            "marketplace": false,
+            "price": 742.78,
+            "rating": 4.6,
+            "storeCount": 7,
+            "url": "/fogao/cooktop-fischer-fit-line-26300-57079-5-bocas-acendimento-superautomatico",
+            "installments": {
+              "amount_months": 10,
+              "price": 78.64,
+              "total_value": 786.4
+            },
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.6196,
+            "hasInterest": true,
+            "bestOffer": {
+              "id": "1487812371",
+              "merchantId": "245",
+              "merchantName": "Webcontinental"
+            },
+            "productTags": {
+              "STAMP": [
+                {
+                  "description": "Produto indicado por um dos editores ou especialistas do Buscapé.",
+                  "label": "#escolhadoeditor",
+                  "priority": 21,
+                  "slug": "escolha-do-editor"
+                }
+              ]
+            },
+            "countOfComments": 572
+          },
+          {
+            "objectId": "product13992267",
+            "position": 11,
+            "type": "product",
+            "sourceId": "13992267",
+            "name": "Smart TV Mini LED 55\" TCL 4K 55C6K",
+            "shortName": "Smart TV Mini LED 55\" TCL 4K 55C6K",
+            "image": "https://i.zst.com.br/thumbs/45/31/14/-1527525485.jpg",
+            "categoryId": "3",
+            "categoryName": "TV",
+            "categorySeoUrl": "tv",
+            "categoryRankType": "CAE",
+            "strategic": false,
+            "marketplace": true,
+            "price": 3079.12,
+            "storeCount": 9,
+            "url": "/tv/smart-tv-mini-led-55-tcl-4k-55c6k",
+            "installments": {
+              "amount_months": 10,
+              "price": 321.9,
+              "total_value": 3219
+            },
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.8157,
+            "hasInterest": true,
+            "bestOffer": {
+              "id": "1514640548",
+              "merchantId": "245",
+              "merchantName": "Webcontinental"
+            }
+          },
+          {
+            "objectId": "product13994605",
+            "position": 12,
+            "type": "product",
+            "sourceId": "13994605",
+            "name": "Smartwatch Xiaomi Smart Band 10",
+            "shortName": "Smartwatch Xiaomi Smart Band 10",
+            "image": "https://i.zst.com.br/thumbs/45/3/1d/-1728270780.jpg",
+            "categoryId": "2096",
+            "categoryName": "Smartwatch",
+            "categorySeoUrl": "smartwatch",
+            "categoryRankType": "MIDTAIL",
+            "strategic": false,
+            "marketplace": true,
+            "price": 296.38,
+            "storeCount": 9,
+            "url": "/smartwatch/smartwatch-xiaomi-smart-band-10",
+            "installments": {
+              "amount_months": 10,
+              "price": 32.93,
+              "total_value": 329.3
+            },
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.737,
+            "hasInterest": true,
+            "bestOffer": {
+              "id": "1517826939",
+              "merchantId": "16108",
+              "merchantName": "KaBuM!"
+            }
+          },
+          {
+            "objectId": "product13993503",
+            "position": 13,
+            "type": "product",
+            "sourceId": "13993503",
+            "name": "Smartwatch Amazfit Balance 2",
+            "shortName": "Smartwatch Amazfit Balance 2",
+            "image": "https://i.zst.com.br/thumbs/45/24/1a/-1609567815.jpg",
+            "categoryId": "2096",
+            "categoryName": "Smartwatch",
+            "categorySeoUrl": "smartwatch",
+            "categoryRankType": "MIDTAIL",
+            "strategic": false,
+            "marketplace": false,
+            "price": 1456.3,
+            "storeCount": 3,
+            "url": "/smartwatch/smartwatch-amazfit-balance-2-32-gb",
+            "installments": {
+              "amount_months": 10,
+              "price": 161.81,
+              "total_value": 1618.1
+            },
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.9,
+            "hasInterest": true,
+            "bestOffer": {
+              "id": "1578096115",
+              "merchantId": "22905",
+              "merchantName": "Magazine Luiza"
+            }
+          },
+          {
+            "objectId": "product13992938",
+            "position": 14,
+            "type": "product",
+            "sourceId": "13992938",
+            "name": "iPhone 17 256GB",
+            "shortName": "iPhone 17 256GB",
+            "image": "https://i.zst.com.br/thumbs/45/15/19/-1584053110.jpg",
+            "categoryId": "7",
+            "categoryName": "Celular e Smartphone",
+            "categorySeoUrl": "celular",
+            "categoryRankType": "CAE",
+            "strategic": false,
+            "marketplace": true,
+            "price": 5599,
+            "storeCount": 11,
+            "url": "/celular/celular-apple-iphone-17-256gb",
+            "installments": {
+              "amount_months": 10,
+              "price": 699.9,
+              "total_value": 6999
+            },
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.6942,
+            "hasInterest": true,
+            "bestOffer": {
+              "id": "1561489368",
+              "merchantId": "5",
+              "merchantName": "Fast Shop"
+            },
+            "productTags": {
+              "EDITORIAL": [
+                {
+                  "description": "Produto é um dos melhores da sua categoria ou marca.",
+                  "label": "#topdelinha",
+                  "priority": 15,
+                  "slug": "top-de-linha"
+                }
+              ]
+            }
+          },
+          {
+            "objectId": "product8922",
+            "position": 15,
+            "type": "product",
+            "sourceId": "8922",
+            "name": "Geladeira Consul CRD37 Cycle Defrost Duplex 334 Litros",
+            "shortName": "Geladeira Consul CRD37 Cycle Defrost Duplex 334 Litros",
+            "image": "https://i.zst.com.br/thumbs/45/10/14/-852345431.jpg",
+            "stamps": [
+              "EditorPick"
+            ],
+            "categoryId": "8",
+            "categoryName": "Geladeira",
+            "categorySeoUrl": "geladeira",
+            "categoryRankType": "CAE",
+            "strategic": false,
+            "marketplace": false,
+            "price": 1799,
+            "rating": 4.6,
+            "storeCount": 12,
+            "url": "/geladeira/geladeira-consul-334-l-crd37",
+            "installments": {
+              "amount_months": 10,
+              "price": 183.76,
+              "total_value": 1837.6
+            },
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.6377,
+            "hasInterest": true,
+            "bestOffer": {
+              "id": "9413750",
+              "merchantId": "245",
+              "merchantName": "Webcontinental"
+            },
+            "productTags": {
+              "STAMP": [
+                {
+                  "description": "Produto indicado por um dos editores ou especialistas do Buscapé.",
+                  "label": "#escolhadoeditor",
+                  "priority": 21,
+                  "slug": "escolha-do-editor"
+                }
+              ]
+            },
+            "countOfComments": 389
+          },
+          {
+            "objectId": "product12482549",
+            "position": 16,
+            "type": "product",
+            "sourceId": "12482549",
+            "name": "Depurador de Ar Parede Suggar Slim 80 cm DPS18",
+            "shortName": "Depurador de Ar Parede Suggar Slim 80 cm DPS18",
+            "image": "https://i.zst.com.br/thumbs/45/2/14/-897763787.jpg",
+            "categoryId": "394",
+            "categoryName": "Coifa e Depurador de Ar",
+            "categorySeoUrl": "coifa-depurador-ar",
+            "categoryRankType": "LONGTAIL",
+            "strategic": false,
+            "marketplace": true,
+            "price": 365.46,
+            "storeCount": 12,
+            "url": "/coifa-depurador-ar/depurador-de-ar-parede-suggar-slim-80-cm-dps18",
+            "installments": {
+              "amount_months": 10,
+              "price": 40.6,
+              "total_value": 406
+            },
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0,
+            "hasInterest": true,
+            "bestOffer": {
+              "id": "1561700250",
+              "merchantId": "245",
+              "merchantName": "Webcontinental"
+            }
+          },
+          {
+            "objectId": "product13992309",
+            "position": 17,
+            "type": "product",
+            "sourceId": "13992309",
+            "name": "Smart TV QD-Mini LED 65\" TCL 4K 65C6K",
+            "shortName": "Smart TV QD-Mini LED 65\" TCL 4K 65C6K",
+            "image": "https://i.zst.com.br/thumbs/45/2a/35/-1529512796.jpg",
+            "categoryId": "3",
+            "categoryName": "TV",
+            "categorySeoUrl": "tv",
+            "categoryRankType": "CAE",
+            "strategic": false,
+            "marketplace": true,
+            "price": 3695.12,
+            "storeCount": 8,
+            "url": "/tv/smart-tv-qd-mini-led-65-tcl-4k-65c6k",
+            "installments": {
+              "amount_months": 10,
+              "price": 386.3,
+              "total_value": 3863
+            },
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.7594,
+            "hasInterest": true,
+            "bestOffer": {
+              "id": "1514640554",
+              "merchantId": "245",
+              "merchantName": "Webcontinental"
+            }
+          },
+          {
+            "objectId": "product13992430",
+            "position": 18,
+            "type": "product",
+            "sourceId": "13992430",
+            "name": "Ar-Condicionado Split Hi Wall Springer Midea AI Ecomaster 12000 BTUs Frio Inverter 42EZVCA12M5 / 38EZVCA12M5",
+            "shortName": "Ar-Condicionado Split Hi Wall Springer Midea AI Ecomaster 12000 BTUs Frio Inverter 42EZVCA12M5 / 38EZVCA12M5",
+            "image": "https://i.zst.com.br/thumbs/45/29/12/-1541458502.jpg",
+            "categoryId": "383",
+            "categoryName": "Ar-Condicionado",
+            "categorySeoUrl": "ar-condicionado",
+            "categoryRankType": "CAE",
+            "strategic": false,
+            "marketplace": false,
+            "price": 1767.15,
+            "storeCount": 11,
+            "url": "/ar-condicionado/ar-condicionado-split-hi-wall-springer-midea-ai-ecomaster-12000-btus-frio-inverter-42ezvca12m5-38ezvca12m5",
+            "installments": {
+              "amount_months": 10,
+              "price": 180.87,
+              "total_value": 1808.7
+            },
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.9521,
+            "hasInterest": true,
+            "bestOffer": {
+              "id": "1577160583",
+              "merchantId": "245",
+              "merchantName": "Webcontinental"
+            },
+            "productTags": {
+              "EDITORIAL": [
+                {
+                  "description": "Produto tem bom preço diante das suas funcionalidades e recursos.",
+                  "label": "#custobenefício",
+                  "priority": 19,
+                  "slug": "bom-custo-beneficio"
+                }
+              ]
+            }
+          },
+          {
+            "objectId": "product13992314",
+            "position": 19,
+            "type": "product",
+            "sourceId": "13992314",
+            "name": "Smart TV LED 50\" LG 4K UA7500",
+            "shortName": "Smart TV LED 50\" LG 4K UA7500",
+            "image": "https://i.zst.com.br/thumbs/45/b/35/-1529957401.jpg",
+            "categoryId": "3",
+            "categoryName": "TV",
+            "categorySeoUrl": "tv",
+            "categoryRankType": "CAE",
+            "strategic": false,
+            "marketplace": false,
+            "price": 1879.06,
+            "storeCount": 7,
+            "url": "/tv/smart-tv-led-50-lg-4k-ua7500",
+            "installments": {
+              "amount_months": 7,
+              "price": 285.57,
+              "total_value": 1998.99
+            },
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.9609,
+            "hasInterest": true,
+            "bestOffer": {
+              "id": "1565232809",
+              "merchantId": "22905",
+              "merchantName": "Magazine Luiza"
+            }
+          },
+          {
+            "objectId": "product12547939",
+            "position": 20,
+            "type": "product",
+            "sourceId": "12547939",
+            "name": "Celular Samsung Galaxy S24 Ultra 5G 256GB 12 GB",
+            "shortName": "Celular Samsung Galaxy S24 Ultra 5G 256GB 12 GB",
+            "image": "https://i.zst.com.br/thumbs/45/30/17/-1202498267.jpg",
+            "stamps": [
+              "EditorPick"
+            ],
+            "categoryId": "7",
+            "categoryName": "Celular e Smartphone",
+            "categorySeoUrl": "celular",
+            "categoryRankType": "CAE",
+            "strategic": false,
+            "marketplace": false,
+            "price": 3922.55,
+            "rating": 4.8,
+            "storeCount": 4,
+            "url": "/celular/smartphone-samsung-galaxy-s24-ultra-5g-256gb-camera-quadrupla",
+            "loweringPercentage": 0,
+            "competitivenessIndex": 1,
+            "hasInterest": true,
+            "bestOffer": {
+              "id": "1533213464",
+              "merchantId": "1582",
+              "merchantName": "Amazon"
+            },
+            "productTags": {
+              "STAMP": [
+                {
+                  "description": "Produto indicado por um dos editores ou especialistas do Buscapé.",
+                  "label": "#escolhadoeditor",
+                  "priority": 21,
+                  "slug": "escolha-do-editor"
+                }
+              ]
+            },
+            "countOfComments": 916
+          },
+          {
+            "objectId": "product4675722",
+            "position": 21,
+            "type": "product",
+            "sourceId": "4675722",
+            "name": "Panela de Pressão Elétrica 5 Litros - Mondial Master Cooker PE-38",
+            "shortName": "Panela de Pressão Elétrica 5 Litros - Mondial Master Cooker PE-38",
+            "image": "https://i.zst.com.br/thumbs/45/13/f/806010816.jpg",
+            "stamps": [
+              "EditorPick"
+            ],
+            "categoryId": "422",
+            "categoryName": "Panela Elétrica",
+            "categorySeoUrl": "panela-eletrica",
+            "categoryRankType": "MIDTAIL",
+            "strategic": false,
+            "marketplace": true,
+            "price": 356.99,
+            "rating": 4.5,
+            "storeCount": 11,
+            "url": "/panela-eletrica/panela-de-pressao-eletrica-5-litros-mondial-master-cooker-pe38",
+            "installments": {
+              "amount_months": 6,
+              "price": 70,
+              "total_value": 420
+            },
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.6447,
+            "hasInterest": true,
+            "bestOffer": {
+              "id": "1498743007",
+              "merchantId": "6149",
+              "merchantName": "Casa&Vídeo"
+            },
+            "productTags": {
+              "STAMP": [
+                {
+                  "description": "Produto indicado por um dos editores ou especialistas do Buscapé.",
+                  "label": "#escolhadoeditor",
+                  "priority": 21,
+                  "slug": "escolha-do-editor"
+                }
+              ]
+            },
+            "countOfComments": 486
+          },
+          {
+            "objectId": "product13992951",
+            "position": 22,
+            "type": "product",
+            "sourceId": "13992951",
+            "name": "Celular Samsung Galaxy A17 5G 256GB 8 GB",
+            "shortName": "Celular Samsung Galaxy A17 5G 256GB 8 GB",
+            "image": "https://i.zst.com.br/thumbs/45/16/30/-1584401187.jpg",
+            "categoryId": "7",
+            "categoryName": "Celular e Smartphone",
+            "categorySeoUrl": "celular",
+            "categoryRankType": "CAE",
+            "strategic": false,
+            "marketplace": true,
+            "price": 1358.74,
+            "storeCount": 14,
+            "url": "/celular/celular-samsung-galaxy-a17-256gb-8-gb",
+            "installments": {
+              "amount_months": 12,
+              "price": 131.66,
+              "total_value": 1579.92
+            },
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0,
+            "hasInterest": true,
+            "bestOffer": {
+              "id": "1577743576",
+              "merchantId": "22905",
+              "merchantName": "Magazine Luiza"
+            }
+          },
+          {
+            "objectId": "product12547865",
+            "position": 23,
+            "type": "product",
+            "sourceId": "12547865",
+            "name": "Notebook Lenovo IdeaPad 1i Intel Core i5 1235U 15,6\" 8GB SSD 512GB Windows 11 82VY000QBR",
+            "shortName": "Notebook Lenovo IdeaPad 1i Intel Core i5 1235U 15,6\" 8GB SSD 512GB Windows 11 82VY000QBR",
+            "image": "https://i.zst.com.br/thumbs/45/2d/11/-1184528729.jpg",
+            "stamps": [
+              "EditorPick"
+            ],
+            "categoryId": "11",
+            "categoryName": "Notebook",
+            "categorySeoUrl": "notebook",
+            "categoryRankType": "CAE",
+            "strategic": false,
+            "marketplace": false,
+            "price": 2969.1,
+            "rating": 4.7,
+            "storeCount": 4,
+            "url": "/notebook/notebook-lenovo-ideapad-1i-82vy000qbr-intel-core-i5-1235u-15-6-8gb-ssd-512-gb-windows-11",
+            "installments": {
+              "amount_months": 10,
+              "price": 329.9,
+              "total_value": 3299
+            },
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.8,
+            "hasInterest": true,
+            "bestOffer": {
+              "id": "1368477528",
+              "merchantId": "22902",
+              "merchantName": "Magazine Luiza"
+            },
+            "productTags": {
+              "STAMP": [
+                {
+                  "description": "Produto indicado por um dos editores ou especialistas do Buscapé.",
+                  "label": "#escolhadoeditor",
+                  "priority": 21,
+                  "slug": "escolha-do-editor"
+                }
+              ]
+            },
+            "countOfComments": 172
+          },
+          {
+            "objectId": "product5667339",
+            "position": 24,
+            "type": "product",
+            "sourceId": "5667339",
+            "name": "Secador de Cabelo Taiff Style Potência 2000 Watts",
+            "shortName": "Secador de Cabelo Taiff Style Potência 2000 Watts",
+            "image": "https://i.zst.com.br/thumbs/45/1c/38/979602686.jpg",
+            "stamps": [
+              "EditorPick"
+            ],
+            "categoryId": "1235",
+            "categoryName": "Secador de Cabelo",
+            "categorySeoUrl": "secador-cabelo",
+            "categoryRankType": "MIDTAIL",
+            "strategic": false,
+            "marketplace": true,
+            "price": 199,
+            "rating": 4.8,
+            "storeCount": 8,
+            "url": "/secador-cabelo/secador-de-cabelo-taiff-style-potencia-2000-watts",
+            "installments": {
+              "amount_months": 5,
+              "price": 41.89,
+              "total_value": 209.45
+            },
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.6922,
+            "hasInterest": true,
+            "bestOffer": {
+              "id": "1382937381",
+              "merchantId": "22906",
+              "merchantName": "Magazine Luiza"
+            },
+            "productTags": {
+              "RESERVED": [
+                {
+                  "description": "Lista de produtos com maior criação de alerta pelos usuários nas categorias long tail",
+                  "label": "Aceleração de Alertas Long Tail",
+                  "priority": 1,
+                  "slug": "aceleracao-de-alertas-long-tail"
+                }
+              ],
+              "STAMP": [
+                {
+                  "description": "Produto indicado por um dos editores ou especialistas do Buscapé.",
+                  "label": "#escolhadoeditor",
+                  "priority": 21,
+                  "slug": "escolha-do-editor"
+                }
+              ]
+            },
+            "countOfComments": 968
+          },
+          {
+            "objectId": "product13461841",
+            "position": 25,
+            "type": "product",
+            "sourceId": "13461841",
+            "name": "Fritadeira Elétrica Sem óleo Oven Air Fryer Mondial AFON-12L 12l Capacidade do Cesto 5l",
+            "shortName": "Fritadeira Elétrica Sem óleo Oven Air Fryer Mondial AFON-12L 12l Capacidade do Cesto 5l",
+            "image": "https://i.zst.com.br/thumbs/45/33/36/-1448645065.jpg",
+            "stamps": [
+              "EditorPick"
+            ],
+            "categoryId": "408",
+            "categoryName": "Fritadeira Elétrica",
+            "categorySeoUrl": "fritadeira",
+            "categoryRankType": "MIDTAIL",
+            "strategic": false,
+            "marketplace": true,
+            "price": 484.49,
+            "rating": 4.7,
+            "storeCount": 11,
+            "url": "/fritadeira/fritadeira-eletrica-forno-oven-12l-mondial-afon-12l-bi",
+            "installments": {
+              "amount_months": 6,
+              "price": 95,
+              "total_value": 570
+            },
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.4358,
+            "hasInterest": true,
+            "bestOffer": {
+              "id": "1500905011",
+              "merchantId": "6149",
+              "merchantName": "Casa&Vídeo"
+            },
+            "productTags": {
+              "STAMP": [
+                {
+                  "description": "Produto indicado por um dos editores ou especialistas do Buscapé.",
+                  "label": "#escolhadoeditor",
+                  "priority": 21,
+                  "slug": "escolha-do-editor"
+                }
+              ]
+            },
+            "countOfComments": 519
+          }
+        ],
+        "loginUrl": "https://login.buscape.com.br/login",
+        "logoutUrl": "https://login.buscape.com.br/api/login/logout"
+      },
+      "deviceType": "desktop",
+      "isNovaProd": false,
+      "isVelhaProd": false
+    },
+    "hasError": false,
+    "enabledGTM": true,
+    "enabledGAU": true,
+    "headerParams": {
+      "id": "b1488995-4dd6-4aef-95aa-d29d5bd3482b",
+      "name": "[Produção] Buscape ",
+      "brand": "buscape",
+      "items": [
+        {
+          "title": "Categorias",
+          "icon": "hamburguer",
+          "openNewTab": false,
+          "items": [
+            {
+              "title": "Celulares",
+              "openNewTab": false,
+              "highlighted": true,
+              "items": [
+                {
+                  "title": "iPhone",
+                  "url": "/celular/iphone",
+                  "openNewTab": true,
+                  "highlighted": true
+                },
+                {
+                  "title": "iPhone 17",
+                  "url": "/busca/iphone+17",
+                  "openNewTab": true
+                },
+                {
+                  "title": "iPhone 17 Pro Max",
+                  "url": "/busca/iphone+17+pro+max",
+                  "openNewTab": true
+                },
+                {
+                  "title": "iPhone 16",
+                  "url": "/busca/iphone+16",
+                  "openNewTab": true
+                },
+                {
+                  "title": "iPhone 15",
+                  "url": "/busca/iphone+15",
+                  "openNewTab": true
+                },
+                {
+                  "title": "iPhone 14",
+                  "url": "/busca/iphone+14",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Celulares Samsung",
+                  "url": "/celular/samsung",
+                  "openNewTab": false,
+                  "highlighted": true
+                },
+                {
+                  "title": "Galaxy S25",
+                  "url": "/busca/s25",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Galaxy S24",
+                  "url": "/busca/s24",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Galaxy A56",
+                  "url": "/busca/a56",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Galaxy A54",
+                  "url": "/busca/a54",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Celulares Motorola",
+                  "url": "/celular/motorola",
+                  "openNewTab": false,
+                  "highlighted": true
+                },
+                {
+                  "title": "Moto G",
+                  "url": "/celular/motorola/linha-moto-g",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Moto E",
+                  "url": "/celular/motorola/linha-moto-e",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Celulares Xiaomi",
+                  "url": "/celular/xiaomi",
+                  "openNewTab": false,
+                  "highlighted": true
+                },
+                {
+                  "title": "Xiaomi Pocophone",
+                  "url": "/celular/xiaomi/pocophone",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Xiaomi 17 Pro Max",
+                  "url": "/busca/xiaomi+17+pro+max",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Ver mais Celulares",
+                  "url": "/celular",
+                  "openNewTab": true,
+                  "highlighted": true
+                }
+              ]
+            },
+            {
+              "title": "TVs",
+              "openNewTab": false,
+              "highlighted": true,
+              "items": [
+                {
+                  "title": "Smart TVs",
+                  "url": "/tv/smart-tv",
+                  "openNewTab": true
+                },
+                {
+                  "title": "TV LED",
+                  "url": "/tv/led",
+                  "openNewTab": true
+                },
+                {
+                  "title": "TV 32 polegadas",
+                  "url": "/tv/tamanho-32-polegadas",
+                  "openNewTab": true
+                },
+                {
+                  "title": "TV 43 polegadas",
+                  "url": "/tv/tamanho-43-polegadas",
+                  "openNewTab": true
+                },
+                {
+                  "title": "TV 50 polegadas",
+                  "url": "/tv/tamanho-50-polegadas",
+                  "openNewTab": true
+                },
+                {
+                  "title": "TV 55 polegadas",
+                  "url": "/tv/tamanho-55-polegadas",
+                  "openNewTab": true
+                },
+                {
+                  "title": "TV 65 polegadas",
+                  "url": "/tv/tamanho-65-polegadas",
+                  "openNewTab": true
+                },
+                {
+                  "title": "TV +70 polegadas",
+                  "url": "/tv/tamanho-70-polegadas-ou-mais",
+                  "openNewTab": true
+                },
+                {
+                  "title": "TV 98 polegadas",
+                  "url": "/busca/tv+98+polegadas",
+                  "openNewTab": true
+                },
+                {
+                  "title": "TV 4K",
+                  "url": "/tv/ultra-definicao-4k-",
+                  "openNewTab": true
+                },
+                {
+                  "title": "TV Samsung",
+                  "url": "/tv/samsung",
+                  "openNewTab": true
+                },
+                {
+                  "title": "TV LG",
+                  "url": "/tv/lg",
+                  "openNewTab": true
+                },
+                {
+                  "title": "TV Philips",
+                  "url": "/tv/philips",
+                  "openNewTab": true
+                },
+                {
+                  "title": "TV Philco",
+                  "url": "/tv/philco",
+                  "openNewTab": true
+                },
+                {
+                  "title": "TV Toshiba",
+                  "url": "/tv/toshiba",
+                  "openNewTab": true
+                },
+                {
+                  "title": "TV Hisense",
+                  "url": "/tv/hisense",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Ver mais TVs",
+                  "url": "/tv",
+                  "openNewTab": true,
+                  "highlighted": true
+                }
+              ]
+            },
+            {
+              "title": "Notebooks",
+              "openNewTab": false,
+              "highlighted": true,
+              "items": [
+                {
+                  "title": "Notebook  Samsung",
+                  "url": "/notebook/samsung",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Notebook  Dell",
+                  "url": "/notebook/dell",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Notebook  Lenovo",
+                  "url": "/notebook/lenovo",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Notebook  Acer",
+                  "url": "/notebook/acer",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Notebook  Asus",
+                  "url": "/notebook/asus",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Notebook  Gamer",
+                  "url": "/busca/notebook+gamer",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Notebook i3",
+                  "url": "/notebook/processador-intel-core-i3",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Notebook  i5",
+                  "url": "/notebook/processador-intel-core-i5",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Notebook  i7",
+                  "url": "/notebook/processador-intel-core-i7",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Memória RAM 8GB ",
+                  "url": "/notebook/memoria-8-gb",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Geforce RTX3050",
+                  "url": "/notebook/geforce-rtx-3050",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Geforce RTX4050",
+                  "url": "/notebook/geforce-rtx-4050",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Tablets e iPads",
+                  "url": "/tablet-ipad",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Ver mais Notebooks",
+                  "url": "/notebook",
+                  "openNewTab": true,
+                  "highlighted": true
+                }
+              ]
+            },
+            {
+              "title": "Macbook",
+              "openNewTab": false,
+              "highlighted": true,
+              "items": [
+                {
+                  "title": "Macbook Air",
+                  "url": "/notebook/macbook-air",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Macbook Pro",
+                  "url": "/notebook/macbook-pro",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Macbook Apple M4",
+                  "url": "/notebook/macbook/apple-m4",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Macbook Apple M3",
+                  "url": "/notebook/macbook/apple-m3",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Macbook Apple M2",
+                  "url": "/notebook/macbook/apple-m2",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Macbook Apple M1",
+                  "url": "/notebook/macbook/apple-m1",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Macbook até 13 polegadas",
+                  "url": "/notebook/macbook/tamanho-ate-13-polegadas",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Macbook até 14 polegadas",
+                  "url": "/notebook/macbook/tamanho-14-polegadas",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Macbook até 15 polegadas",
+                  "url": "/notebook/macbook/tamanho-15-polegadas",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Macbook até 1TB",
+                  "url": "/notebook/macbook/1tb",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Macbook SSD 512GB",
+                  "url": "/notebook/macbook/ssd-512gb",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Macbook SSD 256GB",
+                  "url": "/notebook/macbook/ssd-256gb",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Macbook RAM de 8GB",
+                  "url": "/notebook/macbook/memoria-8-gb",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Macbook RAM de 16GB",
+                  "url": "/notebook/macbook/memoria-16-gb",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Macbook RAM maior que 16GB",
+                  "url": "/notebook/macbook/maior-que-16-gb",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Ver mais Macbooks",
+                  "url": "/notebook/macbook",
+                  "openNewTab": false,
+                  "highlighted": true
+                }
+              ]
+            },
+            {
+              "title": "Ar-condicionado",
+              "openNewTab": false,
+              "highlighted": true,
+              "items": [
+                {
+                  "title": "Ar-condicionado 7.500 BTUs",
+                  "url": "/ar-condicionado/7-500-btus",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Ar-condicionado 9.000 BTUs",
+                  "url": "/ar-condicionado/9-000-btus",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Ar-condicionado 12.000 BTUs",
+                  "url": "/ar-condicionado/12-000-btus",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Ar-condicionado 18.000 BTUs",
+                  "url": "/ar-condicionado/18-000-btus",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Ar-condicionado 24.000 BTUs",
+                  "url": "/ar-condicionado/24-000-btus",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Ar-condicionado 36.000 BTUs",
+                  "url": "/ar-condicionado/36-000-btus",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Ar-condicionado Inverter",
+                  "url": "/ar-condicionado/inverter",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Ar-condicionado Portátil",
+                  "url": "/ar-condicionado/portatil",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Ar-condicionado de Janela e Parede",
+                  "url": "/ar-condicionado/janela-parede",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Ar-condicionado Split Hi Wall Convencional",
+                  "url": "/ar-condicionado/split-hi-wall-convencional",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Ar-condicionado Split Cassete",
+                  "url": "/ar-condicionado/split-cassete",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Ar-condicionado Quente e Frio",
+                  "url": "/ar-condicionado/quente-frio",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Ar-condicionado LG",
+                  "url": "/ar-condicionado/lg",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Ar-condicionado Samsung",
+                  "url": "/ar-condicionado/samsung",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Ar-condicionado Spring Midea",
+                  "url": "/ar-condicionado/springer-midea",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Ver mais Ar-condicionado",
+                  "url": "/ar-condicionado",
+                  "openNewTab": false,
+                  "highlighted": true
+                }
+              ]
+            },
+            {
+              "title": "Lavadora",
+              "openNewTab": false,
+              "highlighted": true,
+              "items": [
+                {
+                  "title": "Lavadora Brastemp",
+                  "url": "/lavadora-roupas/brastemp",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Lavadora Electrolux",
+                  "url": "/lavadora-roupas/electrolux",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Lavadora Panasonic",
+                  "url": "/lavadora-roupas/panasonic",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Lavadora Consul",
+                  "url": "/lavadora-roupas/consul",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Lava e Seca",
+                  "url": "/lavadora-roupas/lava-e-seca",
+                  "openNewTab": false,
+                  "highlighted": true
+                },
+                {
+                  "title": "Lava e Seca Samsung",
+                  "url": "/lavadora-roupas/lava-e-seca/samsung",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Lava e Seca Lg",
+                  "url": "/lavadora-roupas/lava-e-seca/lg",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Ver mais Lavadora",
+                  "url": "/lavadora-roupas",
+                  "openNewTab": false,
+                  "highlighted": true
+                }
+              ]
+            },
+            {
+              "title": "Geladeira",
+              "openNewTab": false,
+              "items": [
+                {
+                  "title": "Geladeira Brastemp",
+                  "url": "/geladeira/brastemp",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Geladeira Eletrolux",
+                  "url": "/geladeira/electrolux",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Geladeira Consul",
+                  "url": "/geladeira/consul",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Geladeira LG",
+                  "url": "/geladeira/lg",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Geladeira Panasonic",
+                  "url": "/geladeira/panasonic",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Geladeira Philco",
+                  "url": "/geladeira/philco",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Geladeira Duplex",
+                  "url": "/geladeira/duplex",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Geladeira French Door",
+                  "url": "/geladeira/french-door",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Geladeira Frost Free",
+                  "url": "/geladeira/frost-free",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Geladeira Inverse",
+                  "url": "/geladeira/inverse",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Geladeira Inox",
+                  "url": "/geladeira/inox",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Capacidade 350 a 449 litros",
+                  "url": "/geladeira/capacidade-350-a-449-litros",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Capacidade +450 litros",
+                  "url": "/geladeira/capacidade-450-litros-ou-mais",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Resfriamento Rápido",
+                  "url": "/geladeira/resfriamento-rapido",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Ver mais Geladeiras",
+                  "url": "/geladeira",
+                  "openNewTab": false,
+                  "highlighted": true
+                }
+              ]
+            },
+            {
+              "title": "Fogões",
+              "openNewTab": false,
+              "highlighted": true,
+              "items": [
+                {
+                  "title": "Fogão 4 Bocas",
+                  "url": "/fogao/4-bocas",
+                  "openNewTab": false,
+                  "highlighted": true
+                },
+                {
+                  "title": "Fogão 4 Bocas Electrolux",
+                  "url": "/fogao/electrolux/4-bocas",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Fogão 4 Bocas Brastemp",
+                  "url": "/fogao/brastemp/4-bocas",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Fogão 4 Bocas Dako",
+                  "url": "/fogao/dako/4-bocas",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Fogão 5 Bocas",
+                  "url": "/fogao/5-bocas",
+                  "openNewTab": false,
+                  "highlighted": true
+                },
+                {
+                  "title": "Fogão 5 Bocas Electrolux",
+                  "url": "/fogao/electrolux/5-bocas",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Fogão 5 Bocas Brastemp",
+                  "url": "/fogao/brastemp/5-bocas",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Fogão 5 Bocas Dako",
+                  "url": "/fogao/dako/5-bocas",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Fogão 6 Bocas",
+                  "url": "/fogao/6-bocas",
+                  "openNewTab": false,
+                  "highlighted": true
+                },
+                {
+                  "title": "Fogão Cooktop",
+                  "url": "/fogao/cooktop",
+                  "openNewTab": false,
+                  "highlighted": true
+                },
+                {
+                  "title": "Fogão Cooktop 5 Bocas",
+                  "url": "/fogao/cooktop/5-bocas",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Fogão de Embutir",
+                  "url": "/fogao/fogao-de-embutir",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Fogão de Indução",
+                  "url": "/fogao/inducao",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Fogão Brastemp",
+                  "url": "/fogao/brastemp",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Fogão Dako",
+                  "url": "/fogao/dako",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Fogão Electrolux",
+                  "url": "/fogao/electrolux",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Fogão Esmaltec",
+                  "url": "/fogao/esmaltec",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Fogão Fisher",
+                  "url": "/fogao/fischer",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Fogão Itatiaia",
+                  "url": "/fogao/itatiaia",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Fogão Muller",
+                  "url": "/fogao/mueller",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Ver mais Fogões",
+                  "url": "/fogao",
+                  "openNewTab": false,
+                  "highlighted": true
+                }
+              ]
+            },
+            {
+              "title": "Outras Categorias",
+              "openNewTab": false,
+              "highlighted": true,
+              "items": [
+                {
+                  "title": "Automóveis e Veículos",
+                  "url": "/automoveis-e-veiculos",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Bebês",
+                  "url": "/bebes",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Brinquedos",
+                  "url": "/brinquedos",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Cama, Mesa e Banho",
+                  "url": "/cama-mesa-banho",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Casa e Jardim",
+                  "url": "/casa-e-jardim",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Casa Inteligente",
+                  "url": "/casa-inteligente",
+                  "openNewTab": true
+                },
+                {
+                  "title": "CD, DVD e Blu-Ray",
+                  "url": "/cd-dvd-e-blu-ray",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Celulares e Telefones",
+                  "url": "/celulares-e-telefones",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Câmeras e Filmadoras",
+                  "url": "/cameras-e-filmadoras",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Decoração de Natal",
+                  "url": "/decoracao-de-natal",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Eletroportáteis",
+                  "url": "/eletroportateis",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Flores e Cestas",
+                  "url": "/flores-e-cestas",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Games",
+                  "url": "/games",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Indústria e Comércio",
+                  "url": "/industria-negocios-e-comercios",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Informática",
+                  "url": "/informatica",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Joalheria",
+                  "url": "/joalheria",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Livros e Revistas",
+                  "url": "/livros-e-revistas",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Ver todas as Categorias",
+                  "url": "/todas-categorias",
+                  "openNewTab": true,
+                  "highlighted": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Crédito Inteligente",
+          "icon": "cartão",
+          "url": "/landing-page/credito-inteligente-para-voce-no-pan",
+          "openNewTab": true
+        },
+        {
+          "title": "Comparador de Celulares",
+          "icon": "nenhum",
+          "url": "/comparador/celular",
+          "openNewTab": true
+        },
+        {
+          "title": "Oferta do Dia",
+          "icon": "nenhum",
+          "url": "/landing-page/oferta-do-dia-buscape",
+          "openNewTab": false
+        },
+        {
+          "title": "Cashback",
+          "icon": "nenhum",
+          "openNewTab": false,
+          "items": [
+            {
+              "title": "Amazon",
+              "url": "/cupom-de-desconto/amazon-1582",
+              "openNewTab": true
+            },
+            {
+              "title": "Cashback Boticário",
+              "url": "/cupom-de-desconto/boticario-21711",
+              "openNewTab": false
+            },
+            {
+              "title": "Cashback Casas Bahia",
+              "url": "/landing-page/cashback-buscape-especial-casas-bahia",
+              "openNewTab": true
+            },
+            {
+              "title": "Cashback Centauro",
+              "url": "/cupom-de-desconto/centauro-21710",
+              "openNewTab": true
+            },
+            {
+              "title": "Cashback Fast Shop",
+              "url": "/cupom-de-desconto/fast-shop-5",
+              "openNewTab": true
+            },
+            {
+              "title": "Cashback Magazine Luiza",
+              "url": "/landing-page/campanha-magalu",
+              "openNewTab": false
+            },
+            {
+              "title": "Cashback Natura",
+              "url": "/cupom-de-desconto/natura-20906",
+              "openNewTab": false
+            },
+            {
+              "title": "Cashback Ponto Frio",
+              "url": "/cupom-de-desconto/ponto-4",
+              "openNewTab": true
+            },
+            {
+              "title": "Ver todas as lojas",
+              "url": "/cupom-de-desconto/lojas",
+              "openNewTab": true,
+              "highlighted": true
+            },
+            {
+              "title": "Termos de uso",
+              "url": "/termos-de-uso",
+              "openNewTab": true,
+              "highlighted": true
+            }
+          ]
+        },
+        {
+          "title": "Eletrodomésticos ",
+          "icon": "nenhum",
+          "openNewTab": false,
+          "items": [
+            {
+              "title": "Ar-Condicionado",
+              "openNewTab": false,
+              "highlighted": true,
+              "items": [
+                {
+                  "title": "Ar-condicionado 7.500 BTUs",
+                  "url": "/ar-condicionado/7-500-btus",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Ar-condicionado 9.000 BTUs",
+                  "url": "/ar-condicionado/9-000-btus",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Ar-condicionado 12.000 BTUs",
+                  "url": "/ar-condicionado/12-000-btus",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Ar-condicionado 18.000 BTUs",
+                  "url": "/ar-condicionado/18-000-btus",
+                  "openNewTab": false
+                },
+                {
+                  "title": "Ar-condicionado 24.000 BTUs",
+                  "url": "/ar-condicionado/24-000-btus",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Ar-condicionado 36.000 BTUs",
+                  "url": "/ar-condicionado/36-000-btus",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Ar-condicionado Inverter",
+                  "url": "/ar-condicionado/inverter",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Ar-condicionado Portátil",
+                  "url": "/ar-condicionado/portatil",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Ar-condicionado de Janela e Parede",
+                  "url": "/ar-condicionado/janela-parede",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Ar-condicionado Split Hi Wall Convencional ",
+                  "url": "/ar-condicionado/split-hi-wall-convencional",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Ar-condicionado Split Cassete",
+                  "url": "/ar-condicionado/split-cassete",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Ar-condicionado Quente e Frio",
+                  "url": "/ar-condicionado/quente-frio",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Ar-condicionado LG",
+                  "url": "/ar-condicionado/lg",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Ar-condicionado Samsung ",
+                  "url": "/ar-condicionado/samsung",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Ar-condicionado Spring Midea",
+                  "url": "/ar-condicionado/springer-midea",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Ver mais em Ar-condicionado ",
+                  "url": "/ar-condicionado",
+                  "openNewTab": true,
+                  "highlighted": true
+                }
+              ]
+            },
+            {
+              "title": "Geladeira",
+              "openNewTab": false,
+              "items": [
+                {
+                  "title": "Geladeira Brastemp",
+                  "url": "/geladeira/brastemp",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Geladeira Electrolux",
+                  "url": "/geladeira/electrolux",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Geladeira Consul",
+                  "url": "/geladeira/consul",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Geladeira LG",
+                  "url": "/geladeira/lg",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Geladeira Philco",
+                  "url": "/geladeira/philco",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Geladeira Duplex",
+                  "url": "/geladeira/duplex",
+                  "openNewTab": true
+                },
+                {
+                  "title": " Geladeira French Door",
+                  "url": "/geladeira/french-door",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Geladeira Frost Free",
+                  "url": "/geladeira/frost-free",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Geladeira Inverse",
+                  "url": "/geladeira/inverse",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Geladeira Inox",
+                  "url": "/geladeira/inox",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Capacidade 350 a 449 litros",
+                  "url": "/geladeira/capacidade-350-a-449-litros",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Capacidade +450 litros",
+                  "url": "/geladeira/capacidade-450-litros-ou-mais",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Resfriamento Rápido",
+                  "url": "/geladeira/resfriamento-rapido",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Ver mais em Geladeiras",
+                  "url": "/geladeira",
+                  "openNewTab": true,
+                  "highlighted": true
+                }
+              ]
+            },
+            {
+              "title": "Fogão",
+              "url": "Fogão",
+              "openNewTab": false,
+              "items": [
+                {
+                  "title": "Fogão 4 Bocas",
+                  "url": "/fogao/4-bocas",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Fogão 4 Bocas Electrolux",
+                  "url": "/fogao/electrolux/4-bocas",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Fogão 4 Bocas Dako",
+                  "url": "/fogao/dako/4-bocas",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Fogão 5 Bocas",
+                  "url": "/fogao/5-bocas",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Fogão 5 Bocas Electrolux",
+                  "url": "/fogao/electrolux/5-bocas",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Fogão 5 Bocas Brastemp ",
+                  "url": "/fogao/brastemp/5-bocas",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Fogão 5 Bocas Dako",
+                  "url": "/fogao/dako/5-bocas",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Fogão 6 Bocas",
+                  "url": "/fogao/6-bocas",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Fogão Cooktop",
+                  "url": "/fogao/cooktop",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Fogão Cooktop 5 Bocas",
+                  "url": "/fogao/cooktop/5-bocas\n",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Fogão de Embutir",
+                  "url": "/fogao/fogao-de-embutir",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Fogão de Indução",
+                  "url": "/fogao/inducao",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Fogão Brastemp",
+                  "url": "/fogao/brastemp",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Fogão Dako",
+                  "url": "/fogao/dako",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Fogão Electrolux",
+                  "url": "/fogao/electrolux",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Fogão Esmaltec",
+                  "url": "/fogao/esmaltec",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Fogão Fisher",
+                  "url": "/fogao/fischer",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Fogão Itatiaia ",
+                  "url": "/fogao/itatiaia\n",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Fogão Muller",
+                  "url": "/fogao/mueller",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Ver mais em Fogões",
+                  "url": "/fogao",
+                  "openNewTab": true,
+                  "highlighted": true
+                }
+              ]
+            },
+            {
+              "title": "Lavadora de Roupas",
+              "openNewTab": false,
+              "items": [
+                {
+                  "title": "Lavadora Brastemp",
+                  "url": "/lavadora-roupas/brastemp",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Lavadora Electrolux",
+                  "url": "/lavadora-roupas/electrolux",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Lavadora Panasonic",
+                  "url": "/lavadora-roupas/panasonic",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Lavadora Consul",
+                  "url": "/lavadora-roupas/consul",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Lava e Seca",
+                  "url": "/lavadora-roupas/lava-e-seca",
+                  "openNewTab": true,
+                  "highlighted": true
+                },
+                {
+                  "title": "Lava e Seca LG",
+                  "url": "/lavadora-roupas/lg/lava-e-seca",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Lava e Seca Samsung",
+                  "url": "/lavadora-roupas/samsung/lava-e-seca",
+                  "openNewTab": true
+                },
+                {
+                  "title": "Ver mais em Lavadora de Roupas",
+                  "url": "/lavadora-roupas",
+                  "openNewTab": true,
+                  "highlighted": true
+                }
+              ]
+            },
+            {
+              "title": "Ver mais Eletrodomésticos",
+              "url": "/eletrodomesticos",
+              "openNewTab": false
+            }
+          ]
+        },
+        {
+          "title": "Celulares e Smartphones",
+          "icon": "nenhum",
+          "openNewTab": false,
+          "items": [
+            {
+              "title": "Celulares",
+              "url": "/celular",
+              "openNewTab": false
+            },
+            {
+              "title": "Smartwatch",
+              "url": "/smartwatch",
+              "openNewTab": false
+            },
+            {
+              "title": "Carregadores",
+              "url": "/carregador-de-celular",
+              "openNewTab": false
+            },
+            {
+              "title": "Películas e Capas",
+              "url": "/capa-para-celular",
+              "openNewTab": false
+            },
+            {
+              "title": "Fone de Ouvido",
+              "url": "/fone-de-ouvido-de-celular",
+              "openNewTab": false
+            },
+            {
+              "title": "Acessórios",
+              "url": "/acessorios-para-celular-e-smartphone",
+              "openNewTab": false
+            },
+            {
+              "title": "Ver mais Celulares",
+              "url": "https://www.buscape.com.br/celulares-e-telefones",
+              "openNewTab": false
+            }
+          ]
+        },
+        {
+          "title": "Informática",
+          "icon": "nenhum",
+          "openNewTab": false,
+          "items": [
+            {
+              "title": "Notebook",
+              "url": "/notebook",
+              "openNewTab": false
+            },
+            {
+              "title": "Tablet",
+              "url": "/tablet-ipad",
+              "openNewTab": false
+            },
+            {
+              "title": "Impressora",
+              "url": "/impressora-e-multifuncional",
+              "openNewTab": false
+            },
+            {
+              "title": "Monitor",
+              "url": "/monitor",
+              "openNewTab": false
+            },
+            {
+              "title": "Pc/Computador",
+              "url": "/pc-computador",
+              "openNewTab": false
+            },
+            {
+              "title": "Ver mais Informática",
+              "url": "/informatica",
+              "openNewTab": false
+            }
+          ]
+        },
+        {
+          "title": "Tv e Eletrônicos",
+          "icon": "nenhum",
+          "openNewTab": false,
+          "items": [
+            {
+              "title": "TV",
+              "url": "/tv",
+              "openNewTab": false
+            },
+            {
+              "title": "Smart Tv Box",
+              "url": "/smart-tv-box",
+              "openNewTab": false
+            },
+            {
+              "title": "Fone de Ouvido e Headset",
+              "url": "/fone-de-ouvido-e-headset",
+              "openNewTab": false
+            },
+            {
+              "title": "Caixa de som Bluetooth",
+              "url": "/caixa-de-som-bluetooth",
+              "openNewTab": false
+            },
+            {
+              "title": "Home Theater",
+              "url": "/home-theater",
+              "openNewTab": false
+            },
+            {
+              "title": "Ver mais TV e Eletrônicos",
+              "url": "/tv-e-eletronicos",
+              "openNewTab": false
+            }
+          ]
+        },
+        {
+          "title": "Eletroportáteis",
+          "icon": "nenhum",
+          "openNewTab": false,
+          "items": [
+            {
+              "title": "Fritadeira",
+              "url": "/fritadeira",
+              "openNewTab": false
+            },
+            {
+              "title": "Ventilador",
+              "url": "/ventilador-circulador",
+              "openNewTab": false
+            },
+            {
+              "title": "Aspirador",
+              "url": "/aspirador-po-agua",
+              "openNewTab": false
+            },
+            {
+              "title": "Purificador",
+              "url": "/purificador-de-agua",
+              "openNewTab": false
+            },
+            {
+              "title": "Climatizador",
+              "url": "/climatizador-ar",
+              "openNewTab": false
+            },
+            {
+              "title": "Cafeteira",
+              "url": "/cafeteira-eletrica",
+              "openNewTab": false
+            },
+            {
+              "title": "Ver mais Eletroportáteis",
+              "url": "/eletroportateis",
+              "openNewTab": false
+            }
+          ]
+        },
+        {
+          "title": "Beleza e Saúde",
+          "icon": "nenhum",
+          "openNewTab": false,
+          "items": [
+            {
+              "title": "Escova Secadora / Babyliss",
+              "url": "/escova-secadora-babyliss",
+              "openNewTab": false
+            },
+            {
+              "title": "Secador de Cabelo",
+              "url": "/higiene-pessoal",
+              "openNewTab": false
+            },
+            {
+              "title": "Barbeador Elétrico",
+              "url": "/barbeador-eletrico",
+              "openNewTab": false
+            },
+            {
+              "title": "Chapinha e Prancha de Cabelo",
+              "url": "/chapinha-e-prancha-de-cabelo",
+              "openNewTab": false
+            },
+            {
+              "title": "Suplementos",
+              "url": "/suplementos",
+              "openNewTab": false
+            },
+            {
+              "title": "Cabelos ",
+              "url": "/cabelos",
+              "openNewTab": false
+            },
+            {
+              "title": "Corpo",
+              "url": "/corpo",
+              "openNewTab": false
+            },
+            {
+              "title": "Depilação",
+              "url": "/depilacao-barba",
+              "openNewTab": false
+            },
+            {
+              "title": "Higiene pessoal",
+              "url": "/higiene-pessoal",
+              "openNewTab": false
+            },
+            {
+              "title": "Ver mais Beleza e Saúde",
+              "url": "/beleza-e-saude",
+              "openNewTab": false
+            }
+          ]
+        },
+        {
+          "title": "Casa",
+          "icon": "nenhum",
+          "openNewTab": false,
+          "items": [
+            {
+              "title": "Climatizador de Ar",
+              "url": "/climatizador-ar",
+              "openNewTab": false
+            },
+            {
+              "title": "Aspirador de Pó e Água",
+              "url": "/aspirador-po-agua",
+              "openNewTab": false
+            },
+            {
+              "title": "Purificador de Água",
+              "url": "/purificador-de-agua",
+              "openNewTab": false
+            },
+            {
+              "title": "Ventilador e Circulador",
+              "url": "/ventilador-circulador",
+              "openNewTab": false
+            },
+            {
+              "title": "Aspirador Robô",
+              "url": "/busca/aspirador+robo",
+              "openNewTab": false
+            },
+            {
+              "title": "Armário e Balcão de Cozinha",
+              "url": "/armario-e-balcao-de-cozinha",
+              "openNewTab": false
+            },
+            {
+              "title": "Fritadeira Elétrica",
+              "url": "/fritadeira",
+              "openNewTab": false
+            },
+            {
+              "title": "Lava-louças",
+              "url": "/lava-loucas",
+              "openNewTab": false
+            },
+            {
+              "title": "Micro-ondas",
+              "url": "/microondas",
+              "openNewTab": false
+            },
+            {
+              "title": "Panela Elétrica",
+              "url": "/busca/panela+eletrica",
+              "openNewTab": false
+            }
+          ]
+        },
+        {
+          "title": "Esporte e Lazer",
+          "icon": "nenhum",
+          "openNewTab": false,
+          "items": [
+            {
+              "title": "Ciclismo",
+              "url": "/ciclismo",
+              "openNewTab": false
+            },
+            {
+              "title": "Bicicleta",
+              "url": "/bicicleta",
+              "openNewTab": false
+            },
+            {
+              "title": "Musculação ",
+              "url": "/musculacao-ginastica",
+              "openNewTab": false
+            },
+            {
+              "title": "Futebol",
+              "url": "/futebol",
+              "openNewTab": false
+            },
+            {
+              "title": "Basquete",
+              "url": "/basquete",
+              "openNewTab": false
+            },
+            {
+              "title": "Camping ",
+              "url": "/camping",
+              "openNewTab": false
+            },
+            {
+              "title": "Dança",
+              "url": "/ballet-danca",
+              "openNewTab": false
+            },
+            {
+              "title": "Escalada e Rapel",
+              "url": "/escalada-rapel",
+              "openNewTab": false
+            },
+            {
+              "title": "Futevôlei",
+              "url": "/futevolei",
+              "openNewTab": false
+            },
+            {
+              "title": "Handebol",
+              "url": "/handebol",
+              "openNewTab": false
+            }
+          ]
+        },
+        {
+          "title": "Moda e Acessórios",
+          "icon": "nenhum",
+          "openNewTab": false,
+          "items": [
+            {
+              "title": "Calçados",
+              "url": "/calcados",
+              "openNewTab": false
+            },
+            {
+              "title": "Tênis ",
+              "url": "/tenis",
+              "openNewTab": false
+            },
+            {
+              "title": "Bolsas e Malas",
+              "url": "/bolsas-malas",
+              "openNewTab": false
+            },
+            {
+              "title": "Mochila ",
+              "url": "/mochila",
+              "openNewTab": false
+            },
+            {
+              "title": "Roupas Esportivas",
+              "url": "/roupas-ginastica-esportes",
+              "openNewTab": false
+            },
+            {
+              "title": "Bermuda e Shorts",
+              "url": "/bermuda",
+              "openNewTab": false
+            },
+            {
+              "title": "Calça",
+              "url": "/calca",
+              "openNewTab": false
+            },
+            {
+              "title": "Camisa, Camiseta e Blusa",
+              "url": "/camisa-camiseta-blusa",
+              "openNewTab": false
+            },
+            {
+              "title": "Saia",
+              "url": "/saia",
+              "openNewTab": false
+            },
+            {
+              "title": "Terno ",
+              "url": "/terno",
+              "openNewTab": false
+            },
+            {
+              "title": "Vestido ",
+              "url": "/vestido",
+              "openNewTab": false
+            }
+          ]
+        },
+        {
+          "title": "Pets",
+          "icon": "nenhum",
+          "openNewTab": false,
+          "items": [
+            {
+              "title": "Cães e Gatos",
+              "url": "/caes-gatos",
+              "openNewTab": false
+            },
+            {
+              "title": "Ração para Cães",
+              "url": "/racao-cachorro",
+              "openNewTab": false
+            },
+            {
+              "title": "Higiene e Perfumaria ",
+              "url": "/higiene-perfumaria-caes-gatos",
+              "openNewTab": false
+            },
+            {
+              "title": "Casa para Cães e Gatos",
+              "url": "/casa-cama-almofada-cachorro-gato",
+              "openNewTab": false
+            },
+            {
+              "title": "Peixes ",
+              "url": "/peixes",
+              "openNewTab": false
+            },
+            {
+              "title": "Roedores",
+              "url": "/hamster-chinchila-roedores",
+              "openNewTab": false
+            },
+            {
+              "title": "Reptéis",
+              "url": "/repteis",
+              "openNewTab": false
+            },
+            {
+              "title": "Aves",
+              "url": "/aves",
+              "openNewTab": false
+            },
+            {
+              "title": "Remédios Veterinários ",
+              "url": "/medicamentos-veterinarios",
+              "openNewTab": false
+            },
+            {
+              "title": "Ver mais em Pets",
+              "url": "/pet-shop",
+              "openNewTab": false
+            }
+          ]
+        },
+        {
+          "title": "Gamers",
+          "icon": "nenhum",
+          "openNewTab": false,
+          "items": [
+            {
+              "title": "Cadeira Gamer ",
+              "url": "/cadeira-gamer",
+              "openNewTab": false
+            },
+            {
+              "title": "Mesa Gamer",
+              "url": "/mesa-gamer",
+              "openNewTab": false
+            },
+            {
+              "title": "Monitores",
+              "url": "/monitor",
+              "openNewTab": false
+            },
+            {
+              "title": "Acessórios",
+              "url": "/acessorios-de-informatica",
+              "openNewTab": false
+            },
+            {
+              "title": "PC/Computador",
+              "url": "/pc-computador",
+              "openNewTab": false
+            },
+            {
+              "title": "Componentes",
+              "url": "/componentes",
+              "openNewTab": false
+            },
+            {
+              "title": "Placa de vídeo ",
+              "url": "/placa-de-video",
+              "openNewTab": false
+            },
+            {
+              "title": "Rede",
+              "url": "/rede",
+              "openNewTab": false
+            }
+          ]
+        }
+      ]
+    },
+    "pathName": "/[...slug]",
+    "isWebview": false,
+    "isPreprod": false,
+    "toggles": {
+      "userPartition": {
+        "featureToggle": "user-partition",
+        "name": "alpha",
+        "enabled": true,
+        "feature_enabled": true,
+        "featureEnabled": true
+      },
+      "zipcodeHeader": true,
+      "autoFetchPromotions": true,
+      "disableInstallmentsOfferPage": false,
+      "isBlackfriday": false,
+      "enableBlackfridayBadge": false,
+      "enablePreBlackfridayBadge": false,
+      "isCybermonday": false,
+      "syncZuthCookieWithRedux": true,
+      "isConsumerDay": false,
+      "isMothersDay": false,
+      "isChristmas": false,
+      "isToTrackOfferPageOnClick": false,
+      "showBancoPanBanner": true,
+      "zSearchAutoFilters": true,
+      "showHitsReview": true,
+      "showConvSearch": true,
+      "showSerpCustom": false,
+      "isComplexSkuEnabled": false,
+      "isBpanAccountOpeningBannerEnabled": false,
+      "isBpanCdbBannerEnabled": true,
+      "isHeroCreditCardBannerEnabled": false,
+      "isSaveProductEnabled": true,
+      "isSearchCouponTrailEnabled": true,
+      "isSearchCashbackTrailEnabled": true,
+      "isOfferCashbackTrailEnabled": false,
+      "isNewPLAEnabled": true,
+      "showOpnativeHistoryPrice": true,
+      "force40DaysOpnativeHistoryPrice": false,
+      "showReviewsOnProductPage": true,
+      "disablePriceAlertFetchAtProductPage": false,
+      "disablePriceHistoryAtProductPage": false,
+      "modalCampaign": true,
+      "showModalCPFCollect": true,
+      "formbricksSurvey": true,
+      "zsearchWithCashbackOffer": true,
+      "bestDeal": true,
+      "showSocialLoginFacebook": true,
+      "showSocialLoginGoogle": true,
+      "appsFlyerSmartBanner": true,
+      "isGAUEnabled": true,
+      "home2024CashbackTrail": true,
+      "isAdobeEnabled": true,
+      "isFormbricksEnabled": true,
+      "isOfferPriceAlertEnabled": true,
+      "smartRecommenderHome": {
+        "featureToggle": "smart-recommender-home",
+        "enabled": false,
+        "name": "Variant-A",
+        "feature_enabled": false,
+        "featureEnabled": false
+      },
+      "smartRecommenderProd": {
+        "featureToggle": "smart-recommender-prod",
+        "enabled": false,
+        "name": "Variant-A",
+        "feature_enabled": false,
+        "featureEnabled": false
+      },
+      "smartRecommenderOffer": {
+        "featureToggle": "smart-recommender-offer",
+        "enabled": false,
+        "name": "Variant-A",
+        "feature_enabled": false,
+        "featureEnabled": false
+      },
+      "smartRecommenderEmptyProd": {
+        "featureToggle": "smart-recommender-empty-prod",
+        "enabled": false,
+        "name": "Variant-A",
+        "feature_enabled": false,
+        "featureEnabled": false
+      },
+      "newOfferModalEnabled": {
+        "featureToggle": "newOfferModal",
+        "enabled": false,
+        "name": "Variant-A",
+        "feature_enabled": false,
+        "featureEnabled": false
+      },
+      "unleashedABTest": {
+        "featureToggle": "unleashedABTest",
+        "enabled": false,
+        "name": "Variant-A",
+        "feature_enabled": false,
+        "featureEnabled": false
+      },
+      "extendInstallments": {
+        "featureToggle": "extendInstallments",
+        "enabled": false,
+        "name": "Variant-A",
+        "feature_enabled": false,
+        "featureEnabled": false
+      },
+      "smartRecommenderAlgolia": {
+        "featureToggle": "smart-recommender-algolia",
+        "enabled": false,
+        "name": "Variant-A",
+        "feature_enabled": false,
+        "featureEnabled": false
+      },
+      "smartRecommenderAlgoliaLogged": {
+        "featureToggle": "smart-recommender-algolia-logged",
+        "enabled": false,
+        "name": "Variant-A",
+        "feature_enabled": false,
+        "featureEnabled": false
+      },
+      "insiderModalTest": {
+        "featureToggle": "insiderModalTest",
+        "enabled": false,
+        "name": "Variant-A",
+        "feature_enabled": false,
+        "featureEnabled": false
+      },
+      "trailGroupABTest": {
+        "featureToggle": "trailGroupABTest",
+        "name": "B",
+        "payload": {
+          "type": "json",
+          "value": "{\n  \"ids\": [\"2701\", \"2700\", \"2702\", \"2703\"],\n  \"titles\": [\n    \"Ar-condicionado\",\n    \"Ofertas de celulares\",\n    \"TVs mais procuradas\",\n    \"Eletrodomésticos\"\n  ],\n  \"links\":[\n    \"/ar-condicionado?utm_campaign=container_trail\",\n    \"/celular?utm_campaign=container_trail\",\n    \"/tv?utm_campaign=container_trail\",\n    \"/search?q=especial-eletrodomesticos-homev2&utm_campaign=container_trail\"\n  ]\n}"
+        },
+        "enabled": true,
+        "feature_enabled": true,
+        "featureEnabled": true
+      },
+      "isComparatorEnabled": false,
+      "blacklistMKPInstallments": {
+        "featureToggle": "blacklist-mkp-installments",
+        "name": "A",
+        "payload": {
+          "type": "string",
+          "value": "21627,21628,21629,18990,23111,22701"
+        },
+        "enabled": true,
+        "feature_enabled": true,
+        "featureEnabled": true
+      },
+      "disableMKPInstallments": false,
+      "isSearchSuggetionsDisabled": true,
+      "newProdHeroTest": {
+        "featureToggle": "newProdHeroTest",
+        "enabled": false,
+        "name": "Variant-A",
+        "feature_enabled": false,
+        "featureEnabled": false
+      },
+      "openSearchTest": {
+        "featureToggle": "openSearchTest",
+        "name": "B",
+        "payload": {
+          "type": "string",
+          "value": "{ \"all\": true, \"home\": true }"
+        },
+        "enabled": true,
+        "feature_enabled": true,
+        "featureEnabled": true
+      }
+    },
+    "isQATest": false,
+    "enabledClarity": true,
+    "initialReduxState": {
+      "sidebar": {
+        "opened": false
+      },
+      "items": {},
+      "search_suggestions": {},
+      "search": {
+        "refinements": [],
+        "userToken": "56af64ab-1684-4637-8ac2-df42006667df"
+      },
+      "promotions": {},
+      "preferences": {
+        "showOver18Products": false,
+        "hideOver18Warning": false,
+        "disclaimerAdultShow": false,
+        "adultContentShow": false,
+        "disclaimerAgeSellShow": false
+      },
+      "offers": {
+        "currentPage": 1,
+        "currentProductID": "12547939",
+        "errorText": "",
+        "bestOffer": {
+          "id": "1533213464",
+          "name": "Smartphone Samsung Galaxy S24 Ultra, Galaxy AI, Selfie de 12MP, Tela de 6.8\" 1-120Hz, 256GB, 12GB RAM - Titânio Cinza (Seminovo)",
+          "imageUrl": "https://i.zst.com.br/thumbs/49/10/10/-1609904318.jpg",
+          "categoryID": "7",
+          "productID": "12547939",
+          "price": 3922.55,
+          "numParcels": 0,
+          "parcelValue": 0,
+          "totalParceledValue": 0,
+          "merchantId": "1582",
+          "sellerID": "1582",
+          "sellerName": "Amazon",
+          "sellerLogoURL": "https://s.zst.com.br/prod/cupons/thumbs/9/merchant_1582_1397758033601.com",
+          "sellerRoundedLogoURL": "https://s.zst.com.br/prod/cupons/1582-Logo-80x80.png",
+          "sellerIsMarketplace": false,
+          "totalPrice": 3922.55,
+          "loweringPercentage": 0,
+          "competitivenessIndex": 1,
+          "hasInterest": true,
+          "skuVariations": [],
+          "stock": 7
+        },
+        "priciestOffer": {
+          "id": "1238408431",
+          "name": "Smartphone Samsung Galaxy S24 Ultra, Galaxy AI, Selfie de 12MP, Tela de 6.8\" 1-120Hz, 256GB, 12GB RAM - Titânio Cinza",
+          "imageUrl": "https://i.zst.com.br/thumbs/49/3e/37/-1203375238.jpg",
+          "categoryID": "7",
+          "productID": "12547939",
+          "price": 5999,
+          "numParcels": 0,
+          "parcelValue": 0,
+          "totalParceledValue": 0,
+          "merchantId": "9385",
+          "sellerID": "9385",
+          "sellerName": "Amazon",
+          "sellerLogoURL": "https://s.zst.com.br/prod/cupons/thumbs/46/1f/32/720266555.jpg",
+          "sellerRoundedLogoURL": "https://s.zst.com.br/prod/cupons/9385-Logo-80x80.png",
+          "sellerIsMarketplace": false,
+          "totalPrice": 5999,
+          "loweringPercentage": 0,
+          "competitivenessIndex": 0.4448,
+          "hasInterest": true,
+          "skuVariations": []
+        },
+        "mkpRefinements": [],
+        "hasError": false,
+        "countOfStores": 4,
+        "countOfOffers": 7,
+        "displayOffers": [
+          {
+            "id": "1533213464",
+            "name": "Smartphone Samsung Galaxy S24 Ultra, Galaxy AI, Selfie de 12MP, Tela de 6.8\" 1-120Hz, 256GB, 12GB RAM - Titânio Cinza (Seminovo)",
+            "imageUrl": "https://i.zst.com.br/thumbs/49/10/10/-1609904318.jpg",
+            "categoryID": "7",
+            "productID": "12547939",
+            "price": 3922.55,
+            "numParcels": 0,
+            "parcelValue": 0,
+            "totalParceledValue": 0,
+            "merchantId": "1582",
+            "sellerID": "1582",
+            "sellerName": "Amazon",
+            "sellerLogoURL": "https://s.zst.com.br/prod/cupons/thumbs/9/merchant_1582_1397758033601.com",
+            "sellerRoundedLogoURL": "https://s.zst.com.br/prod/cupons/1582-Logo-80x80.png",
+            "sellerIsMarketplace": false,
+            "totalPrice": 3922.55,
+            "loweringPercentage": 0,
+            "competitivenessIndex": 1,
+            "hasInterest": true,
+            "skuVariations": [],
+            "stock": 7
+          },
+          {
+            "id": "1368471915",
+            "name": "Smartphone Samsung Galaxy S24 Ultra 6,8\" Galaxy AI 256GB Titânio Preto",
+            "imageUrl": "https://i.zst.com.br/thumbs/49/3f/19/-1684386761.jpg",
+            "categoryID": "7",
+            "productID": "12547939",
+            "price": 5399,
+            "numParcels": 10,
+            "parcelValue": 599.89,
+            "totalParceledValue": 5998.9,
+            "merchantId": "22902",
+            "sellerID": "22902",
+            "sellerName": "Magazine Luiza",
+            "sellerLogoURL": "https://s.zst.com.br/prod/cupons/thumbs/9/null",
+            "sellerRoundedLogoURL": "https://s.zst.com.br/prod/cupons/22902-Logo-80x80.png",
+            "sellerIsMarketplace": false,
+            "totalPrice": 5998.9,
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.2817,
+            "hasInterest": true,
+            "skuVariations": [],
+            "stock": 5
+          },
+          {
+            "id": "1506598109",
+            "name": "Smartphone Samsung Galaxy S24 Ultra, 5G, 256GB, 12GB RAM, Câmera 200MP, Tela 6.8\" 120Hz, S Pen, Preto",
+            "imageUrl": "https://i.zst.com.br/thumbs/49/2e/11/-1556617836.jpg",
+            "categoryID": "7",
+            "productID": "12547939",
+            "price": 5399,
+            "numParcels": 10,
+            "parcelValue": 599.88,
+            "totalParceledValue": 5998.8,
+            "merchantId": "16108",
+            "sellerID": "16108",
+            "sellerName": "KaBuM!",
+            "sellerLogoURL": "https://s.zst.com.br/prod/cupons/thumbs/46/31/2c/46282463.jpg",
+            "sellerRoundedLogoURL": "https://s.zst.com.br/prod/cupons/16108-Logo-80x80.png",
+            "sellerIsMarketplace": false,
+            "totalPrice": 5998.8,
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.2793,
+            "hasInterest": true,
+            "skuVariations": []
+          },
+          {
+            "id": "1246095832",
+            "name": "Smartphone Samsung Galaxy S24 Ultra, Galaxy AI, Selfie de 12MP, Tela de 6.8\" 1-120Hz, 256GB, 12GB RAM - Titânio Preto",
+            "imageUrl": "https://i.zst.com.br/thumbs/49/3c/14/-1343123234.jpg",
+            "categoryID": "7",
+            "productID": "12547939",
+            "price": 5998.89,
+            "numParcels": 0,
+            "parcelValue": 0,
+            "totalParceledValue": 0,
+            "merchantId": "1582",
+            "sellerID": "1582",
+            "sellerName": "Amazon",
+            "sellerLogoURL": "https://s.zst.com.br/prod/cupons/thumbs/9/merchant_1582_1397758033601.com",
+            "sellerRoundedLogoURL": "https://s.zst.com.br/prod/cupons/1582-Logo-80x80.png",
+            "sellerIsMarketplace": false,
+            "totalPrice": 5998.89,
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.4448,
+            "hasInterest": true,
+            "skuVariations": []
+          }
+        ],
+        "offerList": [
+          {
+            "id": "1533213464",
+            "name": "Smartphone Samsung Galaxy S24 Ultra, Galaxy AI, Selfie de 12MP, Tela de 6.8\" 1-120Hz, 256GB, 12GB RAM - Titânio Cinza (Seminovo)",
+            "imageUrl": "https://i.zst.com.br/thumbs/49/10/10/-1609904318.jpg",
+            "categoryID": "7",
+            "productID": "12547939",
+            "price": 3922.55,
+            "numParcels": 0,
+            "parcelValue": 0,
+            "totalParceledValue": 0,
+            "merchantId": "1582",
+            "sellerID": "1582",
+            "sellerName": "Amazon",
+            "sellerLogoURL": "https://s.zst.com.br/prod/cupons/thumbs/9/merchant_1582_1397758033601.com",
+            "sellerRoundedLogoURL": "https://s.zst.com.br/prod/cupons/1582-Logo-80x80.png",
+            "sellerIsMarketplace": false,
+            "totalPrice": 3922.55,
+            "loweringPercentage": 0,
+            "competitivenessIndex": 1,
+            "hasInterest": true,
+            "skuVariations": [],
+            "stock": 7
+          },
+          {
+            "id": "1368471915",
+            "name": "Smartphone Samsung Galaxy S24 Ultra 6,8\" Galaxy AI 256GB Titânio Preto",
+            "imageUrl": "https://i.zst.com.br/thumbs/49/3f/19/-1684386761.jpg",
+            "categoryID": "7",
+            "productID": "12547939",
+            "price": 5399,
+            "numParcels": 10,
+            "parcelValue": 599.89,
+            "totalParceledValue": 5998.9,
+            "merchantId": "22902",
+            "sellerID": "22902",
+            "sellerName": "Magazine Luiza",
+            "sellerLogoURL": "https://s.zst.com.br/prod/cupons/thumbs/9/null",
+            "sellerRoundedLogoURL": "https://s.zst.com.br/prod/cupons/22902-Logo-80x80.png",
+            "sellerIsMarketplace": false,
+            "totalPrice": 5998.9,
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.2817,
+            "hasInterest": true,
+            "skuVariations": [],
+            "stock": 5
+          },
+          {
+            "id": "1506598109",
+            "name": "Smartphone Samsung Galaxy S24 Ultra, 5G, 256GB, 12GB RAM, Câmera 200MP, Tela 6.8\" 120Hz, S Pen, Preto",
+            "imageUrl": "https://i.zst.com.br/thumbs/49/2e/11/-1556617836.jpg",
+            "categoryID": "7",
+            "productID": "12547939",
+            "price": 5399,
+            "numParcels": 10,
+            "parcelValue": 599.88,
+            "totalParceledValue": 5998.8,
+            "merchantId": "16108",
+            "sellerID": "16108",
+            "sellerName": "KaBuM!",
+            "sellerLogoURL": "https://s.zst.com.br/prod/cupons/thumbs/46/31/2c/46282463.jpg",
+            "sellerRoundedLogoURL": "https://s.zst.com.br/prod/cupons/16108-Logo-80x80.png",
+            "sellerIsMarketplace": false,
+            "totalPrice": 5998.8,
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.2793,
+            "hasInterest": true,
+            "skuVariations": []
+          },
+          {
+            "id": "1246095832",
+            "name": "Smartphone Samsung Galaxy S24 Ultra, Galaxy AI, Selfie de 12MP, Tela de 6.8\" 1-120Hz, 256GB, 12GB RAM - Titânio Preto",
+            "imageUrl": "https://i.zst.com.br/thumbs/49/3c/14/-1343123234.jpg",
+            "categoryID": "7",
+            "productID": "12547939",
+            "price": 5998.89,
+            "numParcels": 0,
+            "parcelValue": 0,
+            "totalParceledValue": 0,
+            "merchantId": "1582",
+            "sellerID": "1582",
+            "sellerName": "Amazon",
+            "sellerLogoURL": "https://s.zst.com.br/prod/cupons/thumbs/9/merchant_1582_1397758033601.com",
+            "sellerRoundedLogoURL": "https://s.zst.com.br/prod/cupons/1582-Logo-80x80.png",
+            "sellerIsMarketplace": false,
+            "totalPrice": 5998.89,
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.4448,
+            "hasInterest": true,
+            "skuVariations": []
+          },
+          {
+            "id": "1238408437",
+            "name": "Smartphone Samsung Galaxy S24 Ultra, Galaxy AI, Selfie de 12MP, Tela de 6.8\" 1-120Hz, 256GB, 12GB RAM - Titânio Preto",
+            "imageUrl": "https://i.zst.com.br/thumbs/49/e/12/-1341563696.jpg",
+            "categoryID": "7",
+            "productID": "12547939",
+            "price": 5998.89,
+            "numParcels": 0,
+            "parcelValue": 0,
+            "totalParceledValue": 0,
+            "merchantId": "9385",
+            "sellerID": "9385",
+            "sellerName": "Amazon",
+            "sellerLogoURL": "https://s.zst.com.br/prod/cupons/thumbs/46/1f/32/720266555.jpg",
+            "sellerRoundedLogoURL": "https://s.zst.com.br/prod/cupons/9385-Logo-80x80.png",
+            "sellerIsMarketplace": false,
+            "totalPrice": 5998.89,
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.4448,
+            "hasInterest": true,
+            "skuVariations": []
+          },
+          {
+            "id": "1238408431",
+            "name": "Smartphone Samsung Galaxy S24 Ultra, Galaxy AI, Selfie de 12MP, Tela de 6.8\" 1-120Hz, 256GB, 12GB RAM - Titânio Cinza",
+            "imageUrl": "https://i.zst.com.br/thumbs/49/3e/37/-1203375238.jpg",
+            "categoryID": "7",
+            "productID": "12547939",
+            "price": 5999,
+            "numParcels": 0,
+            "parcelValue": 0,
+            "totalParceledValue": 0,
+            "merchantId": "9385",
+            "sellerID": "9385",
+            "sellerName": "Amazon",
+            "sellerLogoURL": "https://s.zst.com.br/prod/cupons/thumbs/46/1f/32/720266555.jpg",
+            "sellerRoundedLogoURL": "https://s.zst.com.br/prod/cupons/9385-Logo-80x80.png",
+            "sellerIsMarketplace": false,
+            "totalPrice": 5999,
+            "loweringPercentage": 0,
+            "competitivenessIndex": 0.4448,
+            "hasInterest": true,
+            "skuVariations": []
+          }
+        ],
+        "isFetching": false,
+        "currentOrderBy": "prod_product_offers_by_price_with_cashback_asc",
+        "noMoreOffers": false,
+        "showHighlightedOffer": false,
+        "refinements": []
+      },
+      "dynamicFacets": {},
+      "category": {},
+      "products": {
+        "product": {
+          "product": {
+            "id": "12547939",
+            "name": "Celular Samsung Galaxy S24 Ultra 5G 256GB 12 GB",
+            "countOfComments": 0,
+            "productSeries": "",
+            "image": "",
+            "minPrice": 0,
+            "maxPrice": 0,
+            "rating": 4.8,
+            "stores": 0,
+            "saved": false,
+            "adultContent": false,
+            "alertNotify": false,
+            "alertLowerBound": 0,
+            "alertUpperBound": 0,
+            "alertStepSize": 0,
+            "alertSuggestedValue": 0,
+            "seoUrl": "",
+            "categoryId": 0,
+            "priceHistorySet": false,
+            "status": "Active",
+            "mainImageId": 0,
+            "popularity": 0,
+            "loweredSeal": false,
+            "description": "A Samsung traz o sistema operacional Android no Smartphone Samsung Galaxy S24 Ultra 256GB 12GB RAM. A tela de tecnologia Dynamic AMOLED 2x conta com 6.8\" em resolução QHD+. Com resolução 8K em vídeos, a câmera deste Galaxy também possui os recursos de Câmera Quádrupla, Flash, Modo Noturno, Modo Retrato. Este Galaxy possui uma bateria com capacidade de 5000mAh. Este modelo de celular tem uma memória RAM de 12.0GB. ",
+            "creationDate": "2024-01-16T16:52:06.064-0300"
+          },
+          "videos": [],
+          "offers": [],
+          "availableOfferOrders": [],
+          "countOffers": 0,
+          "offerOrder": "",
+          "attributes": [
+            {
+              "group": "Informações Básicas",
+              "values": [
+                {
+                  "categoryAttributeId": -1,
+                  "name": "Marca",
+                  "values": [
+                    "Samsung"
+                  ],
+                  "attributeValues": [
+                    {
+                      "name": "Samsung",
+                      "filterUrl": "/celular/samsung"
+                    }
+                  ]
+                },
+                {
+                  "categoryAttributeId": -1,
+                  "name": "Ano de Lançamento",
+                  "values": [
+                    "2024"
+                  ],
+                  "attributeValues": [
+                    {
+                      "name": "2024",
+                      "filterUrl": null
+                    }
+                  ]
+                },
+                {
+                  "categoryAttributeId": -1,
+                  "name": "Linha",
+                  "values": [
+                    "Galaxy"
+                  ],
+                  "attributeValues": [
+                    {
+                      "name": "Galaxy",
+                      "filterUrl": "/celular/linha-galaxy"
+                    }
+                  ]
+                },
+                {
+                  "categoryAttributeId": -1,
+                  "name": "Série",
+                  "values": [
+                    "S24 Ultra 5G"
+                  ],
+                  "attributeValues": [
+                    {
+                      "name": "S24 Ultra 5G",
+                      "filterUrl": "/celular/serie-s24-ultra-5g"
+                    }
+                  ]
+                },
+                {
+                  "categoryAttributeId": -1,
+                  "name": "Tipo de Aparelho",
+                  "values": [
+                    "Smartphone"
+                  ],
+                  "attributeValues": [
+                    {
+                      "name": "Smartphone",
+                      "filterUrl": null
+                    }
+                  ]
+                },
+                {
+                  "categoryAttributeId": -1,
+                  "name": "Quantidade de Chip",
+                  "values": [
+                    "2 Chips"
+                  ],
+                  "attributeValues": [
+                    {
+                      "name": "2 Chips",
+                      "filterUrl": null
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "group": "Câmera",
+              "values": [
+                {
+                  "categoryAttributeId": -1,
+                  "name": "Resolução da Câmera Frontal",
+                  "values": [
+                    "12.0 MP"
+                  ],
+                  "attributeValues": [
+                    {
+                      "name": "12.0 MP",
+                      "filterUrl": null
+                    }
+                  ]
+                },
+                {
+                  "categoryAttributeId": -1,
+                  "name": "Abertura da Câmera Frontal",
+                  "values": [
+                    "f/2.2"
+                  ],
+                  "attributeValues": [
+                    {
+                      "name": "f/2.2",
+                      "filterUrl": null
+                    }
+                  ]
+                },
+                {
+                  "categoryAttributeId": -1,
+                  "name": "Filma em(Câmera Frontal)",
+                  "values": [
+                    "4K"
+                  ],
+                  "attributeValues": [
+                    {
+                      "name": "4K",
+                      "filterUrl": null
+                    }
+                  ]
+                },
+                {
+                  "categoryAttributeId": -1,
+                  "name": "Filma em(Câmera Traseira)",
+                  "values": [
+                    "8K"
+                  ],
+                  "attributeValues": [
+                    {
+                      "name": "8K",
+                      "filterUrl": "/celular/8k"
+                    }
+                  ]
+                },
+                {
+                  "categoryAttributeId": -1,
+                  "name": "Diferenciais da Câmera",
+                  "values": [
+                    "Câmera Quádrupla",
+                    "Flash",
+                    "Modo Noturno",
+                    "Modo Retrato"
+                  ],
+                  "attributeValues": [
+                    {
+                      "name": "Câmera Quádrupla",
+                      "filterUrl": "/celular/camera-quadrupla"
+                    },
+                    {
+                      "name": "Flash",
+                      "filterUrl": "/celular/flash"
+                    },
+                    {
+                      "name": "Modo Noturno",
+                      "filterUrl": "/celular/modo-noturno"
+                    },
+                    {
+                      "name": "Modo Retrato",
+                      "filterUrl": "/celular/modo-retrato"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "group": "Processador, Memória RAM e Armazenamento",
+              "values": [
+                {
+                  "categoryAttributeId": -1,
+                  "name": "Sistema Operacional",
+                  "values": [
+                    "Android 14"
+                  ],
+                  "attributeValues": [
+                    {
+                      "name": "Android 14",
+                      "filterUrl": "/celular/android-14"
+                    }
+                  ]
+                },
+                {
+                  "categoryAttributeId": -1,
+                  "name": "Memória Ram",
+                  "values": [
+                    "12.0"
+                  ],
+                  "attributeValues": [
+                    {
+                      "name": "12.0",
+                      "unit": "GB",
+                      "filterUrl": "/celular/memoria-12-gb"
+                    }
+                  ]
+                },
+                {
+                  "categoryAttributeId": -1,
+                  "name": "Memória Interna",
+                  "values": [
+                    "256GB"
+                  ],
+                  "attributeValues": [
+                    {
+                      "name": "256GB",
+                      "filterUrl": "/celular/armazenamento-interno-256gb"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "group": "Bateria",
+              "values": [
+                {
+                  "categoryAttributeId": -1,
+                  "name": "Capacidade da Bateria",
+                  "values": [
+                    "5000"
+                  ],
+                  "attributeValues": [
+                    {
+                      "name": "5000",
+                      "unit": "mAh",
+                      "filterUrl": null
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "group": "Tela",
+              "values": [
+                {
+                  "categoryAttributeId": -1,
+                  "name": "Tipo de Tela",
+                  "values": [
+                    "Dynamic AMOLED 2x"
+                  ],
+                  "attributeValues": [
+                    {
+                      "name": "Dynamic AMOLED 2x",
+                      "filterUrl": null
+                    }
+                  ]
+                },
+                {
+                  "categoryAttributeId": -1,
+                  "name": "Tamanho da Tela",
+                  "values": [
+                    "6.8"
+                  ],
+                  "attributeValues": [
+                    {
+                      "name": "6.8",
+                      "unit": "\"",
+                      "filterUrl": "/celular/6-8-polegadas"
+                    }
+                  ]
+                },
+                {
+                  "categoryAttributeId": -1,
+                  "name": "Resolução da Tela",
+                  "values": [
+                    "QHD+"
+                  ],
+                  "attributeValues": [
+                    {
+                      "name": "QHD+",
+                      "filterUrl": null
+                    }
+                  ]
+                },
+                {
+                  "categoryAttributeId": -1,
+                  "name": "Taxa de Atualização",
+                  "values": [
+                    "120.0"
+                  ],
+                  "attributeValues": [
+                    {
+                      "name": "120.0",
+                      "unit": "Hz",
+                      "filterUrl": null
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "group": "Conectividade e Recursos",
+              "values": [
+                {
+                  "categoryAttributeId": -1,
+                  "name": "Acesso à Internet",
+                  "values": [
+                    "5G",
+                    "Wi-Fi Dual-band",
+                    "Wi-Fi 6"
+                  ],
+                  "attributeValues": [
+                    {
+                      "name": "5G",
+                      "filterUrl": "/celular/5g"
+                    },
+                    {
+                      "name": "Wi-Fi Dual-band",
+                      "filterUrl": "/celular/wi-fi-dual-band"
+                    },
+                    {
+                      "name": "Wi-Fi 6",
+                      "filterUrl": "/celular/wi-fi-6"
+                    }
+                  ]
+                },
+                {
+                  "categoryAttributeId": -1,
+                  "name": "Conectividade",
+                  "values": [
+                    "Bluetooth",
+                    "NFC",
+                    "OTG",
+                    "USB Type-C"
+                  ],
+                  "attributeValues": [
+                    {
+                      "name": "Bluetooth",
+                      "filterUrl": "/celular/conexao-bluetooth"
+                    },
+                    {
+                      "name": "NFC",
+                      "filterUrl": "/celular/nfc"
+                    },
+                    {
+                      "name": "OTG",
+                      "filterUrl": "/celular/otg"
+                    },
+                    {
+                      "name": "USB Type-C",
+                      "filterUrl": "/celular/usb-type-c"
+                    }
+                  ]
+                },
+                {
+                  "categoryAttributeId": -1,
+                  "name": "Recursos e Funções",
+                  "values": [
+                    "Acelerômetro",
+                    "Leitor Biométrico na Tela",
+                    "Giroscópio",
+                    "Resistente à água IP68"
+                  ],
+                  "attributeValues": [
+                    {
+                      "name": "Acelerômetro",
+                      "filterUrl": "/celular/acelerometro"
+                    },
+                    {
+                      "name": "Leitor Biométrico na Tela",
+                      "filterUrl": "/celular/leitor-biometrico-na-tela"
+                    },
+                    {
+                      "name": "Giroscópio",
+                      "filterUrl": "/celular/giroscopio"
+                    },
+                    {
+                      "name": "Resistente à água IP68",
+                      "filterUrl": "/celular/resistente-a-agua-ip68"
+                    }
+                  ]
+                },
+                {
+                  "categoryAttributeId": -1,
+                  "name": "Diferenciais desse Produto",
+                  "values": [
+                    "Gorilla Glass"
+                  ],
+                  "attributeValues": [
+                    {
+                      "name": "Gorilla Glass",
+                      "filterUrl": "/celular/resistente-a-arranhoes"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "categoryId": 7,
+          "categoryName": "Celular e Smartphone",
+          "countOfComments": 916,
+          "mediaImages": [
+            {
+              "type": "PRODUCT_ZOOM",
+              "thumbUrl": "https://i.zst.com.br/thumbs/12/30/17/-1202498267.jpg",
+              "url": "https://i.zst.com.br/thumbs/12/30/17/-1202498267.jpg",
+              "name": "Smartphone",
+              "description": null
+            },
+            {
+              "type": "PRODUCT_ZOOM",
+              "thumbUrl": "https://i.zst.com.br/thumbs/12/3b/17/-1202498964.jpg",
+              "url": "https://i.zst.com.br/thumbs/12/3b/17/-1202498964.jpg",
+              "name": "Smartphone",
+              "description": null
+            },
+            {
+              "type": "PRODUCT_ZOOM",
+              "thumbUrl": "https://i.zst.com.br/thumbs/12/27/17/-1202498928.jpg",
+              "url": "https://i.zst.com.br/thumbs/12/27/17/-1202498928.jpg",
+              "name": "Smartphone",
+              "description": null
+            },
+            {
+              "type": "PRODUCT_ZOOM",
+              "thumbUrl": "https://i.zst.com.br/thumbs/12/d/17/-1202498897.jpg",
+              "url": "https://i.zst.com.br/thumbs/12/d/17/-1202498897.jpg",
+              "name": "Smartphone",
+              "description": null
+            },
+            {
+              "type": "PRODUCT_ZOOM",
+              "thumbUrl": "https://i.zst.com.br/thumbs/12/37/17/-1202499064.jpg",
+              "url": "https://i.zst.com.br/thumbs/12/37/17/-1202499064.jpg",
+              "name": "Smartphone",
+              "description": null
+            },
+            {
+              "type": "PRODUCT_ZOOM",
+              "thumbUrl": "https://i.zst.com.br/thumbs/12/5/17/-1202498988.jpg",
+              "url": "https://i.zst.com.br/thumbs/12/5/17/-1202498988.jpg",
+              "name": "Smartphone",
+              "description": null
+            },
+            {
+              "type": "PRODUCT_ZOOM",
+              "thumbUrl": "https://i.zst.com.br/thumbs/12/f/17/-1202498477.jpg",
+              "url": "https://i.zst.com.br/thumbs/12/f/17/-1202498477.jpg",
+              "name": "Smartphone",
+              "description": null
+            },
+            {
+              "type": "PRODUCT_ZOOM",
+              "thumbUrl": "https://i.zst.com.br/thumbs/12/19/17/-1202498499.jpg",
+              "url": "https://i.zst.com.br/thumbs/12/19/17/-1202498499.jpg",
+              "name": "Smartphone",
+              "description": null
+            },
+            {
+              "type": "PRODUCT_ZOOM",
+              "thumbUrl": "https://i.zst.com.br/thumbs/12/3d/17/-1202498542.jpg",
+              "url": "https://i.zst.com.br/thumbs/12/3d/17/-1202498542.jpg",
+              "name": "Smartphone",
+              "description": null
+            },
+            {
+              "type": "PRODUCT_ZOOM",
+              "thumbUrl": "https://i.zst.com.br/thumbs/12/11/17/-1202498589.jpg",
+              "url": "https://i.zst.com.br/thumbs/12/11/17/-1202498589.jpg",
+              "name": "Smartphone",
+              "description": null
+            },
+            {
+              "type": "PRODUCT_ZOOM",
+              "thumbUrl": "https://i.zst.com.br/thumbs/12/2b/17/-1202498616.jpg",
+              "url": "https://i.zst.com.br/thumbs/12/2b/17/-1202498616.jpg",
+              "name": "Smartphone",
+              "description": null
+            }
+          ],
+          "commentOrder": "NONE",
+          "availableCommentOrders": [],
+          "comments": [
+            {
+              "id": 0,
+              "userName": "Nilton",
+              "dislikeCount": 0,
+              "likeCount": 0,
+              "dateCreated": "2025-06-02T21:00:00-03:00",
+              "text": "Aparelho ótimo. Dentro das expectativas. Chegou antes do prazo e muito bem embalado.",
+              "rating": 5,
+              "title": "Ótimo aparelho.",
+              "isPositive": true,
+              "external": false,
+              "offerActive": false,
+              "offerId": 1238408431,
+              "merchantId": 9385,
+              "merchantName": "Amazon",
+              "merchantLogo": "https://s.zst.com.br/prod/cupons/thumbs/46/1f/32/720266555.jpg"
+            },
+            {
+              "id": 0,
+              "userName": "Luu",
+              "dislikeCount": 0,
+              "likeCount": 0,
+              "dateCreated": "2025-05-31T21:00:00-03:00",
+              "text": "o Samsung Galaxy S24 Ultra 5G me impressionou pela sua tela deslumbrante de 6,8 polegadas, que oferece cores vibrantes e uma experiência visual incomparável. O desempenho é fluido, graças ao processador Snapdragon 8 Gen 3, e a bateria de 5000mAh garante que eu consiga passar o dia inteiro sem me preocupar com recargas. A câmera, sem dúvida, é um dos maiores destaques, entregando fotos de altíssima qualidade, especialmente em condições de baixa luminosidade, algo que muitos usuários valorizam. Apesar de seu preço elevado, os recursos que ele oferece justificam o investimento. A popularidade entre os consumidores também é um reflexo do que este dispositivo entrega.<br>",
+              "rating": 5,
+              "title": "Desempenho, Câmera e Tela Incríveis",
+              "isPositive": true,
+              "external": false,
+              "offerActive": false,
+              "offerId": 1238408431,
+              "merchantId": 9385,
+              "merchantName": "Amazon",
+              "merchantLogo": "https://s.zst.com.br/prod/cupons/thumbs/46/1f/32/720266555.jpg"
+            },
+            {
+              "id": 0,
+              "userName": "Claudia",
+              "dislikeCount": 0,
+              "likeCount": 0,
+              "dateCreated": "2025-05-22T21:00:00-03:00",
+              "text": "Celular perfeito. Não deixa nada a desejar.A câmera é um expetáculo.Amei<br>",
+              "rating": 5,
+              "title": "Celular excelente",
+              "isPositive": true,
+              "external": false,
+              "offerActive": false,
+              "offerId": 1238408431,
+              "merchantId": 9385,
+              "merchantName": "Amazon",
+              "merchantLogo": "https://s.zst.com.br/prod/cupons/thumbs/46/1f/32/720266555.jpg"
+            },
+            {
+              "id": 0,
+              "userName": "Henrique",
+              "dislikeCount": 0,
+              "likeCount": 0,
+              "dateCreated": "2025-05-09T21:00:00-03:00",
+              "text": "Celular espetacular,  chegou muito bem embalado.",
+              "rating": 5,
+              "title": "Celular top",
+              "isPositive": true,
+              "external": false,
+              "offerActive": false,
+              "offerId": 1238408431,
+              "merchantId": 9385,
+              "merchantName": "Amazon",
+              "merchantLogo": "https://s.zst.com.br/prod/cupons/thumbs/46/1f/32/720266555.jpg"
+            },
+            {
+              "id": 0,
+              "userName": "NADI",
+              "dislikeCount": 0,
+              "likeCount": 0,
+              "dateCreated": "2025-05-06T21:00:00-03:00",
+              "text": "O celular é maravilhoso. Só acho que deveriam usar plástico bolha dentro da caixa pois a caixa do celular vem solta dentro de uma caixa bem maior, o que pode danifica o celular dentro. Também não gostei pq depois que comprei o preço caiu muito, logo na mesma semana.<br>",
+              "rating": 5,
+              "title": "Celular perfeito",
+              "isPositive": true,
+              "external": false,
+              "offerActive": false,
+              "offerId": 1238408431,
+              "merchantId": 9385,
+              "merchantName": "Amazon",
+              "merchantLogo": "https://s.zst.com.br/prod/cupons/thumbs/46/1f/32/720266555.jpg"
+            },
+            {
+              "id": 0,
+              "userName": "Leonardo",
+              "dislikeCount": 0,
+              "likeCount": 0,
+              "dateCreated": "2025-03-07T21:00:00-03:00",
+              "text": "Celular bom e com ótimo desempenho. Única desvantagem é que ele tende a ser um pouco mais pesado e mais grosso que alguns modelos.",
+              "rating": 5,
+              "title": "Ótimo aparelho com poucas desvantagens",
+              "isPositive": true,
+              "external": false,
+              "offerActive": false,
+              "offerId": 1238408431,
+              "merchantId": 9385,
+              "merchantName": "Amazon",
+              "merchantLogo": "https://s.zst.com.br/prod/cupons/thumbs/46/1f/32/720266555.jpg"
+            },
+            {
+              "id": 0,
+              "userName": "Cliente",
+              "dislikeCount": 0,
+              "likeCount": 0,
+              "dateCreated": "2025-03-03T21:00:00-03:00",
+              "text": "O produto dispensa comentários. Tudo nele de de altíssima qualidade: RAM, ROM, câmera, processador...<br>",
+              "rating": 5,
+              "title": "Excelente custo benefício",
+              "isPositive": true,
+              "external": false,
+              "offerActive": false,
+              "offerId": 1238408431,
+              "merchantId": 9385,
+              "merchantName": "Amazon",
+              "merchantLogo": "https://s.zst.com.br/prod/cupons/thumbs/46/1f/32/720266555.jpg"
+            },
+            {
+              "id": 0,
+              "userName": "Arthur",
+              "dislikeCount": 0,
+              "likeCount": 0,
+              "dateCreated": "2025-02-25T21:00:00-03:00",
+              "text": "Ótima experiência de compra. Um excelente produto, funcionando perfeitamente, e com entrega rápida.  SOBRE O APARELHO:  Mesmo com o lançamento do Galaxy S25 Ultra, o S24 Ultra mantém seu lugar no topo.  Na minha opinião, tem design superior ao S25 Ultra: mais sutil e sofisticado; com bordas retas e acabamento fosco, transmite uma aura de luxo funcional.  Com o Snapdragon 8 Gen 3, 12 GB de RAM, e 120 Hz tudo flui sem engasgos.  O sistema de câmeras do S24 Ultra é uma aula de versatilidade, e não perde para nenhum IPhone:  - Sensor de 200 MP para fotos ultra-detalhadas, mesmo em recortes extremos.  - Telefoto de 10 MP com zoom óptico de 5x, mantendo nitidez em distância.  - Ultrawide de 12 MP para capturar paisagens sem distorção.  - Câmera selfie de 12 MP com HDR inteligente.  A bateria de 5.000 mAh pode durar dois dias com uso moderado e aguenta praticamente um dia inteiro em uso intensivo.  Como o S25 Ultra traz só incrementos marginais, o S24 Ultra fica como o melhor, já que entrega 90% do que o sucessor por um preço muito mais em conta.  🌟 Nota Final: 10/10. O padrão-ouro dos smartphones, ontem, hoje e por muito tempo ainda.",
+              "rating": 5,
+              "title": "Continua Reinando como o Melhor Smartphone do Mundo",
+              "isPositive": true,
+              "external": false,
+              "offerActive": false,
+              "offerId": 1238408431,
+              "merchantId": 9385,
+              "merchantName": "Amazon",
+              "merchantLogo": "https://s.zst.com.br/prod/cupons/thumbs/46/1f/32/720266555.jpg"
+            },
+            {
+              "id": 0,
+              "userName": "Ana",
+              "dislikeCount": 0,
+              "likeCount": 0,
+              "dateCreated": "2024-11-01T21:00:00-03:00",
+              "text": "A entrega foi mais rápida que o prazo da Amazon. O celular é incrível, super rápido e tem bastante funcionalidades interessantes. Até o momento não decepciona.",
+              "rating": 5,
+              "title": "O celular é fantástico",
+              "isPositive": true,
+              "external": false,
+              "offerActive": false,
+              "offerId": 1238408431,
+              "merchantId": 9385,
+              "merchantName": "Amazon",
+              "merchantLogo": "https://s.zst.com.br/prod/cupons/thumbs/46/1f/32/720266555.jpg"
+            },
+            {
+              "id": 0,
+              "userName": "Tcastello",
+              "dislikeCount": 0,
+              "likeCount": 0,
+              "dateCreated": "2024-10-23T21:00:00-03:00",
+              "text": "Smart TOP demais, tudo nele é ótimo, velocidade de processamento, câmera, tela, armazenamento, qualidade do material....tudo é top",
+              "rating": 5,
+              "title": "Smart TOP",
+              "isPositive": true,
+              "external": false,
+              "offerActive": false,
+              "offerId": 1238408431,
+              "merchantId": 9385,
+              "merchantName": "Amazon",
+              "merchantLogo": "https://s.zst.com.br/prod/cupons/thumbs/46/1f/32/720266555.jpg"
+            }
+          ],
+          "commentsPageSize": 0,
+          "hasMediaGallery": false,
+          "minPriceInstallments": 0,
+          "minPriceInstallmentValue": 0,
+          "priceHistorySet": false,
+          "images": [],
+          "largeImages": [],
+          "brandOfProduct": {
+            "id": "",
+            "name": "",
+            "filterUrl": "",
+            "alias": ""
+          },
+          "brand": "",
+          "model": "",
+          "attributesIdsWithHint": [],
+          "shareInfo": {
+            "title": "",
+            "url": ""
+          },
+          "appIndexing": {
+            "title": "",
+            "description": "",
+            "keywords": [],
+            "deepLink": "",
+            "webURL": ""
+          },
+          "zsearchViewAlsoProducts": [],
+          "breadcrumbs": [
+            {
+              "active": true,
+              "category_rank_type": "CAE",
+              "id": 7,
+              "media_id": "1917453423",
+              "name": "Celular e Smartphone",
+              "popularity": 34127827,
+              "slug": "celular",
+              "strategic": false,
+              "type": "PRODUCT_LEAF"
+            },
+            {
+              "active": true,
+              "category_rank_type": "LONGTAIL",
+              "id": 348,
+              "media_id": "1917453423",
+              "name": "Celulares e Telefones",
+              "popularity": 30684359,
+              "slug": "celulares-e-telefones",
+              "strategic": false,
+              "type": "BRANCH"
+            }
+          ],
+          "externalReviewsUrl": "https://www.amazon.com.br/product-reviews/B0CQD912YR",
+          "tags": [],
+          "stamps": [
+            "escolha-do-editor"
+          ],
+          "ranking": 2
+        },
+        "shouldRetry": false,
+        "isFetching": false,
+        "hasError": false
+      },
+      "hits": {
+        "hits": [],
+        "pagination": {
+          "page": 0
+        },
+        "isFetching": false,
+        "hasError": false,
+        "lastQueryId": "",
+        "isIndexable": false
+      },
+      "normalizedRefinements": {
+        "refinements": {
+          "allIds": [],
+          "allSelected": [],
+          "byId": {}
+        },
+        "declinedRefinements": [],
+        "enableRefinementsSuggestions": true,
+        "isFetching": false,
+        "hasError": false
+      },
+      "cashback": {
+        "1238408431": {
+          "cashback": {
+            "formula": null,
+            "cashbackValue": null,
+            "offerId": "1238408431",
+            "echoOfferId": 1238408431,
+            "isSuperCashback": false
+          },
+          "isFetching": false,
+          "hasError": false
+        },
+        "1238408437": {
+          "cashback": {
+            "formula": null,
+            "cashbackValue": null,
+            "offerId": "1238408437",
+            "echoOfferId": 1238408437,
+            "isSuperCashback": false
+          },
+          "isFetching": false,
+          "hasError": false
+        },
+        "1246095832": {
+          "cashback": {
+            "formula": null,
+            "cashbackValue": null,
+            "offerId": "1246095832",
+            "echoOfferId": 1246095832,
+            "isSuperCashback": false
+          },
+          "isFetching": false,
+          "hasError": false
+        },
+        "1368471915": {
+          "cashback": {
+            "formula": {
+              "id": "c5afe86e-0821-4bee-b76f-c3107f6e0bbc",
+              "merchantId": "22902",
+              "originId": null,
+              "cashbackRate": 0.06,
+              "details": "<p>Cashback significa dinheiro de volta, e funciona da seguinte forma: você faz uma compra e recebe de volta uma parte deste valor. Aqui, temos o nosso próprio programa de cashback. Além dele, também identificamos nas ofertas o programa de cashback das Lojas parceiras, esse valor porém em caráter informativo, sujeito a alteração de condições e expirar sem aviso prévio.</p>\n<ul>\n<li>Para acumular cashback é necessário ter uma conta e estar logado no momento da Compra.</li>\n<li>Todo cashback é calculado sobre o valor final da compra, excluindo o frete e demais encargos.</li>\n<li>O cashback será disponibilizado para resgate em torno de 30 dias após a entrega do produto.</li>\n<li>Não utilize outras extensões de navegador, ou aplique cupons que não sejam provenientes das nossas plataformas, caso contrário seu cashback poderá ser cancelado.</li>\n<li>Devolução ou trocas cancelam seu dinheiro de volta.</li>\n<li>A Loja parceira é a responsável por nos informar o valor final da compra e nós responsáveis por garantir a correta aplicação da porcentagem de cashback ofertada sobre este valor.</li>\n<li>As compras devem ser realizadas com o mesmo e-mail cadastrado em nossas plataformas.</li>\n<li>Limpe o seu carrinho antes de iniciar sua compra na loja parceira.</li>\n<li>A Loja parceira tem até 30 dia(s) para nos avisar da compra e o dinheiro aparecer no seu saldo como pendente.</li>\n</ul>\n",
+              "startDate": "2026-08-18T03:00:00Z",
+              "endDate": "2026-08-19T03:00:00Z",
+              "device": null,
+              "merchantSkuId": null,
+              "modalityCashbackType": "ALL_MERCHANT",
+              "updatedAt": null,
+              "category": null,
+              "originIdOptional": null
+            },
+            "cashbackValue": 323.94,
+            "offerId": "1368471915",
+            "echoOfferId": 1368471915,
+            "isSuperCashback": true
+          },
+          "isFetching": false,
+          "hasError": false
+        },
+        "1506598109": {
+          "cashback": {
+            "formula": {
+              "id": "8dad0cc0-ce81-4154-8bf1-e639f8b5c452",
+              "merchantId": "16108",
+              "originId": null,
+              "cashbackRate": 0.005,
+              "details": "<p>Cashback significa dinheiro de volta, e funciona da seguinte forma: você faz uma compra e recebe de volta uma parte deste valor. Aqui, temos o nosso próprio programa de cashback. Além dele, também identificamos nas ofertas o programa de cashback das Lojas parceiras, esse valor porém em caráter informativo, sujeito a alteração de condições e expirar sem aviso prévio.</p>\n<ul>\n<li>Para acumular cashback é necessário ter uma conta e estar logado no momento da Compra.</li>\n<li>Todo cashback é calculado sobre o valor final da compra, excluindo o frete e demais encargos.</li>\n<li>O cashback será disponibilizado para resgate em torno de 30 dias após a entrega do produto.</li>\n<li>Não utilize outras extensões de navegador, ou aplique cupons que não sejam provenientes das nossas plataformas, caso contrário seu cashback poderá ser cancelado.</li>\n<li>Devolução ou trocas cancelam seu dinheiro de volta.</li>\n<li>A Loja parceira é a responsável por nos informar o valor final da compra e nós responsáveis por garantir a correta aplicação da porcentagem de cashback ofertada sobre este valor.</li>\n<li>As compras devem ser realizadas com o mesmo e-mail cadastrado em nossas plataformas.</li>\n<li>Limpe o seu carrinho antes de iniciar sua compra na loja parceira.</li>\n<li>A Loja parceira tem até 30 dia(s) para nos avisar da compra e o dinheiro aparecer no seu saldo como pendente.</li>\n</ul>\n",
+              "startDate": "2026-08-04T03:00:00Z",
+              "endDate": "2026-09-01T03:00:00Z",
+              "device": null,
+              "merchantSkuId": null,
+              "modalityCashbackType": "ALL_MERCHANT",
+              "updatedAt": null,
+              "category": null,
+              "originIdOptional": null
+            },
+            "cashbackValue": 27,
+            "offerId": "1506598109",
+            "echoOfferId": 1506598109,
+            "isSuperCashback": false
+          },
+          "isFetching": false,
+          "hasError": false
+        },
+        "1533213464": {
+          "cashback": {
+            "formula": null,
+            "cashbackValue": null,
+            "offerId": "1533213464",
+            "echoOfferId": 1533213464,
+            "isSuperCashback": false
+          },
+          "isFetching": false,
+          "hasError": false
+        }
+      },
+      "merchantCashbacks": {
+        "rates": {
+          "5": 0.08,
+          "8": 0.005,
+          "18": 0.06,
+          "21": 0.005,
+          "27": 0.005,
+          "50": 0.08,
+          "154": 0.005,
+          "245": 0.005,
+          "345": 0.005,
+          "637": 0.005,
+          "751": 0.06,
+          "752": 0.06,
+          "753": 0.06,
+          "790": 0.005,
+          "1240": 0.005,
+          "2584": 0.005,
+          "2800": 0.005,
+          "2987": 0.005,
+          "3209": 0.01,
+          "4081": 0.04,
+          "4296": 0.005,
+          "4798": 0.06,
+          "5420": 0.005,
+          "5485": 0.005,
+          "5855": 0.005,
+          "8374": 0.005,
+          "12655": 0.005,
+          "13625": 0.06,
+          "14168": 0.03,
+          "14530": 0.005,
+          "15090": 0.005,
+          "16108": 0.005,
+          "16208": 0.005,
+          "17608": 0.005,
+          "18214": 0.03,
+          "18218": 0.03,
+          "18222": 0.06,
+          "18225": 0.01,
+          "18236": 0.02,
+          "18238": 0.1,
+          "18250": 0.03,
+          "18262": 0.05,
+          "18263": 0.02,
+          "18285": 0.01,
+          "18307": 0.05,
+          "18308": 0.09,
+          "18310": 0.04,
+          "18317": 0.07,
+          "18321": 0.05,
+          "18322": 0.05,
+          "18325": 0.02,
+          "18326": 0.05,
+          "18529": 0.06,
+          "18535": 0.06,
+          "18555": 0.06,
+          "18574": 0.04,
+          "18586": 0.02,
+          "18601": 0.02,
+          "18602": 0.02,
+          "18624": 0.04,
+          "18639": 0.05,
+          "18654": 0.005,
+          "18669": 0.005,
+          "18678": 0.02,
+          "18682": 0.06,
+          "18715": 0.005,
+          "18739": 0.06,
+          "18747": 0.05,
+          "18751": 0.05,
+          "18790": 0.05,
+          "18859": 0.04,
+          "18906": 0.05,
+          "18930": 0.03,
+          "18994": 0.01,
+          "19004": 0.06,
+          "19019": 0.01,
+          "19069": 0.02,
+          "19128": 0.02,
+          "19195": 0.05,
+          "19242": 0.06,
+          "19271": 0.005,
+          "19272": 0.005,
+          "19280": 0.06,
+          "19290": 0.06,
+          "19291": 0.06,
+          "19293": 0.008,
+          "19377": 0.005,
+          "19381": 0.01,
+          "19699": 0.01,
+          "19850": 0.06,
+          "19882": 0.05,
+          "20000": 0.03,
+          "20006": 0.03,
+          "20008": 0.04,
+          "20010": 0.09,
+          "20022": 0.02,
+          "20024": 0.04,
+          "20028": 0.02,
+          "20035": 0.09,
+          "20040": 0.04,
+          "20055": 0.05,
+          "20076": 0.02,
+          "20080": 0.06,
+          "20085": 0.09,
+          "20092": 0.04,
+          "20121": 0.01,
+          "20463": 0.005,
+          "20561": 0.06,
+          "20599": 0.2,
+          "20906": 0.01,
+          "20924": 0.01,
+          "20936": 0.03,
+          "20937": 0.06,
+          "20938": 0.01,
+          "20946": 0.02,
+          "20947": 0.02,
+          "20950": 0.05,
+          "20962": 0.04,
+          "20965": 0.005,
+          "21051": 0.005,
+          "21064": 0.05,
+          "21067": 0.04,
+          "21073": 0.1,
+          "21074": 0.1,
+          "21077": 0.03,
+          "21083": 0.04,
+          "21084": 0.04,
+          "21089": 0.05,
+          "21100": 0.02,
+          "21102": 0.04,
+          "21106": 0.005,
+          "21108": 0.03,
+          "21113": 0.01,
+          "21115": 0.02,
+          "21116": 0.01,
+          "21117": 0.06,
+          "21120": 0.02,
+          "21121": 0.04,
+          "21122": 0.01,
+          "21123": 0.04,
+          "21124": 0.03,
+          "21130": 0.06,
+          "21131": 0.03,
+          "21135": 0.01,
+          "21136": 0.05,
+          "21148": 0.04,
+          "21156": 0.04,
+          "21159": 0.02,
+          "21178": 0.005,
+          "21218": 0.05,
+          "21253": 0.005,
+          "21320": 0.005,
+          "21464": 0.07,
+          "21468": 0.005,
+          "21472": 0.06,
+          "21479": 0.05,
+          "21486": 0.04,
+          "21492": 0.04,
+          "21493": 0.04,
+          "21499": 0.04,
+          "21500": 0.04,
+          "21513": 0.04,
+          "21514": 0.01,
+          "21521": 0.01,
+          "21522": 0.04,
+          "21523": 0.06,
+          "21539": 0.05,
+          "21544": 0.05,
+          "21573": 0.04,
+          "21580": 0.02,
+          "21584": 0.05,
+          "21594": 0.01,
+          "21652": 0.06,
+          "21661": 0.04,
+          "21664": 0.02,
+          "21665": 0.05,
+          "21666": 0.03,
+          "21668": 0.05,
+          "21670": 0.09,
+          "21672": 0.03,
+          "21673": 0.005,
+          "21678": 0.05,
+          "21679": 0.02,
+          "21680": 0.05,
+          "21682": 0.06,
+          "21683": 0.06,
+          "21684": 0.03,
+          "21687": 0.03,
+          "21689": 0.04,
+          "21690": 0.03,
+          "21694": 0.06,
+          "21696": 0.03,
+          "21697": 0.03,
+          "21698": 0.04,
+          "21699": 0.01,
+          "21700": 0.01,
+          "21701": 0.04,
+          "21703": 0.01,
+          "21705": 0.04,
+          "21707": 0.04,
+          "21710": 0.01,
+          "21711": 0.005,
+          "21718": 0.01,
+          "21722": 0.02,
+          "21723": 0.015,
+          "21725": 0.09,
+          "21726": 0.04,
+          "21727": 0.09,
+          "21728": 0.02,
+          "21729": 0.04,
+          "21730": 0.005,
+          "21735": 0.01,
+          "21737": 0.03,
+          "21739": 0.03,
+          "21789": 0.005,
+          "21835": 0.005,
+          "21839": 0.09,
+          "21840": 0.03,
+          "21841": 0.02,
+          "21846": 0.04,
+          "21847": 0.005,
+          "21849": 0.02,
+          "21853": 0.05,
+          "21855": 0.02,
+          "21856": 0.03,
+          "21858": 0.02,
+          "21860": 0.01,
+          "21861": 0.04,
+          "21869": 0.05,
+          "21872": 0.03,
+          "21873": 0.03,
+          "21874": 0.03,
+          "21875": 0.07,
+          "21880": 0.005,
+          "21881": 0.11,
+          "21882": 0.09,
+          "21883": 0.005,
+          "21888": 0.09,
+          "21889": 0.02,
+          "21890": 0.03,
+          "21893": 0.04,
+          "21894": 0.03,
+          "21895": 0.005,
+          "21900": 0.03,
+          "21904": 0.09,
+          "21906": 0.03,
+          "21908": 0.005,
+          "21909": 0.03,
+          "21913": 0.02,
+          "21916": 0.06,
+          "21918": 0.02,
+          "21919": 0.005,
+          "21924": 0.03,
+          "21926": 0.07,
+          "21927": 0.01,
+          "21935": 0.06,
+          "21936": 0.02,
+          "21937": 0.02,
+          "21938": 0.04,
+          "21939": 0.005,
+          "21940": 0.04,
+          "21941": 0.06,
+          "21943": 0.04,
+          "21944": 0.05,
+          "21945": 0.02,
+          "21946": 0.04,
+          "21948": 0.04,
+          "21949": 0.04,
+          "21951": 0.09,
+          "21952": 0.06,
+          "21953": 0.04,
+          "21954": 0.03,
+          "21955": 0.06,
+          "21956": 0.09,
+          "21957": 0.02,
+          "21958": 0.04,
+          "21960": 0.04,
+          "21961": 0.04,
+          "21962": 0.09,
+          "21965": 0.02,
+          "21966": 0.04,
+          "21967": 0.05,
+          "21968": 0.04,
+          "21969": 0.04,
+          "21971": 0.005,
+          "21974": 0.04,
+          "21991": 0.04,
+          "22004": 0.03,
+          "22006": 0.05,
+          "22007": 0.005,
+          "22314": 0.02,
+          "22317": 0.02,
+          "22323": 0.03,
+          "22338": 0.05,
+          "22340": 0.03,
+          "22342": 0.05,
+          "22345": 0.04,
+          "22346": 0.01,
+          "22349": 0.04,
+          "22350": 0.005,
+          "22360": 0.06,
+          "22370": 0.04,
+          "22786": 0.05,
+          "22788": 0.01,
+          "22841": 0.07,
+          "22902": 0.06,
+          "22905": 0.06,
+          "22906": 0.06,
+          "23202": 0.04,
+          "23205": 0.06,
+          "23326": 0.005,
+          "23494": 0.02,
+          "23697": 0.005,
+          "23698": 0.03,
+          "23700": 0.03,
+          "23704": 0.05,
+          "23705": 0.02,
+          "23707": 0.02,
+          "23709": 0.03,
+          "25860": 0.02
+        },
+        "isFetching": false,
+        "hasError": false
+      },
+      "cashbackMaxRate": {
+        "rates": null,
+        "isFetching": false,
+        "hasError": false
+      },
+      "PRODUCT_SKU": {
+        "isFetching": false,
+        "hasError": false
+      },
+      "sponsored": {
+        "hasError": false,
+        "isFetching": false,
+        "sponsoredItems": [],
+        "meta": null
+      },
+      "articles": {
+        "hasError": false,
+        "isFetching": false,
+        "articles": []
+      },
+      "highlightedArticle": {
+        "hasError": false,
+        "isFetching": false,
+        "highlightedArticle": null
+      },
+      "unleash": {
+        "toggles": {
+          "userPartition": {
+            "featureToggle": "user-partition",
+            "name": "alpha",
+            "enabled": true,
+            "feature_enabled": true,
+            "featureEnabled": true
+          },
+          "zipcodeHeader": true,
+          "autoFetchPromotions": true,
+          "disableInstallmentsOfferPage": false,
+          "isBlackfriday": false,
+          "enableBlackfridayBadge": false,
+          "enablePreBlackfridayBadge": false,
+          "isCybermonday": false,
+          "syncZuthCookieWithRedux": true,
+          "isConsumerDay": false,
+          "isMothersDay": false,
+          "isChristmas": false,
+          "isToTrackOfferPageOnClick": false,
+          "showBancoPanBanner": true,
+          "zSearchAutoFilters": true,
+          "showHitsReview": true,
+          "showConvSearch": true,
+          "showSerpCustom": false,
+          "isComplexSkuEnabled": false,
+          "isBpanAccountOpeningBannerEnabled": false,
+          "isBpanCdbBannerEnabled": true,
+          "isHeroCreditCardBannerEnabled": false,
+          "isSaveProductEnabled": true,
+          "isSearchCouponTrailEnabled": true,
+          "isSearchCashbackTrailEnabled": true,
+          "isOfferCashbackTrailEnabled": false,
+          "isNewPLAEnabled": true,
+          "showOpnativeHistoryPrice": true,
+          "force40DaysOpnativeHistoryPrice": false,
+          "showReviewsOnProductPage": true,
+          "disablePriceAlertFetchAtProductPage": false,
+          "disablePriceHistoryAtProductPage": false,
+          "modalCampaign": true,
+          "showModalCPFCollect": true,
+          "formbricksSurvey": true,
+          "zsearchWithCashbackOffer": true,
+          "bestDeal": true,
+          "showSocialLoginFacebook": true,
+          "showSocialLoginGoogle": true,
+          "appsFlyerSmartBanner": true,
+          "isGAUEnabled": true,
+          "home2024CashbackTrail": true,
+          "isAdobeEnabled": true,
+          "isFormbricksEnabled": true,
+          "isOfferPriceAlertEnabled": true,
+          "smartRecommenderHome": {
+            "featureToggle": "smart-recommender-home",
+            "enabled": false,
+            "name": "Variant-A",
+            "feature_enabled": false,
+            "featureEnabled": false
+          },
+          "smartRecommenderProd": {
+            "featureToggle": "smart-recommender-prod",
+            "enabled": false,
+            "name": "Variant-A",
+            "feature_enabled": false,
+            "featureEnabled": false
+          },
+          "smartRecommenderOffer": {
+            "featureToggle": "smart-recommender-offer",
+            "enabled": false,
+            "name": "Variant-A",
+            "feature_enabled": false,
+            "featureEnabled": false
+          },
+          "smartRecommenderEmptyProd": {
+            "featureToggle": "smart-recommender-empty-prod",
+            "enabled": false,
+            "name": "Variant-A",
+            "feature_enabled": false,
+            "featureEnabled": false
+          },
+          "newOfferModalEnabled": {
+            "featureToggle": "newOfferModal",
+            "enabled": false,
+            "name": "Variant-A",
+            "feature_enabled": false,
+            "featureEnabled": false
+          },
+          "unleashedABTest": {
+            "featureToggle": "unleashedABTest",
+            "enabled": false,
+            "name": "Variant-A",
+            "feature_enabled": false,
+            "featureEnabled": false
+          },
+          "extendInstallments": {
+            "featureToggle": "extendInstallments",
+            "enabled": false,
+            "name": "Variant-A",
+            "feature_enabled": false,
+            "featureEnabled": false
+          },
+          "smartRecommenderAlgolia": {
+            "featureToggle": "smart-recommender-algolia",
+            "enabled": false,
+            "name": "Variant-A",
+            "feature_enabled": false,
+            "featureEnabled": false
+          },
+          "smartRecommenderAlgoliaLogged": {
+            "featureToggle": "smart-recommender-algolia-logged",
+            "enabled": false,
+            "name": "Variant-A",
+            "feature_enabled": false,
+            "featureEnabled": false
+          },
+          "insiderModalTest": {
+            "featureToggle": "insiderModalTest",
+            "enabled": false,
+            "name": "Variant-A",
+            "feature_enabled": false,
+            "featureEnabled": false
+          },
+          "trailGroupABTest": {
+            "featureToggle": "trailGroupABTest",
+            "name": "B",
+            "payload": {
+              "type": "json",
+              "value": "{\n  \"ids\": [\"2701\", \"2700\", \"2702\", \"2703\"],\n  \"titles\": [\n    \"Ar-condicionado\",\n    \"Ofertas de celulares\",\n    \"TVs mais procuradas\",\n    \"Eletrodomésticos\"\n  ],\n  \"links\":[\n    \"/ar-condicionado?utm_campaign=container_trail\",\n    \"/celular?utm_campaign=container_trail\",\n    \"/tv?utm_campaign=container_trail\",\n    \"/search?q=especial-eletrodomesticos-homev2&utm_campaign=container_trail\"\n  ]\n}"
+            },
+            "enabled": true,
+            "feature_enabled": true,
+            "featureEnabled": true
+          },
+          "isComparatorEnabled": false,
+          "blacklistMKPInstallments": {
+            "featureToggle": "blacklist-mkp-installments",
+            "name": "A",
+            "payload": {
+              "type": "string",
+              "value": "21627,21628,21629,18990,23111,22701"
+            },
+            "enabled": true,
+            "feature_enabled": true,
+            "featureEnabled": true
+          },
+          "disableMKPInstallments": false,
+          "isSearchSuggetionsDisabled": true,
+          "newProdHeroTest": {
+            "featureToggle": "newProdHeroTest",
+            "enabled": false,
+            "name": "Variant-A",
+            "feature_enabled": false,
+            "featureEnabled": false
+          },
+          "openSearchTest": {
+            "featureToggle": "openSearchTest",
+            "name": "B",
+            "payload": {
+              "type": "string",
+              "value": "{ \"all\": true, \"home\": true }"
+            },
+            "enabled": true,
+            "feature_enabled": true,
+            "featureEnabled": true
+          }
+        }
+      },
+      "offerpage": {
+        "isFetching": false,
+        "hasError": false,
+        "quantity": 1,
+        "offerPage": {}
+      },
+      "priceHistory": {
+        "isFetching": false,
+        "hasError": false,
+        "priceHistory": {
+          "12547939": {
+            "days": [
+              {
+                "prodId": 12547939,
+                "date": "2026-07-10",
+                "price": 5129.1,
+                "merchantId": 22902
+              },
+              {
+                "prodId": 12547939,
+                "date": "2026-07-11",
+                "price": 5129.1,
+                "merchantId": 22902
+              },
+              {
+                "prodId": 12547939,
+                "date": "2026-07-12",
+                "price": 5129.1,
+                "merchantId": 22902
+              },
+              {
+                "prodId": 12547939,
+                "date": "2026-07-13",
+                "price": 5129.1,
+                "merchantId": 22902
+              },
+              {
+                "prodId": 12547939,
+                "date": "2026-07-14",
+                "price": 5129.1,
+                "merchantId": 16108
+              },
+              {
+                "prodId": 12547939,
+                "date": "2026-07-15",
+                "price": 5129.1,
+                "merchantId": 16108
+              },
+              {
+                "prodId": 12547939,
+                "date": "2026-07-16",
+                "price": 5129.1,
+                "merchantId": 16108
+              },
+              {
+                "prodId": 12547939,
+                "date": "2026-07-17",
+                "price": 5399,
+                "merchantId": 22902
+              },
+              {
+                "prodId": 12547939,
+                "date": "2026-07-22",
+                "price": 5399,
+                "merchantId": 16108
+              },
+              {
+                "prodId": 12547939,
+                "date": "2026-07-23",
+                "price": 5399,
+                "merchantId": 16108
+              },
+              {
+                "prodId": 12547939,
+                "date": "2026-07-24",
+                "price": 5399,
+                "merchantId": 22902
+              },
+              {
+                "prodId": 12547939,
+                "date": "2026-07-25",
+                "price": 5399,
+                "merchantId": 22902
+              },
+              {
+                "prodId": 12547939,
+                "date": "2026-07-28",
+                "price": 5399,
+                "merchantId": 22902
+              },
+              {
+                "prodId": 12547939,
+                "date": "2026-07-29",
+                "price": 5399,
+                "merchantId": 22902
+              },
+              {
+                "prodId": 12547939,
+                "date": "2026-07-30",
+                "price": 5399,
+                "merchantId": 22902
+              },
+              {
+                "prodId": 12547939,
+                "date": "2026-07-31",
+                "price": 5399,
+                "merchantId": 22902
+              },
+              {
+                "prodId": 12547939,
+                "date": "2026-08-01",
+                "price": 5399,
+                "merchantId": 22902
+              },
+              {
+                "prodId": 12547939,
+                "date": "2026-08-15",
+                "price": 5399,
+                "merchantId": 22902
+              },
+              {
+                "prodId": 12547939,
+                "date": "2026-08-16",
+                "price": 5399,
+                "merchantId": 22902
+              },
+              {
+                "prodId": 12547939,
+                "date": "2026-08-17",
+                "price": 5399,
+                "merchantId": 22902
+              },
+              {
+                "prodId": 12547939,
+                "date": "2026-08-18",
+                "price": 5399,
+                "merchantId": 22902
+              }
+            ]
+          }
+        }
+      },
+      "location": {
+        "isFetching": false,
+        "hasError": false,
+        "address": {}
+      },
+      "shipment": {
+        "isFetching": false,
+        "hasError": false,
+        "shipments": []
+      },
+      "user": {
+        "isFetching": false,
+        "hasError": false,
+        "info": null,
+        "token": ""
+      },
+      "device": "desktop",
+      "webview": false,
+      "expertReviews": {
+        "12547939": {
+          "review": {
+            "expertCons": [
+              "Pode ser muito grande para alguns usuários",
+              "Sem entrada para fone de ouvido"
+            ],
+            "expertPros": [
+              "Recursos avançados de IA que permitem tradução de chamadas e edição de fotos ",
+              "Conjunto de câmera quádrupla com a principal de 200MP",
+              "12GB de RAM para multitarefas eficientes",
+              "Bateria de 5000 mAh para longa duração",
+              "Suporte à tecnologia 5G"
+            ],
+            "expertSummary": "Com um equilíbrio perfeito entre performance, design e novas funcionalidades através de Inteligência Artificial, o Galaxy S24 Ultra 256GB é verdadeiro top de linha.",
+            "expertDate": "2024-01-19T13:34:34.208Z",
+            "title": "Samsung Galaxy S24 Ultra 256GB 5G",
+            "subtitle": "As câmeras quádruplas com uma de 200 MP e os recursos avançados de IA destacam o S24 Ultra 256GB, tornando-o um dispositivo excepcional para fotografia e gravação de vídeo em 8K.",
+            "summary": "Com um equilíbrio perfeito entre performance, design e novas funcionalidades através de Inteligência Artificial, o Galaxy S24 Ultra 256GB é verdadeiro top de linha.",
+            "body": "<p>O Samsung Galaxy S24 Ultra é uma verdadeira central de multimídia e produtividade, com sua tela Dynamic AMOLED de 6.8 polegadas e memória RAM de 12GB, oferecendo uma experiência de usuário imersiva e fluida.</p>\n",
+            "review": [
+              {
+                "content": [
+                  "O Samsung Galaxy S24 Ultra é uma verdadeira central de multimídia e produtividade, com sua tela Dynamic AMOLED de 6.8 polegadas e memória RAM de 12GB, oferecendo uma experiência de usuário imersiva e fluida."
+                ]
+              }
+            ],
+            "type": "Review",
+            "conclusion": "",
+            "videoUrl": "",
+            "expertAuthor": "Redação - Buscapé  ",
+            "expertAvatar": "https://s.zst.com.br/prod/brickz/logo_red_buscape_a7e90366b3.png",
+            "expertDescription": "Texto escrito por um de nossos especialistas",
+            "expertRating": null,
+            "articleLink": null,
+            "faq": {
+              "id": 8567,
+              "heading": "Perguntas & Respostas",
+              "subheading": null,
+              "questions": [
+                {
+                  "id": 36061,
+                  "title": "O que vem na caixa do Galaxy S24 Ultra 256GB?",
+                  "answer": "Além do aparelho, os itens que vem na caixa do S24 Ultra são: carregador de 25W, chave para abertura da porta do cartão SIM e cabo USB-C, todos em uma unidade, além dos tradicionais encartes com instruções sobre o aparelho.",
+                  "json": null,
+                  "questionId": null,
+                  "midia": null
+                },
+                {
+                  "id": 36062,
+                  "title": "Qual o processador do Galaxy S24 Ultra?",
+                  "answer": "O Galaxy S24 Ultra vem com o Snapdragon 8 Gen 3, da Qualcomm.",
+                  "json": null,
+                  "questionId": null,
+                  "midia": null
+                },
+                {
+                  "id": 36063,
+                  "title": "Como são as câmeras do Galaxy S24 Ultra 256GB?",
+                  "answer": "O Galaxy S24 Ultra possui uma conjunto de câmera quádrupla, oferecendo versatilidade e alta qualidade para fotografia e vídeo. A câmera principal tem 200 MP, a telefoto tem 50MP, a ultrawide tem 12MP e a periscópica de 10MP. A câmera frontal tem 12.0 MP e o dispositivo suporta gravação de vídeo em 8K com a câmera traseira e 4K com a frontal, além de incluir recursos como modo noturno e modo retrato.",
+                  "json": null,
+                  "questionId": null,
+                  "midia": null
+                },
+                {
+                  "id": 36064,
+                  "title": "Quais as dimensões do  Galaxy S24 Ultra?",
+                  "answer": "O Galaxy S24  Ultra apresenta as seguintes dimensões: 162,3 mm de altura, 79 mm de largura e 8,6 mm de profundidade. O peso é de 232 gramas.",
+                  "json": null,
+                  "questionId": null,
+                  "midia": null
+                },
+                {
+                  "id": 36065,
+                  "title": "Qual a memória interna do Galaxy S24 Ultra?",
+                  "answer": "O aparelho conta com uma memória interna de 256GB, o que é um bom espaço de armazenamento para a maioria dos usuários, permitindo guardar uma grande quantidade de fotos, vídeos e aplicativos.",
+                  "json": null,
+                  "questionId": null,
+                  "midia": null
+                },
+                {
+                  "id": 36066,
+                  "title": "A bateria do Galaxy S24 Ultra 256GB é boa?",
+                  "answer": "A capacidade da bateria é de 5000 mAh, o que é bastante promissor, indicando uma longa duração de bateria, especialmente considerando as eficiências dos novos processadores e sistemas operacionais.",
+                  "json": null,
+                  "questionId": null,
+                  "midia": null
+                },
+                {
+                  "id": 36067,
+                  "title": "Qual a memória RAM do Galaxy S24 Ultra?",
+                  "answer": "O smartphone vem equipado com 12GB de RAM, garantindo uma performance fluida e eficaz para multitarefas e execução de aplicativos pesados.",
+                  "json": null,
+                  "questionId": null,
+                  "midia": null
+                },
+                {
+                  "id": 36068,
+                  "title": "Quais são as funções adicionais do Galaxy S24 Ultra?",
+                  "answer": "O aparelho oferece recursos como leitor biométrico na tela, resistência à água IP68, Gorilla Glass, conectividade NFC, e suporte OTG.",
+                  "json": null,
+                  "questionId": null,
+                  "midia": null
+                },
+                {
+                  "id": 36069,
+                  "title": "Qual versão do Android do Galaxy S24 Ultra 256GB?",
+                  "answer": "O sistema operacional é o Android 14, assegurando acesso às funcionalidades mais recentes do sistema Android.",
+                  "json": null,
+                  "questionId": null,
+                  "midia": null
+                },
+                {
+                  "id": 36070,
+                  "title": "O Galaxy S24 Ultra aceita quantos chips?",
+                  "answer": "O dispositivo suporta o uso de dois chips (Dual chip).",
+                  "json": null,
+                  "questionId": null,
+                  "midia": null
+                },
+                {
+                  "id": 36071,
+                  "title": "O Galaxy S24 Ultra tem 5G?",
+                  "answer": "Sim, o smartphone é compatível com a tecnologia 5G, oferecendo velocidades de conexão mais rápidas.",
+                  "json": null,
+                  "questionId": null,
+                  "midia": null
+                },
+                {
+                  "id": 36072,
+                  "title": "Como é a tela do Galaxy S24 Ultra 256GB?",
+                  "answer": "A tela é um Dynamic AMOLED 2X de 6.8 polegadas com resolução QHD+ e uma taxa de atualização de 120 Hz, proporcionando uma experiência visual nítida e fluida.",
+                  "json": null,
+                  "questionId": null,
+                  "midia": null
+                },
+                {
+                  "id": 36073,
+                  "title": "O Galaxy S24 Ultra tem NFC?",
+                  "answer": "Sim, inclui a funcionalidade NFC, facilitando pagamentos e outras interações por proximidade.",
+                  "json": null,
+                  "questionId": null,
+                  "midia": null
+                }
+              ]
+            }
+          },
+          "isFetching": false,
+          "hasError": false
+        }
+      },
+      "savedProducts": {
+        "savedProducts": {},
+        "isFetching": false,
+        "hasFetched": false,
+        "hasError": false
+      },
+      "productRanking": {},
+      "priceAlert": {
+        "isFetching": false,
+        "hasError": false,
+        "alerts": [],
+        "currentStep": "create-step",
+        "notificationSettings": null,
+        "alertOriginPage": null
+      },
+      "currentPageSection": "",
+      "modal": {
+        "data": {},
+        "isFetching": false,
+        "hasError": false
+      },
+      "convSearch": {
+        "isFetching": false,
+        "hasError": false,
+        "currentStep": 0,
+        "nextStep": null,
+        "convSearchEnded": false
+      },
+      "backend_app": {},
+      "promotionCondition": {},
+      "COMMON_STORE_KEY": {
+        "showChat": false,
+        "loadChat": false,
+        "optionsChat": {}
+      },
+      "priceTip": {
+        "12547939": {
+          "priceTip": {
+            "price": 4129,
+            "median_price": 4249,
+            "prod_id": 12547939,
+            "description": "REGULAR_PRICE",
+            "date_range": {
+              "start": "2026-07-10",
+              "end": "2026-08-18"
+            }
+          },
+          "isFetching": false,
+          "hasError": false
+        }
+      },
+      "offerSkuModal": {},
+      "searchTrails": {
+        "hasFetched": false
+      },
+      "searchfaq": {
+        "searchFaq": [],
+        "isFetching": false,
+        "hasError": false
+      },
+      "login": {
+        "origin": "",
+        "pageType": "home",
+        "cashback": 0
+      },
+      "dealsShowcase": {
+        "dealsShowcase": {
+          "title": "",
+          "subtitle": "",
+          "dealsOffers": []
+        },
+        "isFetching": false,
+        "hasError": false
+      },
+      "modalManager": {
+        "modalCampaign": null,
+        "isFetching": false,
+        "hasError": true
+      },
+      "plaCashbackTrail": {
+        "merchantCashback": null,
+        "isFetching": false,
+        "hasError": false
+      },
+      "offerSKUDescription": {},
+      "CONTENT_SNIPPET": {
+        "isFetching": false,
+        "hasError": false
+      },
+      "plaPage": false,
+      "adobeABTest": {
+        "tests": {}
+      },
+      "vtexOffers": {
+        "products": [],
+        "isLoading": false,
+        "error": null,
+        "pagination": {
+          "currentPage": 0,
+          "totalPages": 0,
+          "prevButtonEnabled": false,
+          "nextButtonEnabled": false
+        }
+      },
+      "sponsoredVtexHits": {
+        "hits": [],
+        "loading": false,
+        "error": null
+      },
+      "competitivenessIndex": {
+        "threshold": 0.8,
+        "isFetching": false,
+        "hasError": false
+      },
+      "comparativeProducts": {
+        "products": [],
+        "isFetching": false,
+        "hasError": false
+      },
+      "pageSEO": {
+        "data": null
+      }
+    }
+  },
+  "page": "/[...slug]",
+  "query": {
+    "_lc": "211",
+    "slug": [
+      "celular",
+      "smartphone-samsung-galaxy-s24-ultra-5g-256gb-camera-quadrupla"
+    ]
+  },
+  "buildId": "ToFhIw3zc-mzMkFookpSD",
+  "assetPrefix": "/ais",
+  "runtimeConfig": {
+    "NEXT_PUBLIC_GOOGLE_OAUTH_CLIENT_ID": "760344128140-d8t7anhkkj2kvrhl0bdvq1qd1c4t03b9.apps.googleusercontent.com",
+    "NEXT_PUBLIC_FACEBOOK_OAUTH_CLIENT_ID": "673573583127916",
+    "NEXT_PUBLIC_RECAPTCHA_KEY": "6Ld0St0UAAAAAJZKxRWxFMBThuW0cHsRFgQKmcYX"
+  },
+  "isFallback": false,
+  "dynamicIds": [
+    30672,
+    39264,
+    58108,
+    6375
+  ],
+  "gip": true,
+  "appGip": true,
+  "scriptLoader": [
+    {
+      "src": "https://accounts.google.com/gsi/client",
+      "async": true,
+      "defer": true,
+      "strategy": "afterInteractive"
+    }
+  ]
+}

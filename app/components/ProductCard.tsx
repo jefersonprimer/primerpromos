@@ -5,7 +5,7 @@ import { Copy, Check, Tag } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
 import { ptBR } from "date-fns/locale";
 import Link from "next/link";
-import { slugify } from "@/app/lib/utils";
+import { slugify, getCategorySlug } from "@/app/lib/utils";
 
 export interface Product {
   id: number;
@@ -21,6 +21,7 @@ export interface Product {
   product_url: string;
   store_url?: string | null;
   created_at: string;
+  specs?: any;
 }
 
 export default function ProductCard({ product }: { product: Product }) {
@@ -56,7 +57,7 @@ export default function ProductCard({ product }: { product: Product }) {
     }
   };
 
-  const categoryPath = product.category ? slugify(product.category) : "produto";
+  const categoryPath = product.category ? getCategorySlug(product.category) : "produto";
 
   return (
     <Link

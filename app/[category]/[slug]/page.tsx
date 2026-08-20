@@ -16,6 +16,7 @@ import RelatedProductsCarousel from "@/app/components/RelatedProductsCarousel";
 import { slugify } from "@/app/lib/utils";
 import PriceHistoryChart from "@/app/components/PriceHistoryChart";
 import ProductImageGallery from "@/app/components/ProductImageGallery";
+import ProductComparison from "@/app/components/ProductComparison";
 
 export const dynamic = "force-dynamic";
 
@@ -95,6 +96,29 @@ export default async function ProductDetailPage({ params }: PageProps) {
     installment_price: p.installment_price.toString(),
     created_at: p.created_at.toISOString(),
   }));
+
+  // Fetch comparable products in the same category that have specifications
+  const comparableProductsRaw = await prisma.product.findMany({
+    where: {
+      category: product.category,
+    },
+    select: {
+      id: true,
+      title: true,
+      image_url: true,
+      cash_price: true,
+      specs: true,
+      created_at: true,
+    },
+  });
+
+  const allComparableProducts = comparableProductsRaw
+    .filter((p) => p.specs !== null)
+    .map((p) => ({
+      ...p,
+      cash_price: p.cash_price.toString(),
+      created_at: p.created_at.toISOString(),
+    }));
 
   const timeAgo = formatDistanceToNow(new Date(product.created_at), {
     addSuffix: true,
@@ -274,12 +298,15 @@ export default async function ProductDetailPage({ params }: PageProps) {
                         key={offer.id}
                         className="flex items-center justify-between gap-3 p-3 rounded-xl bg-zinc-50 dark:bg-zinc-950/40 border border-zinc-100 dark:border-zinc-800/40 hover:border-zinc-200 dark:hover:border-zinc-800 transition-colors"
                       >
-                        <div className="flex items-center gap-2.5 min-w-0">
+                        <Link
+                          href={`/${category}/${slug}`}
+                          className="flex items-center gap-2.5 min-w-0 hover:opacity-80 transition-opacity"
+                        >
                           {offer.image_url ? (
                             /* eslint-disable-next-line @next/next/no-img-element */
                             <img
                               src={offer.image_url}
-                              alt={offer.store_name}
+                              alt={product.title}
                               className="w-16 h-16 object-contain bg-white rounded-lg p-0.5 border border-zinc-100"
                             />
                           ) : (
@@ -307,22 +334,22 @@ export default async function ProductDetailPage({ params }: PageProps) {
                                 : "Apenas à vista"}
                             </div>
                           </div>
-                        </div>
+                        </Link>
 
-                        <div className="flex items-center gap-2 shrink-0">
-                          <div className="font-semibold text-zinc-900 dark:text-zinc-100 text-xs truncate">
+                        <a
+                          href={offer.store_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 shrink-0 hover:opacity-80 transition-opacity"
+                          title={`Ir para ${offer.store_name}`}
+                        >
+                          <span className="font-semibold text-zinc-900 dark:text-zinc-100 text-xs truncate">
                             {offer.store_name}
-                          </div>
-                          <a
-                            href={offer.store_url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-center bg-zinc-900 hover:bg-zinc-800 dark:bg-zinc-100 dark:hover:bg-zinc-200 text-white dark:text-zinc-900 p-1.5 rounded-lg transition-colors cursor-pointer"
-                            title="Ir para a loja"
-                          >
+                          </span>
+                          <span className="flex items-center justify-center bg-zinc-900 hover:bg-zinc-800 dark:bg-zinc-100 dark:hover:bg-zinc-200 text-white dark:text-zinc-900 p-1.5 rounded-lg transition-colors cursor-pointer">
                             <ExternalLink size={10} />
-                          </a>
-                        </div>
+                          </span>
+                        </a>
                       </div>
                     );
                   })}
@@ -340,11 +367,29 @@ export default async function ProductDetailPage({ params }: PageProps) {
               product_id: h.product_id,
               date: h.date.toISOString(),
               price: parseFloat(h.price.toString()),
-              installment_price: parseFloat(h.installment_price.toString()),
+              installment_price: h.installment_price
+                ? parseFloat(h.installment_price.toString())
+                : parseFloat(h.price.toString()),
             }))}
             currentPrice={parseFloat(product.cash_price.toString())}
           />
         </div>
+
+        {/* Product Comparison Section */}
+        {product.specs && (
+          <ProductComparison
+            currentProduct={{
+              id: product.id,
+              title: product.title,
+              image_url: product.image_url,
+              cash_price: product.cash_price.toString(),
+              specs: product.specs,
+              category: product.category,
+              created_at: product.created_at.toISOString(),
+            }}
+            allComparableProducts={allComparableProducts}
+          />
+        )}
 
         {/* Related Offers Section */}
         {relatedProducts.length > 0 && (

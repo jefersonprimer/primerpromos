@@ -111,6 +111,7 @@ interface BuscapeProductDetails {
     store_url: string;
     image_url: string | null;
   }[];
+  specs?: any;
 }
 
 async function fetchBuscapeProductDetails(productUrl: string): Promise<BuscapeProductDetails> {
@@ -141,6 +142,18 @@ async function fetchBuscapeProductDetails(productUrl: string): Promise<BuscapePr
             date: d.date,
             price: d.price
           }));
+        }
+      }
+    }
+
+    // Parse Specs
+    const productsRoot = reduxState?.products;
+    if (productsRoot) {
+      const productKeys = Object.keys(productsRoot);
+      if (productKeys.length > 0) {
+        const firstProd = productsRoot[productKeys[0]];
+        if (firstProd && firstProd.attributes) {
+          result.specs = firstProd.attributes;
         }
       }
     }
@@ -410,6 +423,12 @@ async function scrapeBuscape() {
       console.log(`Fetching details for Buscapé product: ${productUrl}`);
       const details = await fetchBuscapeProductDetails(productUrl);
       
+      if (details.specs) {
+        await prisma.product.update({
+          where: { id: dbProduct.id },
+          data: { specs: details.specs }
+        });
+      }
       // Save history
       for (const h of details.history) {
         if (!h.date || h.price === undefined) continue;
