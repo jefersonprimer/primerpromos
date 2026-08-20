@@ -170,6 +170,13 @@ function HeaderContent() {
                 Smartphones
               </button>
 
+              <Link
+                href="/monte-seu-pc"
+                className="transition-colors hover:text-zinc-900 dark:hover:text-zinc-100 text-zinc-600 dark:text-zinc-300 font-semibold text-blue-600 dark:text-blue-400"
+              >
+                Monte seu PC
+              </Link>
+
               {/* Peripherals Dropdown */}
               <div
                 className="relative h-16 flex items-center"
@@ -278,6 +285,12 @@ function HeaderContent() {
 
       {/* Mobile navigation (always present on small screens to filter) */}
       <div className="md:hidden flex items-center justify-start gap-4 px-4 pb-3 overflow-x-auto scrollbar-none border-t border-zinc-100 dark:border-zinc-800/40 pt-2">
+        <Link
+          href="/monte-seu-pc"
+          className="text-xs whitespace-nowrap px-2.5 py-1 rounded-full bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 font-semibold border border-blue-100 dark:border-blue-900/50"
+        >
+          Monte seu PC
+        </Link>
         <button
           onClick={() => onCategoryChange("Notebook")}
           className="text-xs whitespace-nowrap px-2.5 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300"
