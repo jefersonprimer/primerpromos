@@ -25,6 +25,9 @@ function normalizeCategory(rawCategory: string | null | undefined): string | nul
   if (clean.includes('notebook') || clean.includes('laptop') || clean.includes('macbook')) {
     return 'Notebook';
   }
+  if (clean.includes('mousepad')) {
+    return 'Mousepad';
+  }
   if (clean.includes('mouse')) {
     return 'Mouse';
   }
@@ -33,6 +36,9 @@ function normalizeCategory(rawCategory: string | null | undefined): string | nul
   }
   if (clean.includes('headset') || clean.includes('fone')) {
     return 'Headset';
+  }
+  if (clean.includes('microfone')) {
+    return 'Microfone';
   }
   if (clean.includes('controle')) {
     return 'Controle';
@@ -46,7 +52,52 @@ function normalizeCategory(rawCategory: string | null | undefined): string | nul
   if (clean.includes('lavadora') || clean.includes('máquina de lavar') || clean.includes('lava e seca')) {
     return 'Lavadora';
   }
-  if (clean.includes('acessório')) {
+  if (clean.includes('placa de vídeo') || clean.includes('placa de video') || clean.includes('gpu') || clean.includes('graphics card')) {
+    return 'Placa De Vídeo';
+  }
+  if (clean.includes('processador') || clean.includes('cpu')) {
+    return 'Processador';
+  }
+  if (clean.includes('placa-mãe') || clean.includes('placa mãe') || clean.includes('motherboard')) {
+    return 'Placa-Mãe';
+  }
+  if (clean.includes('gabinete')) {
+    return 'Gabinete';
+  }
+  if (clean.includes('fonte')) {
+    return 'Fonte';
+  }
+  if (clean.includes('memória ram') || clean.includes('memoria ram') || clean.includes('ram')) {
+    return 'Memória RAM';
+  }
+  if (clean.includes('ssd')) {
+    return 'SSD';
+  }
+  if (clean.includes('cadeira')) {
+    return 'Cadeira';
+  }
+  if (clean.includes('console')) {
+    return 'Console';
+  }
+  if (clean.includes('mochila')) {
+    return 'Mochila';
+  }
+  if (clean.includes('suporte')) {
+    return 'Suporte';
+  }
+  if (clean.includes('eletrodoméstico') || clean.includes('eletrodomestico') || clean.includes('eletroportáteis') || clean.includes('eletroportateis') || clean.includes('aspirador')) {
+    return 'Eletrodoméstico';
+  }
+  if (clean.includes('mesa')) {
+    return 'Mesa';
+  }
+  if (clean.includes('desktop') || clean.includes('computador') || clean.includes('pc')) {
+    return 'Desktop';
+  }
+  if (clean.includes('monitor')) {
+    return 'Monitor';
+  }
+  if (clean.includes('acessório') || clean.includes('acessorio')) {
     return 'Acessório';
   }
   if (clean.includes('tablet') || clean.includes('ipad')) {
@@ -483,10 +534,157 @@ async function scrapeBuscape() {
   }
 }
 
+async function scrapeKabum() {
+  console.log('--- Scraping KaBuM! ---');
+  const urls = [
+    { url: 'https://www.kabum.com.br/promocao/maisvendidos', type: 'maisvendidos' },
+    { url: 'https://www.kabum.com.br/ofertas/quinzenagamer', type: 'quinzenagamer' }
+  ];
+
+  for (const { url, type } of urls) {
+    try {
+      console.log(`Fetching KaBuM! ${type} from ${url}...`);
+      const response = await fetch(url, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        },
+      });
+
+      if (!response.ok) {
+        console.error(`Failed to fetch KaBuM! ${type}: ${response.statusText}`);
+        continue;
+      }
+
+      const html = await response.text();
+      const match = html.match(/<script id="__NEXT_DATA__" type="application\/json">(.*?)<\/script>/s);
+      
+      if (!match || !match[1]) {
+        console.error(`Could not find __NEXT_DATA__ in KaBuM! ${type}`);
+        continue;
+      }
+
+      const nextData = JSON.parse(match[1]);
+      const pageProps = nextData?.props?.pageProps;
+      
+      let products: any[] = [];
+      if (type === 'maisvendidos') {
+        const catalogServer = pageProps?.data?.catalogServer;
+        if (catalogServer && Array.isArray(catalogServer.data)) {
+          products = catalogServer.data;
+        }
+      } else if (type === 'quinzenagamer') {
+        const dataOfferServer = pageProps?.dataOfferServer;
+        if (dataOfferServer && Array.isArray(dataOfferServer.data)) {
+          products = dataOfferServer.data;
+        }
+      }
+
+      console.log(`Found ${products.length} products on KaBuM! ${type}. Syncing the top 20...`);
+      const top20 = products.slice(0, 20);
+
+      let savedCount = 0;
+      for (const item of top20) {
+        const code = item.code;
+        if (!code) continue;
+
+        const title = item.name || '';
+        const imageUrl = item.image || '';
+        const cashPrice = item.priceWithDiscount || item.price || 0;
+        const installmentPrice = item.price || cashPrice;
+        
+        // Parse installments count
+        let installmentsCount = 1;
+        if (item.maxInstallment) {
+          const instMatch = String(item.maxInstallment).match(/^(\d+)x/i);
+          if (instMatch) {
+            installmentsCount = parseInt(instMatch[1], 10);
+          }
+        }
+
+        // Parse coupon
+        let coupon: string | null = null;
+        if (item.stamp && item.stamp.name) {
+          const stampName = String(item.stamp.name).trim();
+          if (stampName.toUpperCase().startsWith('CUPOM ')) {
+            coupon = stampName.slice(6).trim();
+          } else {
+            coupon = stampName;
+          }
+        }
+
+        const category = normalizeCategory(item.category);
+        const productUrl = `https://www.kabum.com.br/produto/${code}`;
+        const storeUrl = productUrl;
+        
+        // Build description
+        const manufacturer = item.manufacturer?.name || item.manufacturer || '';
+        const rating = item.averageRating || item.rating || 'N/A';
+        const description = `Fabricante: ${manufacturer} | Avaliação: ${rating} | Oferta KaBuM!`;
+
+        const dbProduct = await prisma.product.upsert({
+          where: { product_url: productUrl },
+          update: {
+            title,
+            category,
+            description,
+            image_url: imageUrl,
+            cash_price: cashPrice,
+            installment_price: installmentPrice,
+            installments_count: installmentsCount,
+            coupon,
+            store_url: storeUrl,
+          },
+          create: {
+            source_site: 'kabum',
+            title,
+            category,
+            description,
+            image_url: imageUrl,
+            cash_price: cashPrice,
+            installment_price: installmentPrice,
+            installments_count: installmentsCount,
+            coupon,
+            product_url: productUrl,
+            store_url: storeUrl,
+          },
+        });
+
+        // Add to history
+        const dateObj = new Date();
+        dateObj.setUTCHours(0, 0, 0, 0);
+        await prisma.priceHistory.upsert({
+          where: {
+            product_id_date: {
+              product_id: dbProduct.id,
+              date: dateObj
+            }
+          },
+          update: {
+            price: cashPrice,
+            installment_price: installmentPrice
+          },
+          create: {
+            product_id: dbProduct.id,
+            date: dateObj,
+            price: cashPrice,
+            installment_price: installmentPrice
+          }
+        });
+
+        savedCount++;
+      }
+      console.log(`Synchronized ${savedCount} KaBuM! ${type} products.`);
+    } catch (error) {
+      console.error(`Error during KaBuM! ${type} scraping:`, error);
+    }
+  }
+}
+
 async function main() {
   try {
     await scrapeBenchPromos();
     await scrapeBuscape();
+    await scrapeKabum();
     console.log('All scraper operations completed successfully!');
   } finally {
     await prisma.$disconnect();
@@ -495,3 +693,4 @@ async function main() {
 }
 
 main();
+
