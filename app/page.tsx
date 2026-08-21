@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, Suspense, useRef } from "react";
+import { useEffect, useState, Suspense, useRef, useCallback } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import ProductCard, { type Product } from "./components/ProductCard";
 import { getCategorySlug, getCategoryFromSlug } from "@/app/lib/utils";
@@ -13,10 +13,8 @@ const homeFilters = [
   { label: "Acessórios", value: "Acessório" },
   { label: "Monitores", value: "Monitor" },
   { label: "Controles", value: "Controle" },
-  { label: "Notebooks", value: "Notebook" },
-  { label: "Mousepads", value: "Mousepad" },
-  { label: "Smartphones", value: "Smartphone" },
-  { label: "TVs", value: "TV" },
+  { label: "Cadeiras", value: "Cadeira" },
+  { label: "Hardware", value: "Hardware" },
 ];
 
 interface HomeContentProps {
@@ -46,7 +44,7 @@ export function HomeContent({ categoryFromRoute }: HomeContentProps = {}) {
     }
   };
 
-  const fetchProducts = async (pageToFetch: number, isInitial: boolean) => {
+  const fetchProducts = useCallback(async (pageToFetch: number, isInitial: boolean) => {
     if (isInitial) {
       setLoading(true);
     } else {
@@ -96,13 +94,15 @@ export function HomeContent({ categoryFromRoute }: HomeContentProps = {}) {
         setLoadingMore(false);
       }
     }
-  };
+  }, [selectedCategory]);
 
   useEffect(() => {
-    setPage(1);
-    setHasMore(true);
-    fetchProducts(1, true);
-  }, [selectedCategory]);
+    setTimeout(() => {
+      setPage(1);
+      setHasMore(true);
+      fetchProducts(1, true);
+    }, 0);
+  }, [selectedCategory, fetchProducts]);
 
   useEffect(() => {
     if (loading || loadingMore || !hasMore) return;
@@ -128,7 +128,7 @@ export function HomeContent({ categoryFromRoute }: HomeContentProps = {}) {
         observer.unobserve(currentTarget);
       }
     };
-  }, [page, loading, loadingMore, hasMore, selectedCategory]);
+  }, [page, loading, loadingMore, hasMore, fetchProducts]);
 
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-black">

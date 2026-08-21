@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Copy, Check, Tag } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
 import { ptBR } from "date-fns/locale";
 import Link from "next/link";
@@ -21,7 +20,7 @@ export interface Product {
   product_url: string;
   store_url?: string | null;
   created_at: string;
-  specs?: any;
+  specs?: Record<string, unknown> | null;
 }
 
 export default function ProductCard({ product }: { product: Product }) {

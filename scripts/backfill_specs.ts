@@ -9,7 +9,7 @@ const adapter = new PrismaPg(pool);
 const prisma = new PrismaClient({ adapter });
 
 interface BuscapeProductDetails {
-  specs?: any;
+  specs?: Record<string, unknown>;
 }
 
 async function fetchBuscapeProductDetails(productUrl: string): Promise<BuscapeProductDetails> {

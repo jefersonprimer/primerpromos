@@ -2,10 +2,10 @@
 
 import { useState, useEffect, Suspense } from "react";
 import { useRouter } from "next/navigation";
-import ProductCard, { type Product } from "./ProductCard";
-import { ChevronDown, Search, X, Sun, Moon } from "lucide-react";
+import { ChevronDown, Search, Sun, Moon } from "lucide-react";
 import Link from "next/link";
-import { getCategorySlug, slugify } from "@/app/lib/utils";
+import { getCategorySlug } from "@/app/lib/utils";
+import SearchModal from "./SearchModal";
 
 export default function Header() {
   return (
@@ -26,7 +26,10 @@ function HeaderContent() {
 
   useEffect(() => {
     const isDark = document.documentElement.classList.contains("dark");
-    setTheme(isDark ? "dark" : "light");
+    const initialTheme = isDark ? "dark" : "light";
+    setTimeout(() => {
+      setTheme(initialTheme);
+    }, 0);
   }, []);
 
   const toggleTheme = () => {
@@ -53,46 +56,6 @@ function HeaderContent() {
   const [isPeripheralsOpen, setIsPeripheralsOpen] = useState(false);
   const [isCategoriesOpen, setIsCategoriesOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [mouseHasEntered, setMouseHasEntered] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [allProducts, setAllProducts] = useState<Product[]>([]);
-
-  useEffect(() => {
-    if (isSearchOpen && allProducts.length === 0) {
-      fetch("/api/products")
-        .then((res) => res.json())
-        .then((data) => {
-          if (Array.isArray(data)) {
-            setAllProducts(data);
-          }
-        })
-        .catch((err) =>
-          console.error(
-            "Erro ao buscar produtos para o preview de busca:",
-            err,
-          ),
-        );
-    }
-  }, [isSearchOpen, allProducts.length]);
-
-  const handleSearchSubmit = () => {
-    if (searchQuery.trim()) {
-      setIsSearchOpen(false);
-      router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
-    }
-  };
-
-  const filteredPreviewProducts = searchQuery
-    ? allProducts.filter(
-        (product) =>
-          product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          (product.category &&
-            product.category
-              .toLowerCase()
-              .includes(searchQuery.toLowerCase())) ||
-          product.source_site.toLowerCase().includes(searchQuery.toLowerCase()),
-      )
-    : allProducts;
 
   const peripherals = [
     { label: "Mouses", value: "Mouse" },
@@ -170,22 +133,13 @@ function HeaderContent() {
                 Smartphones
               </button>
 
-              <Link
-                href="/monte-seu-pc"
-                className="transition-colors hover:text-zinc-900 dark:hover:text-zinc-100 text-zinc-600 dark:text-zinc-300 font-semibold text-blue-600 dark:text-blue-400"
-              >
-                Monte seu PC
-              </Link>
-
               {/* Peripherals Dropdown */}
               <div
                 className="relative h-16 flex items-center"
                 onMouseEnter={() => setIsPeripheralsOpen(true)}
                 onMouseLeave={() => setIsPeripheralsOpen(false)}
               >
-                <button
-                  className="flex items-center gap-1 transition-colors hover:text-zinc-900 dark:hover:text-zinc-100 text-zinc-600 dark:text-zinc-300"
-                >
+                <button className="flex items-center gap-1 transition-colors hover:text-zinc-900 dark:hover:text-zinc-100 text-zinc-600 dark:text-zinc-300">
                   Periféricos
                   <ChevronDown
                     className={`h-4 w-4 transition-transform duration-200 ${isPeripheralsOpen ? "rotate-180" : ""}`}
@@ -219,9 +173,7 @@ function HeaderContent() {
                 onMouseEnter={() => setIsCategoriesOpen(true)}
                 onMouseLeave={() => setIsCategoriesOpen(false)}
               >
-                <button
-                  className="flex items-center gap-1 transition-colors hover:text-zinc-900 dark:hover:text-zinc-100 text-zinc-600 dark:text-zinc-300"
-                >
+                <button className="flex items-center gap-1 transition-colors hover:text-zinc-900 dark:hover:text-zinc-100 text-zinc-600 dark:text-zinc-300">
                   Categorias
                   <ChevronDown
                     className={`h-4 w-4 transition-transform duration-200 ${isCategoriesOpen ? "rotate-180" : ""}`}
@@ -248,16 +200,27 @@ function HeaderContent() {
                   </div>
                 )}
               </div>
+
+              <Link
+                href="/monte-seu-pc"
+                className="transition-colors hover:text-zinc-900 dark:hover:text-zinc-100 text-zinc-600 dark:text-zinc-300 font-semibold text-blue-600 dark:text-blue-400"
+              >
+                Monte seu PC
+              </Link>
+
+              <Link
+                href="/comparador"
+                className="transition-colors hover:text-zinc-900 dark:hover:text-zinc-100 text-zinc-600 dark:text-zinc-300 font-semibold text-blue-600 dark:text-blue-400"
+              >
+                Comparador
+              </Link>
             </nav>
           </div>
 
           {/* Search and Theme Toggle Buttons on Right */}
           <div className="flex items-center gap-1">
             <button
-              onClick={() => {
-                setMouseHasEntered(false);
-                setIsSearchOpen(true);
-              }}
+              onClick={() => setIsSearchOpen(true)}
               className="p-2 transition-colors text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 cursor-pointer"
               aria-label="Buscar"
             >
@@ -291,6 +254,12 @@ function HeaderContent() {
         >
           Monte seu PC
         </Link>
+        <Link
+          href="/comparador"
+          className="text-xs whitespace-nowrap px-2.5 py-1 rounded-full bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 font-semibold border border-blue-100 dark:border-blue-900/50"
+        >
+          Comparador
+        </Link>
         <button
           onClick={() => onCategoryChange("Notebook")}
           className="text-xs whitespace-nowrap px-2.5 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300"
@@ -314,144 +283,10 @@ function HeaderContent() {
         ))}
       </div>
 
-      {/* Search Overlay Panel (takes 80vh, closes on mouse leave or when entering the 20% backdrop area below) */}
-      {isSearchOpen && (
-        <>
-          <div
-            onMouseEnter={() => {
-              if (mouseHasEntered) {
-                setIsSearchOpen(false);
-              }
-            }}
-            onClick={() => setIsSearchOpen(false)}
-            className="fixed inset-0 z-30 bg-black/10 dark:bg-black/30"
-          />
-          <div className="absolute top-full left-0 right-0 h-[calc(100vh-100%)] flex flex-col z-40">
-            <div
-              onMouseEnter={() => setMouseHasEntered(true)}
-              onMouseLeave={() => {
-                if (mouseHasEntered) {
-                  setIsSearchOpen(false);
-                }
-              }}
-              className="h-[80%] w-full bg-background  py-6 flex flex-col gap-6 overflow-y-auto shadow-xl"
-            >
-              <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex flex-col gap-6 h-full">
-                <div className="w-full flex items-center gap-3 pb-2">
-                  <Search className="h-6 w-6 text-zinc-400 dark:text-zinc-500 shrink-0" />
-                  <input
-                    type="text"
-                    placeholder="O que você está procurando?"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter") {
-                        handleSearchSubmit();
-                      }
-                    }}
-                    className="w-full text-xl bg-transparent outline-none border-none py-2 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-500"
-                    autoFocus
-                  />
-                  {searchQuery && (
-                    <button
-                      onClick={() => setSearchQuery("")}
-                      className="p-1 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200 transition-colors shrink-0"
-                      aria-label="Limpar busca"
-                    >
-                      <X className="w-5 h-5" />
-                    </button>
-                  )}
-                </div>
-
-                <div className="w-full flex-1 overflow-y-auto mt-4">
-                  {searchQuery ? (
-                    <>
-                      <h3 className="text-xs font-semibold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider mb-3">
-                        Resultados encontrados
-                      </h3>
-                      {filteredPreviewProducts.length > 0 ? (
-                        <div className="flex flex-col gap-2 pb-4">
-                          {filteredPreviewProducts
-                            .slice(0, 10)
-                            .map((product) => {
-                              const categoryPath = product.category
-                                ? getCategorySlug(product.category)
-                                : "produto";
-                              const href = `/${categoryPath}/${product.id}-${slugify(product.title)}`;
-                              return (
-                                <Link
-                                  key={product.id}
-                                  href={href}
-                                  onClick={() => setIsSearchOpen(false)}
-                                  className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1 cursor-pointer block truncate"
-                                >
-                                  {product.title}
-                                </Link>
-                              );
-                            })}
-                        </div>
-                      ) : (
-                        <div className="text-center py-8 text-zinc-500 dark:text-zinc-400 text-sm">
-                          Nenhuma promoção encontrada para esta busca.
-                        </div>
-                      )}
-                    </>
-                  ) : (
-                    <div>
-                      <h3 className="text-xs font-semibold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider mb-3">
-                        Links Rápidos
-                      </h3>
-                      <div className="flex flex-col gap-3">
-                        <button
-                          onClick={() => {
-                            onCategoryChange(null);
-                            setIsSearchOpen(false);
-                          }}
-                          className="flex items-center gap-2.5 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors w-fit cursor-pointer animate-fade-in"
-                        >
-                          <span className="w-1.5 h-1.5 rounded-full bg-blue-600 dark:bg-blue-500"></span>
-                          Promoções do Dia
-                        </button>
-                        <button
-                          onClick={() => {
-                            onCategoryChange("Notebook");
-                            setIsSearchOpen(false);
-                          }}
-                          className="flex items-center gap-2.5 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors w-fit cursor-pointer"
-                        >
-                          <span className="w-1.5 h-1.5 rounded-full bg-zinc-400 dark:bg-zinc-600"></span>
-                          Notebooks
-                        </button>
-                        <button
-                          onClick={() => {
-                            onCategoryChange("Smartphone");
-                            setIsSearchOpen(false);
-                          }}
-                          className="flex items-center gap-2.5 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors w-fit cursor-pointer"
-                        >
-                          <span className="w-1.5 h-1.5 rounded-full bg-zinc-400 dark:bg-zinc-600"></span>
-                          Smartphones
-                        </button>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
-
-            {/* Área de 20% com blur no final para fechar ao passar o mouse */}
-            <div
-              onMouseEnter={() => {
-                if (mouseHasEntered) {
-                  setIsSearchOpen(false);
-                }
-              }}
-              onClick={() => setIsSearchOpen(false)}
-              className="h-[20%] w-full bg-background/60 backdrop-blur-md border-t border-zinc-200/30 dark:border-zinc-800/30 cursor-pointer"
-            />
-          </div>
-        </>
-      )}
+      <SearchModal
+        isOpen={isSearchOpen}
+        onClose={() => setIsSearchOpen(false)}
+      />
     </header>
   );
 }

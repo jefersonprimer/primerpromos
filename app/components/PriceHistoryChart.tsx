@@ -8,8 +8,8 @@ interface HistoryItem {
   id: number;
   product_id: number;
   date: Date | string;
-  price: any; // Decimal type from Prisma
-  installment_price: any;
+  price: number | string | { toString(): string }; // Decimal type from Prisma
+  installment_price: number | string | { toString(): string } | null;
 }
 
 interface PriceHistoryChartProps {
@@ -39,7 +39,7 @@ export default function PriceHistoryChart({ history, currentPrice }: PriceHistor
         const d = new Date();
         d.setDate(now.getDate() - i);
         // Slightly random price fluctuation around current price
-        const fluctuation = (Math.sin(i * 0.05) * 0.05 + (Math.random() - 0.5) * 0.02);
+        const fluctuation = (Math.sin(i * 0.05) * 0.05 + Math.sin(i * 7.5) * 0.01);
         mockPoints.push({
           date: d,
           price: Math.round(currentPrice * (1 + fluctuation) * 100) / 100,
@@ -74,9 +74,9 @@ export default function PriceHistoryChart({ history, currentPrice }: PriceHistor
   const chartWidth = width - paddingLeft - paddingRight;
   const chartHeight = height - paddingTop - paddingBottom;
 
-  const { points, minPrice, maxPrice, dates } = useMemo(() => {
+  const { points, minPrice, maxPrice } = useMemo(() => {
     if (filteredData.length === 0) {
-      return { points: [], minPrice: 0, maxPrice: 0, dates: [] };
+      return { points: [], minPrice: 0, maxPrice: 0 };
     }
 
     const prices = filteredData.map((d) => d.price);

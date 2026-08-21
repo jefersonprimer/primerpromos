@@ -2,10 +2,10 @@
 
 import { useRef, useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import ProductCard from "./ProductCard";
+import ProductCard, { type Product } from "./ProductCard";
 
 interface RelatedProductsCarouselProps {
-  products: any[];
+  products: Product[];
 }
 
 export default function RelatedProductsCarousel({ products }: RelatedProductsCarouselProps) {

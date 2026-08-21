@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import ProductCard, { type Product } from "../components/ProductCard";
 import { getNormalizedSpec } from "../lib/utils";
-import { ChevronDown, ChevronUp, SlidersHorizontal, RotateCcw, X } from "lucide-react";
+import { ChevronDown, SlidersHorizontal, RotateCcw, X } from "lucide-react";
 
 interface CategoryPageContentProps {
   categoryName: string;
@@ -41,11 +41,16 @@ export default function CategoryPageContent({
   const [maxPrice, setMaxPrice] = useState<string>("");
 
   // Sorting state
-  const [sortBy, setSortBy] = useState<"relevance" | "price_asc" | "price_desc">("relevance");
+  const [sortBy, setSortBy] = useState<
+    "relevance" | "price_asc" | "price_desc"
+  >("relevance");
 
   const { absoluteMinPrice, absoluteMaxPrice } = useMemo(() => {
-    const prices = initialProducts.map((p) => parseFloat(p.cash_price)).filter((p) => !isNaN(p));
-    if (prices.length === 0) return { absoluteMinPrice: 0, absoluteMaxPrice: 10000 };
+    const prices = initialProducts
+      .map((p) => parseFloat(p.cash_price))
+      .filter((p) => !isNaN(p));
+    if (prices.length === 0)
+      return { absoluteMinPrice: 0, absoluteMaxPrice: 10000 };
     return {
       absoluteMinPrice: Math.floor(Math.min(...prices)),
       absoluteMaxPrice: Math.ceil(Math.max(...prices)),
@@ -70,17 +75,26 @@ export default function CategoryPageContent({
   // Extract all available values and counts for each spec filter dynamically
   const filterOptions = useMemo(() => {
     const options: Record<string, Record<string, number>> = {};
-    
+
     FILTER_CONFIGS.forEach((config) => {
       options[config.key] = {};
     });
 
     initialProducts.forEach((product) => {
       FILTER_CONFIGS.forEach((config) => {
-        if (product.category && product.category.toLowerCase() === categoryName.toLowerCase() || !categoryName) {
-          const val = product.specs ? getNormalizedSpec(product.specs, config.key) : null;
+        if (
+          (product.category &&
+            product.category.toLowerCase() === categoryName.toLowerCase()) ||
+          !categoryName
+        ) {
+          const val = product.specs
+            ? getNormalizedSpec(product.specs, config.key)
+            : null;
           if (val) {
-            const subValues = val.split(",").map((s) => s.trim()).filter(Boolean);
+            const subValues = val
+              .split(",")
+              .map((s) => s.trim())
+              .filter(Boolean);
             subValues.forEach((v) => {
               options[config.key][v] = (options[config.key][v] || 0) + 1;
             });
@@ -89,7 +103,8 @@ export default function CategoryPageContent({
       });
     });
 
-    const sortedOptions: Record<string, { value: string; count: number }[]> = {};
+    const sortedOptions: Record<string, { value: string; count: number }[]> =
+      {};
     FILTER_CONFIGS.forEach((config) => {
       sortedOptions[config.key] = Object.entries(options[config.key])
         .map(([value, count]) => ({ value, count }))
@@ -149,11 +164,17 @@ export default function CategoryPageContent({
       for (const config of FILTER_CONFIGS) {
         const selected = selectedSpecs[config.key];
         if (selected && selected.length > 0) {
-          const specVal = product.specs ? getNormalizedSpec(product.specs, config.key) : null;
+          const specVal = product.specs
+            ? getNormalizedSpec(product.specs, config.key)
+            : null;
           if (!specVal) return false;
 
-          const productValues = specVal.split(",").map((s) => s.trim().toLowerCase());
-          const hasMatch = selected.some((sel) => productValues.includes(sel.toLowerCase()));
+          const productValues = specVal
+            .split(",")
+            .map((s) => s.trim().toLowerCase());
+          const hasMatch = selected.some((sel) =>
+            productValues.includes(sel.toLowerCase()),
+          );
           if (!hasMatch) return false;
         }
       }
@@ -162,9 +183,13 @@ export default function CategoryPageContent({
     });
 
     if (sortBy === "price_asc") {
-      filtered.sort((a, b) => parseFloat(a.cash_price) - parseFloat(b.cash_price));
+      filtered.sort(
+        (a, b) => parseFloat(a.cash_price) - parseFloat(b.cash_price),
+      );
     } else if (sortBy === "price_desc") {
-      filtered.sort((a, b) => parseFloat(b.cash_price) - parseFloat(a.cash_price));
+      filtered.sort(
+        (a, b) => parseFloat(b.cash_price) - parseFloat(a.cash_price),
+      );
     }
 
     return filtered;
@@ -184,13 +209,27 @@ export default function CategoryPageContent({
   // Active filter tags
   const activeFilterTags = useMemo(() => {
     const tags: { key: string; label: string; value: string }[] = [];
-    if (minPrice) tags.push({ key: "minPrice", label: `Preço Mín: R$ ${minPrice}`, value: minPrice });
-    if (maxPrice) tags.push({ key: "maxPrice", label: `Preço Máx: R$ ${maxPrice}`, value: maxPrice });
-    
+    if (minPrice)
+      tags.push({
+        key: "minPrice",
+        label: `Preço Mín: R$ ${minPrice}`,
+        value: minPrice,
+      });
+    if (maxPrice)
+      tags.push({
+        key: "maxPrice",
+        label: `Preço Máx: R$ ${maxPrice}`,
+        value: maxPrice,
+      });
+
     FILTER_CONFIGS.forEach((config) => {
       const selected = selectedSpecs[config.key] || [];
       selected.forEach((val) => {
-        tags.push({ key: config.key, label: `${config.label}: ${val}`, value: val });
+        tags.push({
+          key: config.key,
+          label: `${config.label}: ${val}`,
+          value: val,
+        });
       });
     });
     return tags;
@@ -200,7 +239,7 @@ export default function CategoryPageContent({
     <div className="min-h-screen bg-zinc-50 dark:bg-black text-zinc-900 dark:text-zinc-100">
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
         {/* Category Title & Info */}
-        <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-4 mb-6 pb-4 border-b border-zinc-200 dark:border-zinc-800">
+        <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-4 mb-6 pb-4 ">
           <div>
             <h1 className="text-3xl font-extrabold tracking-tight text-zinc-950 dark:text-zinc-50 capitalize">
               {categoryName}
@@ -217,7 +256,11 @@ export default function CategoryPageContent({
             <div className="relative">
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
+                onChange={(e) =>
+                  setSortBy(
+                    e.target.value as "relevance" | "price_asc" | "price_desc",
+                  )
+                }
                 className="appearance-none pl-4 pr-10 py-2.5 bg-white border-zinc-200 dark:bg-zinc-900 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:border-zinc-300 dark:hover:border-zinc-700 rounded-2xl text-sm font-bold border outline-none cursor-pointer"
               >
                 <option value="relevance">Relevância</option>
@@ -248,7 +291,9 @@ export default function CategoryPageContent({
         {/* Active Filter Tags */}
         {activeFilterTags.length > 0 && (
           <div className="flex flex-wrap items-center gap-2 mb-6">
-            <span className="text-xs font-semibold text-zinc-500 dark:text-zinc-400">Ativos:</span>
+            <span className="text-xs font-semibold text-zinc-500 dark:text-zinc-400">
+              Ativos:
+            </span>
             {activeFilterTags.map((tag) => (
               <span
                 key={`${tag.key}-${tag.value}`}
@@ -275,15 +320,17 @@ export default function CategoryPageContent({
           {filtersExpanded && (
             <>
               {/* Backdrop */}
-              <div 
+              <div
                 className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 transition-opacity"
                 onClick={() => setFiltersExpanded(false)}
               />
-              
+
               {/* Sidebar */}
               <aside className="fixed right-0 top-0 h-full w-80 bg-white dark:bg-zinc-900 shadow-2xl z-50 flex flex-col transition-all animate-in slide-in-from-right duration-300">
                 <div className="flex items-center justify-between p-6 border-b border-zinc-100 dark:border-zinc-800/80">
-                  <span className="font-bold text-zinc-900 dark:text-zinc-50 text-base">Filtros</span>
+                  <span className="font-bold text-zinc-900 dark:text-zinc-50 text-base">
+                    Filtros
+                  </span>
                   <div className="flex items-center gap-4">
                     {activeFiltersCount > 0 && (
                       <button
@@ -293,7 +340,7 @@ export default function CategoryPageContent({
                         Limpar tudo
                       </button>
                     )}
-                    <button 
+                    <button
                       onClick={() => setFiltersExpanded(false)}
                       className="p-1 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-500 dark:text-zinc-400 transition-colors cursor-pointer"
                     >
@@ -310,20 +357,25 @@ export default function CategoryPageContent({
                     </h4>
 
                     <div className="relative h-2 bg-zinc-105 dark:bg-zinc-800 rounded-full mt-4 mb-2">
-                      <div 
+                      <div
                         className="absolute h-full bg-blue-600 dark:bg-blue-500 rounded-full"
                         style={{
                           left: `${((parseFloat(minPrice || absoluteMinPrice.toString()) - absoluteMinPrice) / (absoluteMaxPrice - absoluteMinPrice || 1)) * 100}%`,
-                          right: `${100 - ((parseFloat(maxPrice || absoluteMaxPrice.toString()) - absoluteMinPrice) / (absoluteMaxPrice - absoluteMinPrice || 1)) * 100}%`
+                          right: `${100 - ((parseFloat(maxPrice || absoluteMaxPrice.toString()) - absoluteMinPrice) / (absoluteMaxPrice - absoluteMinPrice || 1)) * 100}%`,
                         }}
                       />
                       <input
                         type="range"
                         min={absoluteMinPrice}
                         max={absoluteMaxPrice}
-                        value={minPrice ? parseFloat(minPrice) : absoluteMinPrice}
+                        value={
+                          minPrice ? parseFloat(minPrice) : absoluteMinPrice
+                        }
                         onChange={(e) => {
-                          const val = Math.min(Number(e.target.value), Number(maxPrice || absoluteMaxPrice));
+                          const val = Math.min(
+                            Number(e.target.value),
+                            Number(maxPrice || absoluteMaxPrice),
+                          );
                           setMinPrice(val.toString());
                         }}
                         className="absolute pointer-events-none appearance-none w-full h-2 bg-transparent top-0 left-0 accent-blue-600 dark:accent-blue-500 [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:bg-blue-600 [&::-moz-range-thumb]:pointer-events-auto [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:bg-blue-600"
@@ -332,9 +384,14 @@ export default function CategoryPageContent({
                         type="range"
                         min={absoluteMinPrice}
                         max={absoluteMaxPrice}
-                        value={maxPrice ? parseFloat(maxPrice) : absoluteMaxPrice}
+                        value={
+                          maxPrice ? parseFloat(maxPrice) : absoluteMaxPrice
+                        }
                         onChange={(e) => {
-                          const val = Math.max(Number(e.target.value), Number(minPrice || absoluteMinPrice));
+                          const val = Math.max(
+                            Number(e.target.value),
+                            Number(minPrice || absoluteMinPrice),
+                          );
                           setMaxPrice(val.toString());
                         }}
                         className="absolute pointer-events-none appearance-none w-full h-2 bg-transparent top-0 left-0 accent-blue-600 dark:accent-blue-500 [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:bg-blue-600 [&::-moz-range-thumb]:pointer-events-auto [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:bg-blue-600"
@@ -343,7 +400,9 @@ export default function CategoryPageContent({
 
                     <div className="flex items-center gap-2 mt-2">
                       <div className="relative flex-1">
-                        <span className="absolute left-2 top-1.5 text-[10px] text-zinc-400 dark:text-zinc-600">Mín</span>
+                        <span className="absolute left-2 top-1.5 text-[10px] text-zinc-400 dark:text-zinc-600">
+                          Mín
+                        </span>
                         <input
                           type="number"
                           placeholder={absoluteMinPrice.toString()}
@@ -354,7 +413,9 @@ export default function CategoryPageContent({
                       </div>
                       <span className="text-zinc-400 text-xs">—</span>
                       <div className="relative flex-1">
-                        <span className="absolute left-2 top-1.5 text-[10px] text-zinc-400 dark:text-zinc-600">Máx</span>
+                        <span className="absolute left-2 top-1.5 text-[10px] text-zinc-400 dark:text-zinc-600">
+                          Máx
+                        </span>
                         <input
                           type="number"
                           placeholder={absoluteMaxPrice.toString()}
@@ -374,7 +435,10 @@ export default function CategoryPageContent({
                     const selected = selectedSpecs[config.key] || [];
 
                     return (
-                      <div key={config.key} className="flex flex-col gap-3 border-t border-zinc-100 dark:border-zinc-800/80 pt-4">
+                      <div
+                        key={config.key}
+                        className="flex flex-col gap-3 border-t border-zinc-100 dark:border-zinc-800/80 pt-4"
+                      >
                         <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 flex items-center justify-between">
                           <span>{config.label}</span>
                           {selected.length > 0 && (
@@ -393,7 +457,12 @@ export default function CategoryPageContent({
                                   <input
                                     type="checkbox"
                                     checked={isChecked}
-                                    onChange={() => handleCheckboxChange(config.key, opt.value)}
+                                    onChange={() =>
+                                      handleCheckboxChange(
+                                        config.key,
+                                        opt.value,
+                                      )
+                                    }
                                     className="w-3.5 h-3.5 rounded border-zinc-300 dark:border-zinc-700 text-blue-600 focus:ring-blue-500 bg-white dark:bg-zinc-900 cursor-pointer"
                                   />
                                   <span>{opt.value}</span>

@@ -3,17 +3,10 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { formatDistanceToNow } from "date-fns";
 import { ptBR } from "date-fns/locale";
-import {
-  ChevronLeft,
-  ExternalLink,
-  ShoppingBag,
-  Calendar,
-  Tag,
-} from "lucide-react";
+import { ExternalLink, ShoppingBag } from "lucide-react";
 import prisma from "@/app/lib/prisma";
 import CopyCouponButton from "@/app/components/CopyCouponButton";
 import RelatedProductsCarousel from "@/app/components/RelatedProductsCarousel";
-import { slugify } from "@/app/lib/utils";
 import PriceHistoryChart from "@/app/components/PriceHistoryChart";
 import ProductImageGallery from "@/app/components/ProductImageGallery";
 import ProductComparison from "@/app/components/ProductComparison";
@@ -149,7 +142,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
             ),
           );
         }
-      } catch (e) {}
+      } catch {}
     }
     if (images.length === 0) {
       images.push(
@@ -174,9 +167,13 @@ export default async function ProductDetailPage({ params }: PageProps) {
   }
 
   const hasCoupon = !!product.coupon;
-  const hideThumbnails = 
-    ["notebooks", "notebook", "smartphones", "smartphone"].includes(category.toLowerCase()) || 
-    ["notebooks", "notebook", "smartphones", "smartphone"].includes(product.category?.toLowerCase() || "");
+  const hideThumbnails =
+    ["notebooks", "notebook", "smartphones", "smartphone"].includes(
+      category.toLowerCase(),
+    ) ||
+    ["notebooks", "notebook", "smartphones", "smartphone"].includes(
+      product.category?.toLowerCase() || "",
+    );
 
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-black text-zinc-900 dark:text-zinc-100 flex flex-col">
@@ -184,7 +181,11 @@ export default async function ProductDetailPage({ params }: PageProps) {
       <main className="flex-grow max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-4 py-8 md:py-12">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
           {/* Images Gallery Container */}
-          <ProductImageGallery images={images} title={product.title} hideThumbnails={hideThumbnails} />
+          <ProductImageGallery
+            images={images}
+            title={product.title}
+            hideThumbnails={hideThumbnails}
+          />
 
           {/* Details and Information */}
           <div className="md:col-span-6 flex flex-col justify-between gap-6">
@@ -266,7 +267,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 href={product.store_url || product.product_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm py-3.5 px-6 rounded-2xl transition-colors cursor-pointer shadow-md shadow-blue-500/10 hover:shadow-blue-500/20 text-center"
+                className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm py-3.5 px-6 rounded-xl transition-colors cursor-pointer shadow-md shadow-blue-500/10 hover:shadow-blue-500/20 text-center"
               >
                 <ShoppingBag size={18} />
                 Ir para a Loja {product.source_site}
@@ -286,6 +287,9 @@ export default async function ProductDetailPage({ params }: PageProps) {
             {/* Outras Ofertas Section */}
             {product.offers && product.offers.length > 0 && (
               <div className="my-6 flex flex-col gap-4">
+                <h3 className="text-base font-bold text-zinc-950 dark:text-zinc-50">
+                  Outras Lojas e Ofertas
+                </h3>
                 <div className="flex flex-col gap-3">
                   {product.offers.map((offer) => {
                     const formattedOfferCash = new Intl.NumberFormat("pt-BR", {
@@ -296,29 +300,29 @@ export default async function ProductDetailPage({ params }: PageProps) {
                     return (
                       <div
                         key={offer.id}
-                        className="flex items-center justify-between gap-3 p-3 rounded-xl bg-zinc-50 dark:bg-zinc-950/40 border border-zinc-100 dark:border-zinc-800/40 hover:border-zinc-200 dark:hover:border-zinc-800 transition-colors"
+                        className="flex items-center justify-between gap-4 p-4 rounded-xl bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800/60 hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors shadow-sm"
                       >
                         <Link
                           href={`/${category}/${slug}`}
-                          className="flex items-center gap-2.5 min-w-0 hover:opacity-80 transition-opacity"
+                          className="flex items-center gap-3 min-w-0 hover:opacity-80 transition-opacity"
                         >
                           {offer.image_url ? (
                             /* eslint-disable-next-line @next/next/no-img-element */
                             <img
                               src={offer.image_url}
                               alt={product.title}
-                              className="w-16 h-16 object-contain bg-white rounded-lg p-0.5 border border-zinc-100"
+                              className="w-14 h-14 object-contain bg-white rounded-lg p-1 border border-zinc-200 shrink-0"
                             />
                           ) : (
-                            <div className="w-8 h-8 bg-zinc-100 dark:bg-zinc-800 rounded-lg flex items-center justify-center text-[10px] font-bold text-zinc-400">
+                            <div className="w-14 h-14 bg-zinc-100 dark:bg-zinc-800 rounded-lg flex items-center justify-center text-xs font-bold text-zinc-500 shrink-0">
                               {offer.store_name.slice(0, 2).toUpperCase()}
                             </div>
                           )}
                           <div className="min-w-0">
-                            <span className="text-xl font-extrabold text-zinc-950 dark:text-zinc-50">
+                            <span className="text-lg font-extrabold text-zinc-950 dark:text-zinc-50 block">
                               {formattedOfferCash}
                             </span>
-                            <div className="text-xs text-zinc-500">
+                            <div className="text-xs text-zinc-500 dark:text-zinc-400">
                               {offer.installments_count > 1
                                 ? `ou ${offer.installments_count}x de ${new Intl.NumberFormat(
                                     "pt-BR",
@@ -340,15 +344,13 @@ export default async function ProductDetailPage({ params }: PageProps) {
                           href={offer.store_url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 shrink-0 hover:opacity-80 transition-opacity"
+                          className="flex items-center gap-1.5 shrink-0 bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-500 text-white rounded-xl py-2 px-3.5 transition-colors font-semibold text-xs shadow-sm hover:shadow"
                           title={`Ir para ${offer.store_name}`}
                         >
-                          <span className="font-semibold text-zinc-900 dark:text-zinc-100 text-xs truncate">
+                          <span className="truncate max-w-[80px] sm:max-w-none">
                             {offer.store_name}
                           </span>
-                          <span className="flex items-center justify-center bg-zinc-900 hover:bg-zinc-800 dark:bg-zinc-100 dark:hover:bg-zinc-200 text-white dark:text-zinc-900 p-1.5 rounded-lg transition-colors cursor-pointer">
-                            <ExternalLink size={10} />
-                          </span>
+                          <ExternalLink size={13} className="shrink-0" />
                         </a>
                       </div>
                     );

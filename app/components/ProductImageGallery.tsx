@@ -16,7 +16,9 @@ export default function ProductImageGallery({ images, title, hideThumbnails = fa
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    setTimeout(() => {
+      setMounted(true);
+    }, 0);
   }, []);
 
   // Keyboard navigation for Lightbox

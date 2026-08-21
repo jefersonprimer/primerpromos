@@ -3,13 +3,23 @@
 import { useState, Fragment, useMemo } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
+export interface SpecItem {
+  name: string;
+  values: string[];
+}
+
+export interface SpecGroup {
+  group: string;
+  values: SpecItem[];
+}
+
 interface ProductComparisonProps {
   currentProduct: {
     id: number;
     title: string;
     image_url: string;
     cash_price: string;
-    specs: any;
+    specs: SpecGroup[] | null | unknown;
     category: string | null;
     created_at: string;
   };
@@ -18,7 +28,7 @@ interface ProductComparisonProps {
     title: string;
     image_url: string;
     cash_price: string;
-    specs: any;
+    specs: SpecGroup[] | null | unknown;
     created_at: string;
   }[];
 }
@@ -29,14 +39,14 @@ export default function ProductComparison({
 }: ProductComparisonProps) {
   // Helper to extract a value from the product specs JSON
   const getSpecString = (
-    specs: any,
+    specs: SpecGroup[] | null | unknown,
     groupName: string,
     attrName: string,
   ): string => {
     if (!specs || !Array.isArray(specs)) return "";
-    const group = specs.find((g: any) => g.group === groupName);
+    const group = (specs as SpecGroup[]).find((g: SpecGroup) => g.group === groupName);
     if (!group || !Array.isArray(group.values)) return "";
-    const attr = group.values.find((v: any) => v.name === attrName);
+    const attr = group.values.find((v: SpecItem) => v.name === attrName);
     if (!attr || !Array.isArray(attr.values) || attr.values.length === 0)
       return "";
     return attr.values.join(", ");
@@ -55,14 +65,14 @@ export default function ProductComparison({
   };
 
   const getSpecValue = (
-    specs: any,
+    specs: SpecGroup[] | null | unknown,
     groupName: string,
     attrName: string,
   ): string => {
     if (!specs || !Array.isArray(specs)) return "-";
-    const group = specs.find((g: any) => g.group === groupName);
+    const group = (specs as SpecGroup[]).find((g: SpecGroup) => g.group === groupName);
     if (!group || !Array.isArray(group.values)) return "-";
-    const attr = group.values.find((v: any) => v.name === attrName);
+    const attr = group.values.find((v: SpecItem) => v.name === attrName);
     if (!attr || !Array.isArray(attr.values) || attr.values.length === 0)
       return "-";
     return attr.values.join(", ");
@@ -212,11 +222,14 @@ export default function ProductComparison({
                   >
                     <div className="flex flex-col items-center gap-2">
                       {p.image_url ? (
-                        <img
-                          src={p.image_url}
-                          alt={p.title}
-                          className="w-48 h-48 object-contain bg-white rounded-2xl"
-                        />
+                        <>
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={p.image_url}
+                            alt={p.title}
+                            className="w-48 h-48 object-contain bg-white rounded-2xl"
+                          />
+                        </>
                       ) : (
                         <div className="w-16 h-16 bg-zinc-100 dark:bg-zinc-800 rounded-lg" />
                       )}
@@ -235,7 +248,7 @@ export default function ProductComparison({
             </tr>
           </thead>
           <tbody>
-            {currentSpecs.map((groupObj: any) => {
+            {currentSpecs.map((groupObj: SpecGroup) => {
               const groupName = groupObj.group;
               const valuesArray = groupObj.values || [];
               const isCollapsed = collapsedGroups[groupName];
@@ -264,7 +277,7 @@ export default function ProductComparison({
 
                   {/* Attributes details (if not collapsed) */}
                   {!isCollapsed &&
-                    valuesArray.map((attrObj: any) => {
+                    valuesArray.map((attrObj: SpecItem) => {
                       const attrName = attrObj.name;
                       return (
                         <Fragment key={attrName}>

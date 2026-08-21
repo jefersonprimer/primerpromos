@@ -115,12 +115,25 @@ function normalizeCategory(rawCategory: string | null | undefined): string | nul
     .join(' ');
 }
 
-async function fetchBenchPromosHistory(slug: string): Promise<{ date: string; lowestPrice: number; lowestInstallmentPrice: number }[]> {
+interface DailyHistoryItem {
+  lowestPrice: number;
+  lowestInstallmentPrice: number;
+  date: string;
+}
+interface BenchPromosHistoryResponse {
+  data?: {
+    productHistory?: {
+      dailyHistory?: DailyHistoryItem[];
+    };
+  };
+}
+
+async function fetchBenchPromosHistory(slug: string): Promise<DailyHistoryItem[]> {
   try {
-    const url = 'https://api.benchpromos.com.br/api';
+    const url = 'https://benchpromos-api.com/graphql';
     const query = `
-      query GetProductHistory($input: GetProductHistoryInput!) {
-        productHistory(productHistoryInput: $input) {
+      query GetProductHistory($productId: String!) {
+        productHistory(productId: $productId) {
           dailyHistory {
             lowestPrice
             lowestInstallmentPrice
@@ -131,7 +144,6 @@ async function fetchBenchPromosHistory(slug: string): Promise<{ date: string; lo
     `;
     const variables = {
       input: {
-        periodInDays: 30,
         productId: slug
       }
     };
@@ -144,7 +156,7 @@ async function fetchBenchPromosHistory(slug: string): Promise<{ date: string; lo
       body: JSON.stringify({ query, variables })
     });
     if (!response.ok) return [];
-    const data = await response.json() as any;
+    const data = await response.json() as BenchPromosHistoryResponse;
     return data?.data?.productHistory?.dailyHistory || [];
   } catch (error) {
     console.error(`Error fetching Bench Promos history for ${slug}:`, error);
@@ -162,7 +174,7 @@ interface BuscapeProductDetails {
     store_url: string;
     image_url: string | null;
   }[];
-  specs?: any;
+  specs?: Record<string, unknown>;
 }
 
 async function fetchBuscapeProductDetails(productUrl: string): Promise<BuscapeProductDetails> {
@@ -189,7 +201,7 @@ async function fetchBuscapeProductDetails(productUrl: string): Promise<BuscapePr
       if (productIds.length > 0) {
         const firstProductHistory = historyRoot[productIds[0]];
         if (firstProductHistory && Array.isArray(firstProductHistory.days)) {
-          result.history = firstProductHistory.days.map((d: any) => ({
+          result.history = firstProductHistory.days.map((d: { date: string; price: number }) => ({
             date: d.date,
             price: d.price
           }));
@@ -258,11 +270,39 @@ async function scrapeBenchPromos() {
     const scriptRegex = /window\[Symbol\.for\("ApolloSSRDataTransport"\)\]\s*\?\?=\s*\[\]\)\.push\(([\s\S]*?)\);?$/m;
     const match = html.match(scriptRegex);
     
-    let jsonData: any = null;
+    interface SaleItem {
+      id: string | number;
+      slug: string;
+      title?: string;
+      caption?: string;
+      review?: string;
+      imageUrl?: string;
+      price?: number;
+      installments?: number;
+      totalInstallmentPrice?: number;
+      couponSchema?: { code?: string };
+      coupon?: string;
+      url?: string;
+      category?: { name?: string };
+    }
+
+    interface ApolloSSRData {
+      json?: {
+        rehydrate?: Record<string, {
+          data?: {
+            sales?: {
+              list?: SaleItem[];
+            };
+          };
+        }>;
+      };
+    }
+
+    let jsonData: ApolloSSRData | null = null;
     if (match && match[1]) {
       try {
-        jsonData = JSON.parse(match[1]);
-      } catch (err) {
+        jsonData = JSON.parse(match[1]) as ApolloSSRData;
+      } catch {
         // Fallback
       }
     }
@@ -273,8 +313,8 @@ async function scrapeBenchPromos() {
       const fallbackMatch = html.match(fallbackRegex);
       if (fallbackMatch && fallbackMatch[1]) {
         try {
-          jsonData = JSON.parse(fallbackMatch[1]);
-        } catch (err) {
+          jsonData = JSON.parse(fallbackMatch[1]) as ApolloSSRData;
+        } catch {
           // ignore
         }
       }
@@ -289,7 +329,7 @@ async function scrapeBenchPromos() {
       throw new Error('Rehydrate data not found.');
     }
 
-    let salesList: any[] = [];
+    let salesList: SaleItem[] = [];
     for (const key of Object.keys(rehydrateData)) {
       const sales = rehydrateData[key]?.data?.sales;
       if (sales && Array.isArray(sales.list)) {
@@ -408,7 +448,18 @@ async function scrapeBuscape() {
       throw new Error('Buscapé landingPageData is missing in nextData.');
     }
 
-    const buscapeProducts: any[] = [];
+    interface BuscapeItem {
+      type: string;
+      name: string;
+      price: number;
+      image?: string;
+      rating?: number | string;
+      bestOffer?: { merchantName?: string };
+      categoryName?: string;
+      url: string;
+    }
+
+    const buscapeProducts: BuscapeItem[] = [];
     const landingPageData = pageProps.landingPageData;
     
     // Extract products from all sections in landingPageData
@@ -566,7 +617,18 @@ async function scrapeKabum() {
       const nextData = JSON.parse(match[1]);
       const pageProps = nextData?.props?.pageProps;
       
-      let products: any[] = [];
+      interface KabumItem {
+        code: string | number;
+        name: string;
+        image?: string;
+        priceWithDiscount?: number;
+        price?: number;
+        maxInstallment?: string | number;
+        friendlyString?: string;
+        description?: string;
+      }
+
+      let products: KabumItem[] = [];
       if (type === 'maisvendidos') {
         const catalogServer = pageProps?.data?.catalogServer;
         if (catalogServer && Array.isArray(catalogServer.data)) {

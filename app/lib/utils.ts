@@ -98,11 +98,21 @@ export function getCategoryFromSlug(slug: string): string | null {
   return slugToCategory[decoded] || null;
 }
 
-export function getProductSpec(specs: any, attrName: string): string | null {
+interface SpecItem {
+  name: string;
+  values: string[];
+}
+
+interface SpecGroup {
+  group: string;
+  values: SpecItem[];
+}
+
+export function getProductSpec(specs: SpecGroup[] | null | unknown, attrName: string): string | null {
   if (!specs || !Array.isArray(specs)) return null;
-  for (const group of specs) {
+  for (const group of specs as SpecGroup[]) {
     if (group && Array.isArray(group.values)) {
-      const attr = group.values.find((v: any) => v && v.name && v.name.toLowerCase() === attrName.toLowerCase());
+      const attr = group.values.find((v: SpecItem) => v && v.name && v.name.toLowerCase() === attrName.toLowerCase());
       if (attr && Array.isArray(attr.values) && attr.values.length > 0) {
         return attr.values.join(", ");
       }
@@ -111,7 +121,7 @@ export function getProductSpec(specs: any, attrName: string): string | null {
   return null;
 }
 
-export function getNormalizedSpec(specs: any, filterKey: string): string | null {
+export function getNormalizedSpec(specs: SpecGroup[] | null | unknown, filterKey: string): string | null {
   const mappings: Record<string, string[]> = {
     fabricante: ["Marca", "Marca - Celular"],
     processador: ["Processador"],

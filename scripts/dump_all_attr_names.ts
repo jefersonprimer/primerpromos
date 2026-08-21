@@ -8,6 +8,17 @@ const pool = new Pool({ connectionString });
 const adapter = new PrismaPg(pool);
 const prisma = new PrismaClient({ adapter });
 
+interface SpecValue {
+  name: string;
+  [key: string]: unknown;
+}
+
+interface SpecGroup {
+  group: string;
+  values?: SpecValue[];
+  [key: string]: unknown;
+}
+
 async function main() {
   try {
     const products = await prisma.product.findMany({
@@ -18,7 +29,7 @@ async function main() {
     const groups: Record<string, Set<string>> = {};
 
     for (const p of products) {
-      const specs = p.specs as any[];
+      const specs = p.specs as unknown as SpecGroup[];
       if (!Array.isArray(specs)) continue;
       for (const g of specs) {
         if (!groups[g.group]) groups[g.group] = new Set();

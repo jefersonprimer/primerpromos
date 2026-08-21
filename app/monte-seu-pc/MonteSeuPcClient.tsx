@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
-import Link from "next/link";
 import { 
   Search, 
   Trash2, 
@@ -61,9 +60,11 @@ export default function MonteSeuPcClient({ initialProducts }: MonteSeuPcClientPr
 
   // Reset pagination & filters on tab change
   useEffect(() => {
-    setCurrentPage(1);
-    setSearchQuery("");
-    setBrandFilter("all");
+    setTimeout(() => {
+      setCurrentPage(1);
+      setSearchQuery("");
+      setBrandFilter("all");
+    }, 0);
   }, [activeTab]);
 
   // Filter products for the active tab
@@ -310,7 +311,7 @@ export default function MonteSeuPcClient({ initialProducts }: MonteSeuPcClientPr
                 <select
                   value={sortBy}
                   onChange={(e) => {
-                    setSortBy(e.target.value as any);
+                    setSortBy(e.target.value as "relevance" | "price_asc" | "price_desc");
                     setCurrentPage(1);
                   }}
                   className="px-3 py-2 bg-zinc-50 dark:bg-zinc-955 border border-zinc-200 dark:border-zinc-800 rounded-xl text-xs font-semibold outline-none cursor-pointer text-zinc-700 dark:text-zinc-300"
