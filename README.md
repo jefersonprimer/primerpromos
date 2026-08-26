@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Primer Promos
 
-## Getting Started
+O **Primer Promos** é uma plataforma moderna e de alta performance projetada para monitoramento, raspagem (*scraping*) e agregação de promoções e produtos. Desenvolvida utilizando **Next.js**, **Prisma** e **Tailwind CSS v4**, a aplicação integra um pipeline eficiente de coleta de dados (*scraper*) com um banco de dados relacional **PostgreSQL** para fornecer ofertas e especificações detalhadas de produtos em tempo real.
 
-First, run the development server:
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Frontend & Server-Side:** [Next.js](https://nextjs.org/) (App Router)
+- **Banco de Dados & ORM:** [PostgreSQL](https://www.postgresql.org/) & [Prisma ORM](https://www.prisma.io/)
+- **Estilização:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Linguagem:** [TypeScript](https://www.typescriptlang.org/)
+- **Gerenciador de Pacotes:** [pnpm](https://pnpm.io/)
+
+---
+
+## 📋 Pré-requisitos
+
+Certifique-se de ter instalado em sua máquina:
+- [Node.js](https://nodejs.org/) (v20 ou superior recomendado)
+- [pnpm](https://pnpm.io/)
+- Instância do banco de dados **PostgreSQL** (ou serviço como Supabase / Docker)
+
+---
+
+## ⚙️ Variáveis de Ambiente
+
+Crie um arquivo `.env` na raiz do projeto com base no arquivo `.example.env`:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Copiar o exemplo de configuração para o ambiente local
+cp .example.env .env
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra o arquivo `.env` recém-criado e configure as URLs de conexão com o seu banco de dados:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```env
+# Conexão com o banco via transaction-mode pooler (ideal para serverless/Next.js)
+DATABASE_URL="postgresql://usuario:senha@host:porta/banco?pgbouncer=true"
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Conexão direta com o banco (necessária para rodar as migrações do Prisma)
+DIRECT_URL="postgresql://usuario:senha@host:porta/banco"
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Instalação e Execução
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Siga os comandos abaixo no seu terminal para clonar o repositório, instalar as dependências e rodar o projeto:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+# 1. Clonar o repositório
+git clone https://github.com/seu-usuario/primerpromos.git
 
-## Deploy on Vercel
+# 2. Entrar no diretório do projeto
+cd primerpromos
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# 3. Instalar as dependências
+pnpm install
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# 4. Gerar o Prisma Client e aplicar as migrações do banco
+pnpm prisma:generate
+pnpm prisma:migrate:dev
+
+# 5. Executar o servidor em ambiente de desenvolvimento
+pnpm dev
+```
+
+Após iniciar o servidor, abra **[http://localhost:3000](http://localhost:3000)** no seu navegador.
+
+---
+
+## 📂 Scripts Disponíveis
+
+No arquivo `package.json` estão disponíveis os seguintes comandos:
+
+| Comando | Descrição |
+|---|---|
+| `pnpm dev` | Inicia o servidor de desenvolvimento do Next.js. |
+| `pnpm build` | Compila o projeto Next.js para produção. |
+| `pnpm start` | Inicia o servidor de produção após o build. |
+| `pnpm scraper` | Roda o script de raspagem de promoções (`scripts/scraper.ts`). |
+| `pnpm prisma:generate` | Gera os tipos do Prisma Client com base no esquema. |
+| `pnpm prisma:migrate:dev` | Roda migrações do Prisma em ambiente de desenvolvimento. |
+| `pnpm prisma:studio` | Abre o console administrativo do Prisma no navegador. |
