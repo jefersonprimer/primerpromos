@@ -5,18 +5,6 @@ import { useSearchParams, useRouter } from "next/navigation";
 import ProductCard, { type Product } from "./components/ProductCard";
 import { getCategorySlug, getCategoryFromSlug } from "@/app/lib/utils";
 
-const homeFilters = [
-  { label: "Todos", value: null },
-  { label: "Mouses", value: "Mouse" },
-  { label: "Teclados", value: "Teclado" },
-  { label: "Headsets", value: "Headset" },
-  { label: "Acessórios", value: "Acessório" },
-  { label: "Monitores", value: "Monitor" },
-  { label: "Controles", value: "Controle" },
-  { label: "Cadeiras", value: "Cadeira" },
-  { label: "Hardware", value: "Hardware" },
-];
-
 interface HomeContentProps {
   categoryFromRoute?: string;
 }
@@ -133,25 +121,6 @@ export function HomeContent({ categoryFromRoute }: HomeContentProps = {}) {
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-black">
       <main className="max-w-7xl mx-auto p-8">
-        {/* Category Filter Bar */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-6 scrollbar-none">
-          {homeFilters.map((item) => {
-            const isActive = selectedCategory === item.value;
-            return (
-              <button
-                key={item.label}
-                onClick={() => handleCategoryChange(item.value)}
-                className={`px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all border cursor-pointer ${
-                  isActive
-                    ? "bg-zinc-900 border-zinc-900 text-white dark:bg-zinc-100 dark:border-zinc-100 dark:text-zinc-900"
-                    : "bg-white border-zinc-200 dark:bg-zinc-900 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:border-zinc-300 dark:hover:border-zinc-700 hover:text-zinc-900 dark:hover:text-zinc-100"
-                }`}
-              >
-                {item.label}
-              </button>
-            );
-          })}
-        </div>
 
         <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-50 mb-6">
           {selectedCategory && `${selectedCategory}s em Destaque`}

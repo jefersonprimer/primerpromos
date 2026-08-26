@@ -155,111 +155,60 @@ export default function SearchModal({
         </div>
 
         {/* Results Body */}
-        <div className="flex-1 overflow-y-auto p-4 min-h-[250px]">
-          {isSearching ? (
-            <div className="flex flex-col items-center justify-center py-12 text-zinc-500 gap-2">
-              <Loader2 className="animate-spin w-8 h-8 text-blue-600 dark:text-blue-500" />
-              <span className="text-sm font-semibold">Buscando...</span>
-            </div>
-          ) : searchResults.length > 0 ? (
-            <div className="flex flex-col gap-1.5">
-              {searchResults.map((product) => (
-                <button
-                  key={product.id}
-                  onClick={() => handleProductClick(product)}
-                  className="flex items-center gap-4 p-3 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 rounded-2xl text-left w-full transition-all border border-transparent hover:border-zinc-200 dark:hover:border-zinc-800"
-                >
-                  <div className="w-20 h-20 bg-white rounded-xl border border-zinc-100 flex items-center justify-center p-1 shrink-0 relative overflow-hidden">
-                    <Image
-                      src={product.image_url}
-                      alt={product.title}
-                      fill
-                      unoptimized
-                      className="object-contain p-1"
-                    />
-                  </div>
-                  <div className="flex flex-col min-w-0">
-                    <span className="text-sm font-bold text-zinc-900 dark:text-zinc-100 line-clamp-2">
-                      {product.title}
-                    </span>
-                    <div className="flex items-baseline gap-1.5 mt-1">
-                      <span className="text-base font-extrabold text-zinc-900 dark:text-zinc-50">
-                        {formatPrice(product.cash_price)}
-                      </span>
-                      <span className="text-[10px] text-zinc-500 dark:text-zinc-400 uppercase tracking-wider font-bold">
-                        à vista
-                      </span>
-                    </div>
-                  </div>
-                </button>
-              ))}
-            </div>
-          ) : searchQuery ? (
-            <div className="flex flex-col items-center justify-center py-12 text-zinc-400 text-center px-4">
-              <span className="text-sm font-bold">
-                {onSelectProduct
-                  ? "Nenhum produto com especificações encontrado."
-                  : "Nenhum produto encontrado."}
-              </span>
-              <span className="text-xs mt-1">
-                Experimente buscar por outros termos ou verifique a grafia.
-              </span>
-            </div>
-          ) : (
-            <div className="flex flex-col gap-3.5 p-2">
-              <h4 className="text-xs font-semibold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider px-1">
-                Navegação Rápida
-              </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <button
-                  onClick={() => {
-                    router.push("/");
-                    onClose();
-                  }}
-                  className="group flex items-center justify-between p-3.5 bg-zinc-50 hover:bg-orange-50/40 dark:bg-zinc-800/20 dark:hover:bg-orange-950/10 border border-zinc-100 hover:border-orange-200/60 dark:border-zinc-850 dark:hover:border-orange-900/40 rounded-2xl transition-all duration-200 text-left outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
-                >
-                  <div className="flex items-center gap-3.5">
-                    <div className="p-2 bg-orange-100/70 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400 rounded-xl group-hover:scale-105 transition-transform duration-200 shrink-0">
-                      <Flame size={20} className="fill-orange-600/10" />
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-sm font-bold text-zinc-800 dark:text-zinc-200 group-hover:text-orange-700 dark:group-hover:text-orange-400 transition-colors">
-                        Promoções do Dia
-                      </span>
-                      <span className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">
-                        Confira as melhores ofertas
-                      </span>
-                    </div>
-                  </div>
-                  <ChevronRight size={16} className="text-zinc-400 group-hover:text-orange-500 group-hover:translate-x-0.5 transition-all opacity-0 group-hover:opacity-100 shrink-0" />
-                </button>
-
-                <button
-                  onClick={() => {
-                    router.push("/comparador");
-                    onClose();
-                  }}
-                  className="group flex items-center justify-between p-3.5 bg-zinc-50 hover:bg-blue-50/40 dark:bg-zinc-800/20 dark:hover:bg-blue-950/10 border border-zinc-100 hover:border-blue-200/60 dark:border-zinc-850 dark:hover:border-blue-900/40 rounded-2xl transition-all duration-200 text-left outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
-                >
-                  <div className="flex items-center gap-3.5">
-                    <div className="p-2 bg-blue-100/70 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 rounded-xl group-hover:scale-105 transition-transform duration-200 shrink-0">
-                      <GitCompare size={20} />
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-sm font-bold text-zinc-800 dark:text-zinc-200 group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors">
-                        Comparador
-                      </span>
-                      <span className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">
-                        Compare preços e specs
-                      </span>
-                    </div>
-                  </div>
-                  <ChevronRight size={16} className="text-zinc-400 group-hover:text-blue-500 group-hover:translate-x-0.5 transition-all opacity-0 group-hover:opacity-100 shrink-0" />
-                </button>
+        {searchQuery.trim() && (
+          <div className="flex-1 overflow-y-auto p-4 max-h-[60vh]">
+            {isSearching ? (
+              <div className="flex flex-col items-center justify-center py-12 text-zinc-500 gap-2">
+                <Loader2 className="animate-spin w-8 h-8 text-blue-600 dark:text-blue-500" />
+                <span className="text-sm font-semibold">Buscando...</span>
               </div>
-            </div>
-          )}
-        </div>
+            ) : searchResults.length > 0 ? (
+              <div className="flex flex-col gap-1.5">
+                {searchResults.map((product) => (
+                  <button
+                    key={product.id}
+                    onClick={() => handleProductClick(product)}
+                    className="flex items-center gap-4 p-3 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 rounded-2xl text-left w-full transition-all border border-transparent hover:border-zinc-200 dark:hover:border-zinc-800"
+                  >
+                    <div className="w-20 h-20 bg-white rounded-xl border border-zinc-100 flex items-center justify-center p-1 shrink-0 relative overflow-hidden">
+                      <Image
+                        src={product.image_url}
+                        alt={product.title}
+                        fill
+                        unoptimized
+                        className="object-contain p-1"
+                      />
+                    </div>
+                    <div className="flex flex-col min-w-0">
+                      <span className="text-sm font-bold text-zinc-900 dark:text-zinc-100 line-clamp-2">
+                        {product.title}
+                      </span>
+                      <div className="flex items-baseline gap-1.5 mt-1">
+                        <span className="text-base font-extrabold text-zinc-900 dark:text-zinc-50">
+                          {formatPrice(product.cash_price)}
+                        </span>
+                        <span className="text-[10px] text-zinc-500 dark:text-zinc-400 uppercase tracking-wider font-bold">
+                          à vista
+                        </span>
+                      </div>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            ) : (
+              <div className="flex flex-col items-center justify-center py-12 text-zinc-400 text-center px-4">
+                <span className="text-sm font-bold">
+                  {onSelectProduct
+                    ? "Nenhum produto com especificações encontrado."
+                    : "Nenhum produto encontrado."}
+                </span>
+                <span className="text-xs mt-1">
+                  Experimente buscar por outros termos ou verifique a grafia.
+                </span>
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );

@@ -92,7 +92,7 @@ export default function ProductCard({ product }: { product: Product }) {
         {hasCoupon && product.coupon && (
           <div
             onClick={handleCopy}
-            className={`absolute top-2 right-2 border text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider transition-all active:scale-95 cursor-pointer z-10 select-all shadow-sm ${
+            className={`absolute top-2 left-2 border text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider transition-all active:scale-95 cursor-pointer z-10 select-all shadow-sm ${
               copied
                 ? "bg-emerald-600 border-emerald-600 text-white"
                 : "bg-yellow-400 border-yellow-400 text-black hover:bg-yellow-500"
