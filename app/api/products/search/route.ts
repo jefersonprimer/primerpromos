@@ -5,6 +5,7 @@ export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
     const query = searchParams.get('q') || '';
+    const requireSpecs = searchParams.get('requireSpecs') === 'true';
     const category = searchParams.get('category') || undefined;
 
     const products = await prisma.product.findMany({
@@ -17,9 +18,12 @@ export async function GET(request: NextRequest) {
       take: 50,
     });
 
-    // Filter out products without specifications and format fields
-    const formattedProducts = products
-      .filter((p) => p.specs !== null && p.specs !== undefined)
+    // Filter out products without specifications if required
+    const filteredProducts = requireSpecs
+      ? products.filter((p) => p.specs !== null && p.specs !== undefined)
+      : products;
+
+    const formattedProducts = filteredProducts
       .slice(0, 20)
       .map((p) => ({
         ...p,

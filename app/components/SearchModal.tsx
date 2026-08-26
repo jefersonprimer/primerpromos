@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { Search, X, Loader2 } from "lucide-react";
+import { Search, X, Loader2, Flame, GitCompare, ChevronRight } from "lucide-react";
 import { getCategorySlug, slugify } from "@/app/lib/utils";
 import { type Product } from "./ProductCard";
 import Image from "next/image";
@@ -72,14 +72,16 @@ export default function SearchModal({
       return;
     }
 
+    const requireSpecs = !!onSelectProduct;
     const delayDebounceFn = setTimeout(async () => {
       setIsSearching(true);
       try {
         const catParam = categoryFilter
           ? `&category=${encodeURIComponent(categoryFilter)}`
           : "";
+        const specsParam = requireSpecs ? "&requireSpecs=true" : "";
         const res = await fetch(
-          `/api/products/search?q=${encodeURIComponent(searchQuery)}${catParam}`,
+          `/api/products/search?q=${encodeURIComponent(searchQuery)}${catParam}${specsParam}`,
         );
         const data = await res.json();
         if (Array.isArray(data)) {
@@ -96,7 +98,7 @@ export default function SearchModal({
     }, 300);
 
     return () => clearTimeout(delayDebounceFn);
-  }, [searchQuery, categoryFilter, excludeIdsString]);
+  }, [searchQuery, categoryFilter, excludeIdsString, onSelectProduct]);
 
   if (!isOpen) return null;
 
@@ -107,7 +109,7 @@ export default function SearchModal({
       const categorySlug = product.category
         ? getCategorySlug(product.category)
         : "produto";
-      router.push(`/${categorySlug}/${product.id}-${slugify(product.title)}`);
+      router.push(`/${categorySlug}/${slugify(product.title)}`);
     }
     onClose();
   };
@@ -180,9 +182,14 @@ export default function SearchModal({
                     <span className="text-sm font-bold text-zinc-900 dark:text-zinc-100 line-clamp-2">
                       {product.title}
                     </span>
-                    <span className="text-lg text-zinc-500 font-semibold uppercase tracking-wider mt-0.5">
-                      {formatPrice(product.cash_price)}
-                    </span>
+                    <div className="flex items-baseline gap-1.5 mt-1">
+                      <span className="text-base font-extrabold text-zinc-900 dark:text-zinc-50">
+                        {formatPrice(product.cash_price)}
+                      </span>
+                      <span className="text-[10px] text-zinc-500 dark:text-zinc-400 uppercase tracking-wider font-bold">
+                        à vista
+                      </span>
+                    </div>
                   </div>
                 </button>
               ))}
@@ -190,35 +197,64 @@ export default function SearchModal({
           ) : searchQuery ? (
             <div className="flex flex-col items-center justify-center py-12 text-zinc-400 text-center px-4">
               <span className="text-sm font-bold">
-                Nenhum produto com especificações encontrado.
+                {onSelectProduct
+                  ? "Nenhum produto com especificações encontrado."
+                  : "Nenhum produto encontrado."}
               </span>
               <span className="text-xs mt-1">
                 Experimente buscar por outros termos ou verifique a grafia.
               </span>
             </div>
           ) : (
-            <div className="flex flex-col gap-4 p-2">
-              <h4 className="text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">
+            <div className="flex flex-col gap-3.5 p-2">
+              <h4 className="text-xs font-semibold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider px-1">
                 Navegação Rápida
               </h4>
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <button
                   onClick={() => {
                     router.push("/");
                     onClose();
                   }}
-                  className="p-3 text-left bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-800/40 dark:hover:bg-zinc-800 rounded-2xl text-sm font-semibold text-zinc-700 dark:text-zinc-300 transition-colors"
+                  className="group flex items-center justify-between p-3.5 bg-zinc-50 hover:bg-orange-50/40 dark:bg-zinc-800/20 dark:hover:bg-orange-950/10 border border-zinc-100 hover:border-orange-200/60 dark:border-zinc-850 dark:hover:border-orange-900/40 rounded-2xl transition-all duration-200 text-left outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
                 >
-                  🔥 Promoções do Dia
+                  <div className="flex items-center gap-3.5">
+                    <div className="p-2 bg-orange-100/70 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400 rounded-xl group-hover:scale-105 transition-transform duration-200 shrink-0">
+                      <Flame size={20} className="fill-orange-600/10" />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-sm font-bold text-zinc-800 dark:text-zinc-200 group-hover:text-orange-700 dark:group-hover:text-orange-400 transition-colors">
+                        Promoções do Dia
+                      </span>
+                      <span className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">
+                        Confira as melhores ofertas
+                      </span>
+                    </div>
+                  </div>
+                  <ChevronRight size={16} className="text-zinc-400 group-hover:text-orange-500 group-hover:translate-x-0.5 transition-all opacity-0 group-hover:opacity-100 shrink-0" />
                 </button>
+
                 <button
                   onClick={() => {
                     router.push("/comparador");
                     onClose();
                   }}
-                  className="p-3 text-left bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-800/40 dark:hover:bg-zinc-800 rounded-2xl text-sm font-semibold text-zinc-700 dark:text-zinc-300 transition-colors"
+                  className="group flex items-center justify-between p-3.5 bg-zinc-50 hover:bg-blue-50/40 dark:bg-zinc-800/20 dark:hover:bg-blue-950/10 border border-zinc-100 hover:border-blue-200/60 dark:border-zinc-850 dark:hover:border-blue-900/40 rounded-2xl transition-all duration-200 text-left outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                 >
-                  ⚔️ Comparador
+                  <div className="flex items-center gap-3.5">
+                    <div className="p-2 bg-blue-100/70 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 rounded-xl group-hover:scale-105 transition-transform duration-200 shrink-0">
+                      <GitCompare size={20} />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-sm font-bold text-zinc-800 dark:text-zinc-200 group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors">
+                        Comparador
+                      </span>
+                      <span className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">
+                        Compare preços e specs
+                      </span>
+                    </div>
+                  </div>
+                  <ChevronRight size={16} className="text-zinc-400 group-hover:text-blue-500 group-hover:translate-x-0.5 transition-all opacity-0 group-hover:opacity-100 shrink-0" />
                 </button>
               </div>
             </div>

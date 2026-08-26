@@ -60,7 +60,7 @@ export default function ProductCard({ product }: { product: Product }) {
 
   return (
     <Link
-      href={`/${categoryPath}/${product.id}-${slugify(product.title)}`}
+      href={`/${categoryPath}/${slugify(product.title)}`}
       className="flex flex-col bg-white dark:bg-zinc-900 hover:bg-zinc-50/50 dark:hover:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all relative cursor-pointer group"
     >
       {/* Header */}

@@ -2,6 +2,7 @@
 
 import { useState, Fragment, useMemo } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import Image from "next/image";
 
 export interface SpecItem {
   name: string;
@@ -44,7 +45,9 @@ export default function ProductComparison({
     attrName: string,
   ): string => {
     if (!specs || !Array.isArray(specs)) return "";
-    const group = (specs as SpecGroup[]).find((g: SpecGroup) => g.group === groupName);
+    const group = (specs as SpecGroup[]).find(
+      (g: SpecGroup) => g.group === groupName,
+    );
     if (!group || !Array.isArray(group.values)) return "";
     const attr = group.values.find((v: SpecItem) => v.name === attrName);
     if (!attr || !Array.isArray(attr.values) || attr.values.length === 0)
@@ -70,7 +73,9 @@ export default function ProductComparison({
     attrName: string,
   ): string => {
     if (!specs || !Array.isArray(specs)) return "-";
-    const group = (specs as SpecGroup[]).find((g: SpecGroup) => g.group === groupName);
+    const group = (specs as SpecGroup[]).find(
+      (g: SpecGroup) => g.group === groupName,
+    );
     if (!group || !Array.isArray(group.values)) return "-";
     const attr = group.values.find((v: SpecItem) => v.name === attrName);
     if (!attr || !Array.isArray(attr.values) || attr.values.length === 0)
@@ -203,7 +208,7 @@ export default function ProductComparison({
   return (
     <div className="mt-12 bg-white dark:bg-zinc-900 p-6 rounded-3xl">
       <div className="flex items-center justify-center gap-2 mb-6 pb-4">
-        <h3 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50">
+        <h3 className="text-3xl font-semibold text-zinc-900 dark:text-zinc-50">
           Qual {currentProduct.category} é o certo para você?
         </h3>
       </div>
@@ -214,7 +219,6 @@ export default function ProductComparison({
             {/* Headers row (Images and Titles) */}
             <tr className="border-b border-zinc-200 dark:border-zinc-800">
               {sortedComparisonGroup.map((p) => {
-                const isCurrent = p.id === currentProduct.id;
                 return (
                   <th
                     key={p.id}
@@ -223,22 +227,21 @@ export default function ProductComparison({
                     <div className="flex flex-col items-center gap-2">
                       {p.image_url ? (
                         <>
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img
+                          <Image
                             src={p.image_url}
                             alt={p.title}
-                            className="w-48 h-48 object-contain bg-white rounded-2xl"
+                            width={200}
+                            height={256}
+                            className="object-contain bg-white rounded-2xl"
                           />
                         </>
                       ) : (
                         <div className="w-16 h-16 bg-zinc-100 dark:bg-zinc-800 rounded-lg" />
                       )}
-                      <span
-                        className={`text-base font-semibold block line-clamp-2 max-w-[200px] ${isCurrent ? "text-blue-600 dark:text-blue-400 font-bold" : "text-zinc-900 dark:text-zinc-100"}`}
-                      >
+                      <span className="text-xl font-semibold block line-clamp-2 text-zinc-900 dark:text-zinc-100">
                         {p.title}
                       </span>
-                      <span className="text-xs font-normal text-zinc-900 dark:text-zinc-50 mt-1">
+                      <span className="text-sm font-normal text-zinc-900 dark:text-zinc-50 mt-1">
                         {formatPrice(p.cash_price)}
                       </span>
                     </div>
@@ -285,7 +288,7 @@ export default function ProductComparison({
                           <tr className="bg-zinc-50/20 dark:bg-zinc-900/20">
                             <td
                               colSpan={sortedComparisonGroup.length}
-                              className="py-1 px-3 text-[10px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider text-center border-b border-zinc-100/50 dark:border-zinc-800/20"
+                              className="py-1 px-3 text-[10px] font-semibold text-zinc-900 dark:text-zinc-50 uppercase tracking-wider text-center border-b border-zinc-100/50 dark:border-zinc-800/20"
                             >
                               {attrName}
                             </td>
@@ -298,15 +301,10 @@ export default function ProductComparison({
                                 groupName,
                                 attrName,
                               );
-                              const isCurrent = p.id === currentProduct.id;
                               return (
                                 <td
                                   key={p.id}
-                                  className={`py-3 px-3 text-sm text-center align-middle ${
-                                    isCurrent
-                                      ? "font-semibold text-blue-600 dark:text-blue-400 bg-blue-50/5 dark:bg-blue-950/10"
-                                      : "text-zinc-700 dark:text-zinc-300"
-                                  }`}
+                                  className="py-3 px-3 text-sm text-center align-middle text-zinc-900 dark:text-zinc-50"
                                 >
                                   {val}
                                 </td>

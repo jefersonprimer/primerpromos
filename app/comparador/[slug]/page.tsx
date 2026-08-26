@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import prisma from "@/app/lib/prisma";
 import ComparadorClient from "../ComparadorClient";
+import { slugify } from "@/app/lib/utils";
 
 import { type Product } from "@/app/components/ProductCard";
 
@@ -18,12 +19,17 @@ interface PageProps {
 export default async function ComparadorSlugPage({ params }: PageProps) {
   const { slug } = await params;
   
-  // Extract IDs from the slug (e.g. 134-slug-vs-136-slug)
+  // Extract products from slug parts (e.g. slug-1-vs-slug-2)
   const parts = slug.split(/-vs-/i);
+
+  const allProducts = await prisma.product.findMany({
+    select: { id: true, title: true }
+  });
+
   const idList = parts
     .map((part) => {
-      const match = part.match(/^(\d+)/);
-      return match ? parseInt(match[1], 10) : null;
+      const match = allProducts.find((p) => slugify(p.title) === part);
+      return match ? match.id : null;
     })
     .filter((id): id is number => id !== null);
 
@@ -45,6 +51,7 @@ export default async function ComparadorSlugPage({ params }: PageProps) {
         cash_price: p.cash_price.toString(),
         installment_price: p.installment_price.toString(),
         created_at: p.created_at.toISOString(),
+        specs: p.specs as Record<string, unknown> | null,
       }));
   }
 

@@ -10,6 +10,7 @@ import RelatedProductsCarousel from "@/app/components/RelatedProductsCarousel";
 import PriceHistoryChart from "@/app/components/PriceHistoryChart";
 import ProductImageGallery from "@/app/components/ProductImageGallery";
 import ProductComparison from "@/app/components/ProductComparison";
+import { getNormalizedSpec, getCategoryFromSlug, slugify } from "@/app/lib/utils";
 
 export const dynamic = "force-dynamic";
 
@@ -17,14 +18,35 @@ interface PageProps {
   params: Promise<{ category: string; slug: string }>;
 }
 
+async function findProductBySlug(categorySlug: string, slug: string) {
+  const dbCategory = getCategoryFromSlug(categorySlug);
+  
+  // Find within category first for performance
+  const products = await prisma.product.findMany({
+    where: dbCategory ? { category: dbCategory } : {},
+    select: { id: true, title: true },
+  });
+
+  let match = products.find((p) => slugify(p.title) === slug);
+
+  // Fallback to checking all products if category mismatch or not found
+  if (!match && dbCategory) {
+    const allProducts = await prisma.product.findMany({
+      select: { id: true, title: true },
+    });
+    match = allProducts.find((p) => slugify(p.title) === slug);
+  }
+
+  return match ? match.id : null;
+}
+
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const match = slug.match(/^(\d+)-/);
-  if (!match) return { title: "Produto não encontrado" };
+  const { category, slug } = await params;
+  const productId = await findProductBySlug(category, slug);
+  if (!productId) return { title: "Produto não encontrado" };
 
-  const productId = parseInt(match[1], 10);
   const product = await prisma.product.findUnique({
     where: { id: productId },
     select: { title: true },
@@ -39,14 +61,10 @@ export async function generateMetadata({
 
 export default async function ProductDetailPage({ params }: PageProps) {
   const { category, slug } = await params;
-
-  // Extract ID from slug (format: ID-slugified-title)
-  const match = slug.match(/^(\d+)-/);
-  if (!match) {
+  const productId = await findProductBySlug(category, slug);
+  if (!productId) {
     notFound();
   }
-
-  const productId = parseInt(match[1], 10);
 
   const product = await prisma.product.findUnique({
     where: { id: productId },
@@ -77,17 +95,48 @@ export default async function ProductDetailPage({ params }: PageProps) {
         { source_site: product.source_site },
       ],
     },
-    take: 4,
+    take: 50,
     orderBy: {
       created_at: "desc",
     },
   });
 
-  const relatedProducts = relatedProductsRaw.map((p) => ({
+  const currentBrand = getNormalizedSpec(product.specs, "fabricante")?.trim().toLowerCase();
+  const currentCategory = product.category?.trim().toLowerCase();
+
+  const sortedCandidates = [...relatedProductsRaw].sort((a, b) => {
+    const aBrand = getNormalizedSpec(a.specs, "fabricante")?.trim().toLowerCase();
+    const bBrand = getNormalizedSpec(b.specs, "fabricante")?.trim().toLowerCase();
+    const aCategory = a.category?.trim().toLowerCase();
+    const bCategory = b.category?.trim().toLowerCase();
+
+    const aMatchesBrand = !!(currentBrand && aBrand && aBrand === currentBrand);
+    const bMatchesBrand = !!(currentBrand && bBrand && bBrand === currentBrand);
+    
+    const aMatchesCategory = !!(currentCategory && aCategory && aCategory === currentCategory);
+    const bMatchesCategory = !!(currentCategory && bCategory && bCategory === currentCategory);
+
+    let scoreA = 0;
+    if (aMatchesBrand) scoreA += 2;
+    if (aMatchesCategory) scoreA += 1;
+
+    let scoreB = 0;
+    if (bMatchesBrand) scoreB += 2;
+    if (bMatchesCategory) scoreB += 1;
+
+    if (scoreA !== scoreB) {
+      return scoreB - scoreA;
+    }
+
+    return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
+  });
+
+  const relatedProducts = sortedCandidates.slice(0, 4).map((p) => ({
     ...p,
     cash_price: p.cash_price.toString(),
     installment_price: p.installment_price.toString(),
     created_at: p.created_at.toISOString(),
+    specs: p.specs as Record<string, unknown> | null,
   }));
 
   // Fetch comparable products in the same category that have specifications

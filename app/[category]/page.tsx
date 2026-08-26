@@ -50,6 +50,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     cash_price: p.cash_price.toString(),
     installment_price: p.installment_price.toString(),
     created_at: p.created_at.toISOString(),
+    specs: p.specs as Record<string, unknown> | null,
   }));
 
   // Standardize pluralized category title

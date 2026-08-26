@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo, Fragment } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 import {
   Plus,
   X,
@@ -26,6 +26,8 @@ export default function ComparadorClient({
   availableCategories,
 }: ComparadorClientProps) {
   const router = useRouter();
+  const params = useParams();
+  const currentSlug = params?.slug as string | undefined;
 
   const [selectedProducts, setSelectedProducts] =
     useState<Product[]>(initialProducts);
@@ -38,24 +40,30 @@ export default function ComparadorClient({
   // Update selected products when initialProducts changes
   useEffect(() => {
     if (initialProducts.length > 0) {
-      setTimeout(() => {
+      const initialIds = initialProducts.map((p) => p.id).join(",");
+      const selectedIds = selectedProducts.map((p) => p.id).join(",");
+      if (initialIds !== selectedIds) {
         setSelectedProducts(initialProducts);
-      }, 0);
+      }
     }
-  }, [initialProducts]);
+  }, [initialProducts, selectedProducts]);
 
   // Update URL parameters when selection changes
   useEffect(() => {
     if (selectedProducts.length > 0) {
       const slugParts = selectedProducts.map(
-        (p) => `${p.id}-${slugify(p.title)}`,
+        (p) => slugify(p.title),
       );
       const slug = slugParts.join("-vs-");
-      router.replace(`/comparador/${slug}`, { scroll: false });
+      if (currentSlug !== slug) {
+        router.replace(`/comparador/${slug}`, { scroll: false });
+      }
     } else {
-      router.replace("/comparador", { scroll: false });
+      if (currentSlug) {
+        router.replace("/comparador", { scroll: false });
+      }
     }
-  }, [selectedProducts, router]);
+  }, [selectedProducts, router, currentSlug]);
 
   const handleAddProduct = (product: Product, slotIndex: number) => {
     setSelectedProducts((prev) => {
@@ -189,7 +197,7 @@ export default function ComparadorClient({
             const categorySlug = product.category
               ? getCategorySlug(product.category)
               : "produto";
-            const productHref = `/${categorySlug}/${product.id}-${slugify(product.title)}`;
+            const productHref = `/${categorySlug}/${slugify(product.title)}`;
 
             return (
               <div
